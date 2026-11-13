@@ -316,6 +316,41 @@
       "title": "Negation & Negative Polarity",
       "level": "B2",
       "summary": "Запрет двойного отрицания (not... anything), слова с отрицательным значением (barely, hardly, seldom) и neither/nor."
+    },
+    {
+      "id": "prepositions-at-in-on-edge",
+      "category": "Prepositions",
+      "title": "On time vs In time, At the end vs In the end",
+      "level": "B2",
+      "summary": "Тонкие различия устойчивых предложных пар (on time / in time, at the end / in the end, by / until)."
+    },
+    {
+      "id": "verb-say-tell-speak-talk",
+      "category": "Verb Patterns",
+      "title": "Say, Tell, Speak & Talk",
+      "level": "B1",
+      "summary": "Управление глаголов речи: say (something to someone) vs tell (someone something) и устойчивые фразы."
+    },
+    {
+      "id": "quantifiers-so-such-too-enough",
+      "category": "Modifiers",
+      "title": "So / Such & Too / Enough",
+      "level": "B1",
+      "summary": "Разница между so + adj и such + (a) adj + noun, а также позиция enough (big enough vs enough time)."
+    },
+    {
+      "id": "clauses-if-unless-otherwise",
+      "category": "Conditionals",
+      "title": "Conditionals Without If",
+      "level": "B2",
+      "summary": "Условные конструкции с unless, provided (that), as long as, in case и otherwise."
+    },
+    {
+      "id": "cleft-what-it-wh",
+      "category": "Advanced Syntax",
+      "title": "Advanced Clefts & Pseudo-Clefts",
+      "level": "C2",
+      "summary": "Сложные выделительные конструкции (It was..., The reason why..., The place where...)."
     }
   ],
   "exercises": [
@@ -5162,6 +5197,696 @@
       ],
       "answer": "on",
       "explanation": "Устойчивое управление: congratulate someone on (doing) something."
+    },
+    {
+      "id": "fprep-1",
+      "topicId": "prepositions-at-in-on-edge",
+      "type": "error",
+      "prompt": "We arrived just on time to catch the train.",
+      "errorWordIndex": 3,
+      "options": [
+        "in",
+        "at",
+        "by"
+      ],
+      "answer": "in",
+      "explanation": "«In time (for/to)» означает «успеть вовремя, не опоздать», а «on time» — «строго по расписанию»."
+    },
+    {
+      "id": "fprep-2",
+      "topicId": "prepositions-at-in-on-edge",
+      "type": "cloze",
+      "prompt": "___ the end, we decided to keep the interface minimal.",
+      "options": [
+        "In",
+        "At",
+        "On",
+        "By"
+      ],
+      "answer": "In",
+      "explanation": "«In the end» означает «в конце концов / в итоге», а «at the end of» — физический или временной конец чего-либо."
+    },
+    {
+      "id": "fprep-3",
+      "topicId": "prepositions-at-in-on-edge",
+      "type": "cloze",
+      "prompt": "There is a small summary ___ the end of the chapter.",
+      "options": [
+        "at",
+        "in",
+        "on",
+        "by"
+      ],
+      "answer": "at",
+      "explanation": "Перед «...of something» для указания конечной точки ставится предлог at (at the end of the chapter)."
+    },
+    {
+      "id": "fprep-4",
+      "topicId": "prepositions-at-in-on-edge",
+      "type": "input",
+      "prompt": "The flight departed right ___ time — not a single minute late.",
+      "hint": "punctual / according to schedule",
+      "answer": "on",
+      "explanation": "«On time» означает «точно по расписанию, пунктуально»."
+    },
+    {
+      "id": "say-1",
+      "topicId": "verb-say-tell-speak-talk",
+      "type": "error",
+      "prompt": "He said me that he would be late.",
+      "errorWordIndex": 1,
+      "options": [
+        "told",
+        "spoke",
+        "talked"
+      ],
+      "answer": "told",
+      "explanation": "Сразу перед лицом-адресатом (me, him, us) используется tell (told me), а не say (нужно было бы say to me)."
+    },
+    {
+      "id": "say-2",
+      "topicId": "verb-say-tell-speak-talk",
+      "type": "cloze",
+      "prompt": "She always ___ the truth, even when it's uncomfortable.",
+      "options": [
+        "tells",
+        "says",
+        "speaks",
+        "talks"
+      ],
+      "answer": "tells",
+      "explanation": "Устойчивые выражения: tell the truth, tell a lie, tell a story, tell the difference."
+    },
+    {
+      "id": "say-3",
+      "topicId": "verb-say-tell-speak-talk",
+      "type": "cloze",
+      "prompt": "How many languages does she ___?",
+      "options": [
+        "speak",
+        "tell",
+        "say",
+        "talk"
+      ],
+      "answer": "speak",
+      "explanation": "Для владения иностранными языками используется только глагол speak."
+    },
+    {
+      "id": "say-4",
+      "topicId": "verb-say-tell-speak-talk",
+      "type": "input",
+      "prompt": "Did he ___ (say / tell) anything about the new schedule?",
+      "hint": "no personal object directly after verb",
+      "answer": "say",
+      "explanation": "Со словами something / anything / nothing без адресата используется say."
+    },
+    {
+      "id": "sotoo-1",
+      "topicId": "quantifiers-so-such-too-enough",
+      "type": "error",
+      "prompt": "It was so cold day that we stayed inside.",
+      "errorWordIndex": 2,
+      "options": [
+        "such a",
+        "very",
+        "too"
+      ],
+      "answer": "such a",
+      "explanation": "Перед исчисляемым существительным с прилагательным (cold day) ставится «such a», а не so."
+    },
+    {
+      "id": "sotoo-2",
+      "topicId": "quantifiers-so-such-too-enough",
+      "type": "cloze",
+      "prompt": "Is the font ___ to read comfortably on an iPad?",
+      "options": [
+        "large enough",
+        "enough large",
+        "too large",
+        "so large"
+      ],
+      "answer": "large enough",
+      "explanation": "Слово enough ставится ПОСЛЕ прилагательного/наречия (large enough), но ПЕРЕД существительным (enough time)."
+    },
+    {
+      "id": "sotoo-3",
+      "topicId": "quantifiers-so-such-too-enough",
+      "type": "cloze",
+      "prompt": "We didn't have ___ to test all edge cases.",
+      "options": [
+        "enough time",
+        "time enough",
+        "so time",
+        "such time"
+      ],
+      "answer": "enough time",
+      "explanation": "Перед существительным enough всегда стоит спереди (enough time)."
+    },
+    {
+      "id": "sotoo-4",
+      "topicId": "quantifiers-so-such-too-enough",
+      "type": "input",
+      "prompt": "There were ___ (so / such) many people at the cinema that it was sold out.",
+      "hint": "before many/much/few/little",
+      "answer": "so",
+      "explanation": "Перед словами many, much, few, little всегда используется so (so many people), а не such."
+    },
+    {
+      "id": "noif-1",
+      "topicId": "clauses-if-unless-otherwise",
+      "type": "error",
+      "prompt": "Unless you don't hurry, we'll miss the flight.",
+      "errorWordIndex": 2,
+      "options": [
+        "(remove 'don't')",
+        "won't",
+        "didn't"
+      ],
+      "answer": "(remove 'don't')",
+      "explanation": "Unless уже означает «если не»; добавлять don't после него — двойное отрицание."
+    },
+    {
+      "id": "noif-2",
+      "topicId": "clauses-if-unless-otherwise",
+      "type": "cloze",
+      "prompt": "Write the token down; ___, you'll forget it.",
+      "options": [
+        "otherwise",
+        "unless",
+        "provided",
+        "in case"
+      ],
+      "answer": "otherwise",
+      "explanation": "Otherwise («иначе / в противном случае») связывает два предложения."
+    },
+    {
+      "id": "noif-3",
+      "topicId": "clauses-if-unless-otherwise",
+      "type": "cloze",
+      "prompt": "I'll keep a local backup ___ the remote server goes down.",
+      "options": [
+        "in case",
+        "unless",
+        "otherwise",
+        "provided"
+      ],
+      "answer": "in case",
+      "explanation": "«In case» означает предосторожность («на случай, если вдруг...»)."
+    },
+    {
+      "id": "noif-4",
+      "topicId": "clauses-if-unless-otherwise",
+      "type": "input",
+      "prompt": "You can borrow my iPad ___ (provided / unless) you return it tonight.",
+      "hint": "on condition that",
+      "answer": "provided",
+      "acceptedAnswers": [
+        "provided that",
+        "providing",
+        "as long as"
+      ],
+      "explanation": "Значение «при условии, что» выражается через provided (that) / as long as."
+    },
+    {
+      "id": "cleft-1",
+      "topicId": "cleft-what-it-wh",
+      "type": "error",
+      "prompt": "It was John which fixed the layout bug.",
+      "errorWordIndex": 3,
+      "options": [
+        "who",
+        "whom",
+        "what"
+      ],
+      "answer": "who",
+      "explanation": "Для выделения человека в Cleft Sentence используется who или that, но не which."
+    },
+    {
+      "id": "cleft-2",
+      "topicId": "cleft-what-it-wh",
+      "type": "cloze",
+      "prompt": "The reason ___ I switched to TypeScript is strict type safety.",
+      "options": [
+        "why",
+        "which",
+        "what",
+        "who"
+      ],
+      "answer": "why",
+      "explanation": "Псевдо-расщепление с фокусом на причине: «The reason why ... is...»."
+    },
+    {
+      "id": "cleft-3",
+      "topicId": "cleft-what-it-wh",
+      "type": "transform",
+      "prompt": "I love the minimalist design most.",
+      "hint": "Pseudo-cleft: What I love...",
+      "tokens": [
+        "What",
+        "I",
+        "love",
+        "most",
+        "is",
+        "the",
+        "minimalist",
+        "design."
+      ],
+      "answer": "What I love most is the minimalist design.",
+      "explanation": "What-cleft выносит фокус в конец предложения после связки is/was."
+    },
+    {
+      "id": "cleft-4",
+      "topicId": "cleft-what-it-wh",
+      "type": "cloze",
+      "prompt": "It wasn't until midnight ___ the build finally passed.",
+      "options": [
+        "that",
+        "when",
+        "which",
+        "until"
+      ],
+      "answer": "that",
+      "explanation": "В конструкции «It wasn't until + time + that...» всегда используется союз that."
+    },
+    {
+      "id": "padj-5",
+      "topicId": "participle-adjectives",
+      "type": "error",
+      "prompt": "The film was so bored that I fell asleep.",
+      "errorWordIndex": 4,
+      "options": [
+        "boring",
+        "bore",
+        "boredom"
+      ],
+      "answer": "boring",
+      "explanation": "Фильм сам вызывает скуку (источник), поэтому нужно причастие на -ing (boring)."
+    },
+    {
+      "id": "padj-6",
+      "topicId": "participle-adjectives",
+      "type": "cloze",
+      "prompt": "Everyone was ___ by the sudden plot twist.",
+      "options": [
+        "shocked",
+        "shocking",
+        "shock",
+        "shocks"
+      ],
+      "answer": "shocked",
+      "explanation": "Эмоция, которую испытали люди — форма на -ed (shocked)."
+    },
+    {
+      "id": "abil-5",
+      "topicId": "modals-ability-permission",
+      "type": "error",
+      "prompt": "I will can help you after lunch.",
+      "errorWordIndex": 2,
+      "options": [
+        "be able to",
+        "could",
+        "able to"
+      ],
+      "answer": "be able to",
+      "explanation": "Два модальных глагола (will и can) не могут стоять рядом; в будущем времени используется will be able to."
+    },
+    {
+      "id": "abil-6",
+      "topicId": "modals-ability-permission",
+      "type": "cloze",
+      "prompt": "The fog was thick, but we ___ land safely.",
+      "options": [
+        "managed to",
+        "could",
+        "can",
+        "may"
+      ],
+      "answer": "managed to",
+      "explanation": "Успешное завершение трудного разового действия в прошлом — managed to / were able to."
+    },
+    {
+      "id": "fitp-5",
+      "topicId": "future-in-the-past",
+      "type": "error",
+      "prompt": "He promised he will send the draft by Friday.",
+      "errorWordIndex": 3,
+      "options": [
+        "would",
+        "can",
+        "may"
+      ],
+      "answer": "would",
+      "explanation": "После глагола в прошлом (promised) будущее время сдвигается с will на would."
+    },
+    {
+      "id": "fitp-6",
+      "topicId": "future-in-the-past",
+      "type": "cloze",
+      "prompt": "They ___ to announce the winner when the power went out.",
+      "options": [
+        "were about",
+        "are about",
+        "will be",
+        "would be"
+      ],
+      "answer": "were about",
+      "explanation": "Готовность сделать что-то в ту же секунду в прошлом — was/were about to + V1."
+    },
+    {
+      "id": "nom-5",
+      "topicId": "clauses-nom-wh",
+      "type": "error",
+      "prompt": "I didn't understand that he meant.",
+      "errorWordIndex": 3,
+      "options": [
+        "what",
+        "which",
+        "whom"
+      ],
+      "answer": "what",
+      "explanation": "В значении «то, что он имел в виду» используется what, а не that."
+    },
+    {
+      "id": "nom-6",
+      "topicId": "clauses-nom-wh",
+      "type": "cloze",
+      "prompt": "___ fast you type, always double-check the output.",
+      "options": [
+        "However",
+        "Whatever",
+        "Whichever",
+        "What"
+      ],
+      "answer": "However",
+      "explanation": "Перед прилагательным или наречием («как бы быстро ни...») используется However."
+    },
+    {
+      "id": "neg-5",
+      "topicId": "negation-scope-double",
+      "type": "error",
+      "prompt": "She hasn't never visited London.",
+      "errorWordIndex": 2,
+      "options": [
+        "ever",
+        "always",
+        "already"
+      ],
+      "answer": "ever",
+      "explanation": "После отрицания hasn't используется наречие ever («когда-либо»), чтобы избежать двойного отрицания."
+    },
+    {
+      "id": "neg-6",
+      "topicId": "negation-scope-double",
+      "type": "cloze",
+      "prompt": "___ in the documentation did it mention this flag.",
+      "options": [
+        "Nowhere",
+        "Anywhere",
+        "Somewhere",
+        "Not where"
+      ],
+      "answer": "Nowhere",
+      "explanation": "Вынос отрицательного наречия Nowhere в начало предложения вызывает инверсию (did it mention)."
+    },
+    {
+      "id": "noun-7",
+      "topicId": "nouns-uncountable-plural",
+      "type": "cloze",
+      "prompt": "Can you give me ___ information about the exam?",
+      "options": [
+        "some",
+        "an",
+        "a",
+        "many"
+      ],
+      "answer": "some",
+      "explanation": "Information в английском неисчисляемо: нельзя сказать an information или many informations."
+    },
+    {
+      "id": "det-7",
+      "topicId": "determiners-both-all-every",
+      "type": "cloze",
+      "prompt": "___ of my parents live in the same city.",
+      "options": [
+        "Both",
+        "Every",
+        "Each",
+        "Either"
+      ],
+      "answer": "Both",
+      "explanation": "Для двух объектов с глаголом во множественном числе (live) используется Both."
+    },
+    {
+      "id": "mkdo-7",
+      "topicId": "collocations-make-do",
+      "type": "cloze",
+      "prompt": "We have to ___ a decision before the end of the day.",
+      "options": [
+        "make",
+        "do",
+        "take",
+        "give"
+      ],
+      "answer": "make",
+      "explanation": "Устойчивая коллокация: make a decision («принять решение»)."
+    },
+    {
+      "id": "time-7",
+      "topicId": "clauses-time-contrast",
+      "type": "cloze",
+      "prompt": "As soon as the deploy ___, let me know.",
+      "options": [
+        "finishes",
+        "will finish",
+        "finished",
+        "would finish"
+      ],
+      "answer": "finishes",
+      "explanation": "После «As soon as» для будущего действия используется Present Simple (finishes)."
+    },
+    {
+      "id": "soinv-7",
+      "topicId": "inversion-so-such",
+      "type": "cloze",
+      "prompt": "So exhausted ___ that she fell asleep in minutes.",
+      "options": [
+        "was she",
+        "she was",
+        "did she",
+        "she did"
+      ],
+      "answer": "was she",
+      "explanation": "Инверсия после «So + adjective»: So exhausted was she that..."
+    },
+    {
+      "id": "agr-8",
+      "topicId": "agreement-subject-verb",
+      "type": "cloze",
+      "prompt": "Either my brother or my cousins ___ picking me up.",
+      "options": [
+        "are",
+        "is",
+        "was",
+        "has been"
+      ],
+      "answer": "are",
+      "explanation": "В «Either A or B» сказуемое согласуется с ближайшим подлежащим (cousins → are)."
+    },
+    {
+      "id": "perm-8",
+      "topicId": "verbs-causative-perception",
+      "type": "cloze",
+      "prompt": "Smoking is not ___ inside the terminal.",
+      "options": [
+        "allowed",
+        "let",
+        "made",
+        "forbade"
+      ],
+      "answer": "allowed",
+      "explanation": "Глагол let в пассиве обычно не употребляется; в пассивном запрете используется be allowed."
+    },
+    {
+      "id": "hab-8",
+      "topicId": "habits-used-to-would",
+      "type": "cloze",
+      "prompt": "I ___ drink three cups of coffee a day, but now I drink tea.",
+      "options": [
+        "used to",
+        "am used to",
+        "got used to",
+        "use to"
+      ],
+      "answer": "used to",
+      "explanation": "Прошлая регулярная привычка, которой больше нет — used to + V1."
+    },
+    {
+      "id": "purp-8",
+      "topicId": "clauses-purpose-reason",
+      "type": "cloze",
+      "prompt": "___ the software update, the system runs 30% faster.",
+      "options": [
+        "Owing to",
+        "Because",
+        "Since",
+        "As"
+      ],
+      "answer": "Owing to",
+      "explanation": "Перед существительным («the software update») используется предлог Owing to / Due to."
+    },
+    {
+      "id": "pinf-8",
+      "topicId": "infinitive-perfect-passive",
+      "type": "cloze",
+      "prompt": "The documents are reported ___ leaked online.",
+      "options": [
+        "to have been",
+        "to be been",
+        "having been",
+        "been"
+      ],
+      "answer": "to have been",
+      "explanation": "Сообщается о пассивном событии, уже произошедшем в прошлом: to have been + V3."
+    },
+    {
+      "id": "phr-10",
+      "topicId": "phrasal-verbs-separable",
+      "type": "cloze",
+      "prompt": "Please fill ___ this short form before the interview.",
+      "options": [
+        "out",
+        "up",
+        "on",
+        "over"
+      ],
+      "answer": "out",
+      "explanation": "Fill out / fill in a form — «заполнить анкету/форму»."
+    },
+    {
+      "id": "adj-10",
+      "topicId": "modifiers-adj-vs-adv",
+      "type": "cloze",
+      "prompt": "The train was ___ delayed by heavy snow.",
+      "options": [
+        "heavily",
+        "heavy",
+        "heavier",
+        "heaviness"
+      ],
+      "answer": "heavily",
+      "explanation": "Перед причастием/глаголом (delayed) требуется наречие меры (heavily)."
+    },
+    {
+      "id": "pron-9",
+      "topicId": "pronouns-reflexive-reciprocal",
+      "type": "cloze",
+      "prompt": "She taught ___ TypeScript using documentation and small projects.",
+      "options": [
+        "herself",
+        "her",
+        "hers",
+        "own"
+      ],
+      "answer": "herself",
+      "explanation": "Действие направлено на того же субъекта («научила саму себя») — возвратное местоимение herself."
+    },
+    {
+      "id": "qtag-10",
+      "topicId": "questions-tags-indirect",
+      "type": "cloze",
+      "prompt": "Do you remember where ___ the keys?",
+      "options": [
+        "you left",
+        "did you leave",
+        "left you",
+        "have you left"
+      ],
+      "answer": "you left",
+      "explanation": "Во встроенном (косвенном) вопросе порядок слов прямой (you left)."
+    },
+    {
+      "id": "emph-10",
+      "topicId": "emphasis-fronting-cleft",
+      "type": "cloze",
+      "prompt": "Not only ___ the bug, but she also added unit tests.",
+      "options": [
+        "did she fix",
+        "she fixed",
+        "fixed she",
+        "was she fix"
+      ],
+      "answer": "did she fix",
+      "explanation": "После «Not only» в начале предложения требуется инверсия (did she fix)."
+    },
+    {
+      "id": "wish-10",
+      "topicId": "wishes-unreal-past",
+      "type": "cloze",
+      "prompt": "I wish I ___ listened to your advice earlier.",
+      "options": [
+        "had",
+        "have",
+        "would",
+        "did"
+      ],
+      "answer": "had",
+      "explanation": "Сожаление о прошлом поступке: wish + Past Perfect (had listened)."
+    },
+    {
+      "id": "subj-10",
+      "topicId": "subjunctive-formal",
+      "type": "cloze",
+      "prompt": "The committee proposed that the meeting ___ postponed.",
+      "options": [
+        "be",
+        "is",
+        "was",
+        "would be"
+      ],
+      "answer": "be",
+      "explanation": "После «propose that...» в формальном сослагательном наклонении ставится bare infinitive (be)."
+    },
+    {
+      "id": "comp-10",
+      "topicId": "comparisons-gradable",
+      "type": "cloze",
+      "prompt": "The new tablet is slightly ___ than the previous model.",
+      "options": [
+        "lighter",
+        "more light",
+        "lightest",
+        "light"
+      ],
+      "answer": "lighter",
+      "explanation": "Сравнительная степень короткого прилагательного light — lighter."
+    },
+    {
+      "id": "link-10",
+      "topicId": "linking-concession",
+      "type": "cloze",
+      "prompt": "___ it was raining, we walked all the way home.",
+      "options": [
+        "Even though",
+        "Despite",
+        "In spite of",
+        "However"
+      ],
+      "answer": "Even though",
+      "explanation": "Перед полным предложением (it was raining) используются although / even though."
+    },
+    {
+      "id": "ell-10",
+      "topicId": "ellipsis-substitution",
+      "type": "cloze",
+      "prompt": "I won't be able to attend, and ___ will Alex.",
+      "options": [
+        "neither",
+        "so",
+        "either",
+        "too"
+      ],
+      "answer": "neither",
+      "explanation": "Присоединение к отрицательному утверждению: «neither/nor + вспомогательный глагол + подлежащее»."
     }
   ]
 }
