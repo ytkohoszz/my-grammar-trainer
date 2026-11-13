@@ -37,7 +37,31 @@ export interface CachedPack {
   pack: GrammarPack;
 }
 
-export type SessionMode = "smart" | "mistakes" | "topic";
+export interface RuleExample {
+  en: string;
+  note?: string;
+}
+
+export interface GrammarRule {
+  topicId: string;
+  formula: string;
+  points: string[];
+  examples: RuleExample[];
+  pitfall?: string;
+}
+
+export interface RulesPack {
+  version: string;
+  rules: GrammarRule[];
+}
+
+export interface CachedRulesPack {
+  sourceUrl: string;
+  fetchedAt: number;
+  pack: RulesPack;
+}
+
+export interface GrammarTrainerSettings {
 
 export const SHARED_GRAMMAR_STATE_KEY = "my-grammar-trainer:dashboard-state";
 
@@ -107,12 +131,14 @@ export const DEFAULT_SETTINGS: GrammarTrainerSettings = {
 export interface PluginData {
   settings: GrammarTrainerSettings;
   cachedPack: CachedPack | null;
+  cachedRules?: CachedRulesPack | null;
   progress: GrammarProgress;
 }
 
 export const DEFAULT_PLUGIN_DATA: PluginData = {
   settings: { ...DEFAULT_SETTINGS },
   cachedPack: null,
+  cachedRules: null,
   progress: {
     topics: {},
     exercises: {},

@@ -838,7 +838,237 @@ button.mgt-topic-card.is-weak .mgt-topic-bar-fill {
     padding: 14px;
   }
 
-  .mgt-map-grid {
+.mgt-map-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* --- Grammar Rules Guide --- */
+button.mgt-meta-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 2px 4px;
+  margin-left: -4px;
+  height: auto;
+  border-radius: 999px;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 140ms ease;
+}
+
+@media (hover: hover) {
+  button.mgt-meta-btn:hover {
+    opacity: 0.78;
+  }
+}
+
+.mgt-rules-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+input.mgt-rules-search {
+  width: 100%;
+  min-height: 38px;
+  padding: 8px 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+  box-sizing: border-box;
+}
+
+.mgt-rules-levels {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.mgt-rules-levels::-webkit-scrollbar {
+  display: none;
+}
+
+.mgt-rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+button.mgt-rule-row {
+  appearance: none;
+  width: 100%;
+  height: auto;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+  text-align: left;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 140ms ease, transform 90ms ease;
+}
+
+button.mgt-rule-row:active {
+  transform: scale(0.985);
+}
+
+.mgt-rule-row-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.mgt-rule-row-title {
+  font-size: 13.5px;
+  font-weight: 550;
+  white-space: normal;
+  line-height: 1.3;
+}
+
+.mgt-rule-chevron {
+  font-size: 12px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.mgt-rule-chevron.has-guide {
+  color: var(--interactive-accent);
+  font-weight: 600;
+}
+
+.mgt-rule-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+button.mgt-rule-back,
+button.mgt-rule-practice {
+  min-height: 36px;
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+.mgt-rule-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mgt-rule-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mgt-rule-cat {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mgt-rule-heading {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-normal);
+  margin-top: -8px;
+}
+
+.mgt-rule-summary {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.mgt-rule-block-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.mgt-rule-formula {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--interactive-accent) 10%, var(--background-primary));
+  border: 1px solid color-mix(in srgb, var(--interactive-accent) 26%, transparent);
+}
+
+.mgt-rule-formula-text {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-normal);
+  line-height: 1.45;
+}
+
+.mgt-rule-points {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-normal);
+}
+
+.mgt-rule-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mgt-rule-example-card {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.mgt-rule-example-en {
+  font-size: 14px;
+  font-weight: 550;
+  color: var(--text-normal);
+}
+
+.mgt-rule-example-note {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.mgt-rule-pitfall {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--color-orange) 10%, var(--background-primary));
+  border: 1px solid color-mix(in srgb, var(--color-orange) 30%, transparent);
+}
+
+.mgt-rule-pitfall-text {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-normal);
 }

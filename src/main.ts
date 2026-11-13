@@ -6,7 +6,12 @@ import {
   getWeakestTopics,
   recordExerciseAnswer
 } from "./engine";
-import { fetchAndCachePack, getActivePack } from "./packLoader";
+import {
+  deriveRulesUrl,
+  fetchAndCachePack,
+  fetchAndCacheRulesPack,
+  getActivePack
+} from "./packLoader";
 import { GrammarTrainerSettingTab } from "./settings";
 import {
   DEFAULT_PLUGIN_DATA,
@@ -89,6 +94,7 @@ async syncRemotePack(): Promise<void> {
     const url = this.data.settings.packSourceUrl.trim();
     if (!url) {
       this.data.cachedPack = null;
+      this.data.cachedRules = null;
       await this.savePluginData();
       this.syncDashboardSnapshot();
       this.refreshOpenViews();
@@ -97,6 +103,16 @@ async syncRemotePack(): Promise<void> {
 
     const cached = await fetchAndCachePack(url);
     this.data.cachedPack = cached;
+
+    const rulesUrl = deriveRulesUrl(url);
+    if (rulesUrl) {
+      try {
+        this.data.cachedRules = await fetchAndCacheRulesPack(rulesUrl);
+      } catch {
+        // Keep existing cached rules or starter fallback if remote rules-pack is unavailable
+      }
+    }
+
     await this.savePluginData();
     this.syncDashboardSnapshot();
     this.refreshOpenViews();
@@ -164,7 +180,8 @@ async recordExerciseResult(
         ...DEFAULT_PLUGIN_DATA.settings,
         ...(raw?.settings ?? {})
       },
-      cachedPack: raw?.cachedPack ?? null,
+cachedPack: raw?.cachedPack ?? null,
+      cachedRules: raw?.cachedRules ?? null,
       progress: {
         topics: raw?.progress?.topics ?? {},
         exercises: raw?.progress?.exercises ?? {},

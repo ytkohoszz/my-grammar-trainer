@@ -1,0 +1,84 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    {
+      "topicId": "tenses-present-simple-vs-cont",
+      "formula": "Simple: V1 / V1+s  |  Continuous: am/is/are + V-ing",
+      "points": [
+        "Present Simple — привычки, регулярные действия, расписания и научные факты.",
+        "Present Continuous — процессы прямо сейчас, временные ситуации и меняющиеся тренды (these days).",
+        "Стативные глаголы (know, understand, belong, believe, want, contain) обычно не ставятся в Continuous."
+      ],
+      "examples": [
+        { "en": "The train leaves at 07:45.", "note": "Расписание — Present Simple." },
+        { "en": "I'm trying to concentrate right now.", "note": "Действие в моменте — Present Continuous." }
+      ],
+      "pitfall": "Think и taste меняют значение: «I think» (мнение — Simple) vs «I'm thinking of moving» (обдумываю — Continuous)."
+    },
+    {
+      "topicId": "tenses-pp-vs-past",
+      "formula": "Present Perfect: have/has + V3  |  Past Simple: V2 / did + V1",
+      "points": [
+        "Present Perfect — результат важен сейчас или период ещё не закончился (today, this week, so far, ever, since, for).",
+        "Past Simple — завершённое событие в конкретном прошлом (yesterday, last year, three days ago, in 2022)."
+      ],
+      "examples": [
+        { "en": "I have lost my keys.", "note": "Не могу открыть дверь сейчас (результат)." },
+        { "en": "She visited London three years ago.", "note": "Есть закрытый маркер ago → Past Simple." }
+      ],
+      "pitfall": "Вопрос «How long ago...?» всегда требует Past Simple, а «How long have you...?» — Present Perfect."
+    },
+    {
+      "topicId": "cond-zero-first",
+      "formula": "Zero: If + V1, V1  |  First: If + V1, will + V1",
+      "points": [
+        "Zero Conditional — законы природы, физические факты и автоматические правила.",
+        "First Conditional — реальные события в будущем (вместо if часто используют unless = «если не»)."
+      ],
+      "examples": [
+        { "en": "If you heat ice, it melts.", "note": "Факт (Zero)." },
+        { "en": "Unless you leave now, you'll miss the train.", "note": "Unless + утвердительный глагол (First)." }
+      ],
+      "pitfall": "После if, unless, when, as soon as, until в условии будущего времени will не ставится."
+    },
+    {
+      "topicId": "cond-second",
+      "formula": "If + Past Simple (V2 / were), ... would / could + V1",
+      "points": [
+        "Описывает воображаемые или маловероятные ситуации в настоящем и будущем.",
+        "Глагол be в условии формально ставится в форму were для всех лиц (If I were you)."
+      ],
+      "examples": [
+        { "en": "If I had more time, I would redesign the UI.", "note": "Воображаемое настоящее." },
+        { "en": "If I were you, I'd accept the offer.", "note": "Конструкция совета." }
+      ],
+      "pitfall": "В части с if во Second Conditional используется Past Simple, а не would."
+    },
+    {
+      "topicId": "cond-third-mixed",
+      "formula": "Third: If + had V3, would have V3  |  Mixed: If + had V3, would V1 (now)",
+      "points": [
+        "Third Conditional — сожаления и нереальные сценарии, полностью оставшиеся в прошлом.",
+        "Mixed Conditional — нереальное прошлое действие, которое влияет на текущую ситуацию (now, today)."
+      ],
+      "examples": [
+        { "en": "If I had known, I would have left earlier.", "note": "Всё в прошлом (Third)." },
+        { en: "If he had taken the earlier train, he would be here by now.", "note": "Прошлое → сейчас (Mixed)." }
+      ],
+      "pitfall": "Никогда не ставьте would have в придаточное с if."
+    },
+    {
+      "topicId": "syntax-inversion-cleft",
+      "formula": "Negative Adverb + Aux + Subject + Verb  |  It is/was X that...",
+      "points": [
+        "После отрицательных и ограничительных фраз в начале (Never, Seldom, Rarely, Hardly, Not only, Under no circumstances) глагол-помощник выносится перед подлежащим.",
+        "Cleft Sentences («It was X that...» / «What I need is...») выделяют ключевой элемент фразы."
+      ],
+      "examples": [
+        { "en": "Never have I seen such a clean UI.", "note": "Инверсия: have перед I." },
+        { "en": "It was the syntax error that broke the build.", "note": "Cleft-выделение причины." }
+      ],
+      "pitfall": "После «Not until / Only after» инверсия делается во второй (главной) части предложения."
+    }
+  ]
+}

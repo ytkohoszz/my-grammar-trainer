@@ -6,7 +6,8 @@ import {
 } from "./engine";
 import { renderExerciseCard } from "./exerciseCard";
 import type GrammarTrainerPlugin from "./main";
-import { getActivePack } from "./packLoader";
+import { getActivePack, getActiveRules } from "./packLoader";
+import { renderRulesOverlay } from "./rulesView";
 import { renderTopicsMap } from "./topicsMap";
 import { GrammarExercise, GrammarTopic, SessionMode } from "./types";
 
@@ -21,6 +22,8 @@ export class GrammarTrainerView extends ItemView {
   private mode: SessionMode = "smart";
   private selectedTopicId: string | undefined = undefined;
   private isMapOpen = false;
+  private isRulesOpen = false;
+  private activeRuleTopicId: string | undefined = undefined;
   private queue: GrammarExercise[] = [];
   private currentIndex = 0;
   private sessionCorrect = 0;
@@ -73,10 +76,11 @@ async onClose(): Promise<void> {
     this.mapHostEl = null;
   }
 
-  startSession(mode: SessionMode, topicId?: string): void {
+startSession(mode: SessionMode, topicId?: string): void {
     this.mode = mode;
     this.selectedTopicId = topicId;
     this.isMapOpen = false;
+    this.isRulesOpen = false;
 
     const { pack } = getActivePack(this.plugin.data);
     this.queue = buildSessionQueue(
@@ -102,9 +106,11 @@ private handleKeydown(e: KeyboardEvent): void {
       return;
     }
 
-    if (e.key === "Escape" && this.isMapOpen) {
+if (e.key === "Escape" && (this.isMapOpen || this.isRulesOpen)) {
       e.preventDefault();
-      this.toggleMap(false);
+      this.isMapOpen = false;
+      this.isRulesOpen = false;
+      this.syncOverlays();
       return;
     }
 
@@ -114,7 +120,13 @@ private handleKeydown(e: KeyboardEvent): void {
       return;
     }
 
-    if (this.isMapOpen) return;
+    if (e.key === "r" || e.key === "R") {
+      e.preventDefault();
+      this.toggleRules();
+      return;
+    }
+
+    if (this.isMapOpen || this.isRulesOpen) return;
 
     if (!this.currentAnswered && ["1", "2", "3", "4"].includes(e.key)) {
       const btn = this.stageEl?.querySelector<HTMLButtonElement>(
@@ -171,35 +183,70 @@ const mapBtn = island.createEl("button", {
     setIcon(mapBtn, "layout-grid");
     mapBtn.addEventListener("click", () => this.toggleMap());
 
+    const rulesBtn = island.createEl("button", {
+      cls: `mgt-island-btn mgt-icon-btn ${this.isRulesOpen ? "is-active" : ""}`,
+      attr: { "aria-label": "Grammar Rules" }
+    });
+    rulesBtn.type = "button";
+    setIcon(rulesBtn, "book-open");
+    rulesBtn.addEventListener("click", () => this.toggleRules());
+
     this.stageEl = this.rootEl.createDiv({ cls: "mgt-stage" });
     this.mapHostEl = this.rootEl.createDiv({ cls: "mgt-map-host" });
     this.renderCurrentStep();
-    this.syncMapOverlay();
+    this.syncOverlays();
   }
 
   private toggleMap(force?: boolean): void {
     this.isMapOpen = force ?? !this.isMapOpen;
-    this.syncMapOverlay();
+    if (this.isMapOpen) this.isRulesOpen = false;
+    this.syncOverlays();
   }
 
-  private syncMapOverlay(): void {
+  private toggleRules(force?: boolean, topicId?: string): void {
+    this.isRulesOpen = force ?? !this.isRulesOpen;
+    if (this.isRulesOpen) {
+      this.isMapOpen = false;
+      this.activeRuleTopicId = topicId;
+    }
+    this.syncOverlays();
+  }
+
+  private syncOverlays(): void {
     if (!this.mapHostEl) return;
-    if (!this.isMapOpen) {
-      this.mapHostEl.empty();
+
+    const { pack } = getActivePack(this.plugin.data);
+
+    if (this.isMapOpen) {
+      renderTopicsMap(
+        this.mapHostEl,
+        pack,
+        this.plugin.data.progress,
+        this.selectedTopicId,
+        {
+          onSelectTopic: (topicId) => this.startSession("topic", topicId),
+          onClose: () => this.toggleMap(false)
+        }
+      );
       return;
     }
 
-    const { pack } = getActivePack(this.plugin.data);
-    renderTopicsMap(
-      this.mapHostEl,
-      pack,
-      this.plugin.data.progress,
-      this.selectedTopicId,
-      {
-        onSelectTopic: (topicId) => this.startSession("topic", topicId),
-        onClose: () => this.toggleMap(false)
-      }
-    );
+    if (this.isRulesOpen) {
+      const rulesPack = getActiveRules(this.plugin.data);
+      renderRulesOverlay(
+        this.mapHostEl,
+        pack,
+        rulesPack,
+        this.activeRuleTopicId,
+        {
+          onClose: () => this.toggleRules(false),
+          onPracticeTopic: (topicId) => this.startSession("topic", topicId)
+        }
+      );
+      return;
+    }
+
+    this.mapHostEl.empty();
   }
 
   private renderCurrentStep(): void {
@@ -257,10 +304,11 @@ const mapBtn = island.createEl("button", {
         if (isCorrect) this.sessionCorrect++;
         void this.plugin.recordExerciseResult(exercise, isCorrect);
       },
-      onNext: () => {
+onNext: () => {
         this.currentIndex++;
         this.renderCurrentStep();
-      }
+      },
+      onOpenRule: (topicId) => this.toggleRules(true, topicId)
     });
   }
 

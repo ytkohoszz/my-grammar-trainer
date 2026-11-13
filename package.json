@@ -1,6 +1,6 @@
 {
     "name":  "my-grammar-trainer",
-    "version":  "1.0.2",
+    "version":  "1.0.3",
     "description":  "Minimalist adaptive English grammar trainer for Obsidian.",
     "main":  "main.js",
     "scripts":  {

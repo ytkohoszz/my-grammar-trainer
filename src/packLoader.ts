@@ -1,13 +1,18 @@
 import { requestUrl } from "obsidian";
 import { STARTER_PACK } from "./starterPack";
+import { STARTER_RULES } from "./starterRules";
 import {
   CachedPack,
+  CachedRulesPack,
   CefrLevel,
   ExerciseType,
   GrammarExercise,
   GrammarPack,
+  GrammarRule,
   GrammarTopic,
-  PluginData
+  PluginData,
+  RuleExample,
+  RulesPack
 } from "./types";
 
 const VALID_LEVELS: ReadonlySet<string> = new Set<CefrLevel>([
@@ -154,6 +159,71 @@ const sep = trimmedUrl.includes("?") ? "&" : "?";
   };
 }
 
+export function deriveRulesUrl(packUrl: string): string {
+  const trimmed = packUrl.trim();
+  if (!trimmed) return "";
+  if (trimmed.endsWith("grammar-pack.json")) {
+    return trimmed.slice(0, -"grammar-pack.json".length) + "rules-pack.json";
+  }
+  const slashIdx = trimmed.lastIndexOf("/");
+  return slashIdx >= 0 ? trimmed.slice(0, slashIdx + 1) + "rules-pack.json" : "";
+}
+
+export function validateRulesPack(raw: unknown): RulesPack {
+  if (!isRecord(raw) || !Array.isArray(raw.rules)) {
+    throw new Error("Rules pack must contain a 'rules' array");
+  }
+
+  const rules: GrammarRule[] = [];
+  for (const item of raw.rules) {
+    if (!isRecord(item) || typeof item.topicId !== "string") continue;
+    const examples: RuleExample[] = Array.isArray(item.examples)
+      ? item.examples
+          .filter((ex): ex is Record<string, unknown> => isRecord(ex) && typeof ex.en === "string")
+          .map((ex) => ({
+            en: ex.en as string,
+            note: typeof ex.note === "string" ? ex.note : undefined
+          }))
+      : [];
+
+    rules.push({
+      topicId: item.topicId.trim(),
+      formula: typeof item.formula === "string" ? item.formula.trim() : "",
+      points: parseStringArray(item.points) ?? [],
+      examples,
+      pitfall: typeof item.pitfall === "string" ? item.pitfall.trim() : undefined
+    });
+  }
+
+  return {
+    version: typeof raw.version === "string" ? raw.version : "1.0.0",
+    rules
+  };
+}
+
+export async function fetchAndCacheRulesPack(url: string): Promise<CachedRulesPack> {
+  const trimmedUrl = url.trim();
+  const sep = trimmedUrl.includes("?") ? "&" : "?";
+  const response = await requestUrl({
+    url: `${trimmedUrl}${sep}t=${Date.now()}`,
+    method: "GET",
+    headers: { "Cache-Control": "no-cache" }
+  });
+
+  if (response.status < 200 || response.status >= 300) {
+    throw new Error(`HTTP ${response.status} while fetching rules pack`);
+  }
+
+  const parsed: unknown = response.json ?? JSON.parse(response.text);
+  const pack = validateRulesPack(parsed);
+
+  return {
+    sourceUrl: trimmedUrl,
+    fetchedAt: Date.now(),
+    pack
+  };
+}
+
 export function getActivePack(data: PluginData): {
   pack: GrammarPack;
   isRemote: boolean;
@@ -171,4 +241,8 @@ export function getActivePack(data: PluginData): {
     isRemote: false,
     fetchedAt: null
   };
+}
+
+export function getActiveRules(data: PluginData): RulesPack {
+  return data.cachedRules?.pack ?? STARTER_RULES;
 }
