@@ -141,6 +141,41 @@
       "title": "Negative Inversion & Cleft Sentences",
       "level": "C1",
       "summary": "Инверсия после Never/Hardly/Not only и эмфатические конструкции It is... that."
+    },
+    {
+      "id": "wishes-unreal-past",
+      "category": "Conditionals",
+      "title": "Wish, If only & Would rather",
+      "level": "B2",
+      "summary": "Выражение сожалений о настоящем/прошлом и предпочтений через сдвиг времени назад."
+    },
+    {
+      "id": "subjunctive-formal",
+      "category": "Advanced Syntax",
+      "title": "Subjunctive & Mandative Clauses",
+      "level": "C1",
+      "summary": "Сослагательное наклонение после suggest, insist, vital, essential (bare infinitive)."
+    },
+    {
+      "id": "comparisons-gradable",
+      "category": "Modifiers",
+      "title": "Comparatives, Double Comparatives & Intensifiers",
+      "level": "B2",
+      "summary": "Усиление сравнений (far, much, slightly) и конструкции «the more..., the better...»."
+    },
+    {
+      "id": "linking-concession",
+      "category": "Discourse",
+      "title": "Contrast & Concession",
+      "level": "B2",
+      "summary": "Различие между although / even though (+ clause) и despite / in spite of (+ noun/gerund)."
+    },
+    {
+      "id": "ellipsis-substitution",
+      "category": "Advanced Syntax",
+      "title": "Ellipsis & Substitution",
+      "level": "C2",
+      "summary": "Избегание повторов в речи через do so, neither/so, one/ones и опущение инфинитива."
     }
   ],
   "exercises": [
@@ -1506,6 +1541,689 @@
       ],
       "answer": "It was the syntax error that broke the build.",
       "explanation": "Эмфатическая конструкция (Cleft Sentence) «It is/was X that...» выделяет ключевой элемент предложения."
+    },
+    {
+      "id": "wish-1",
+      "topicId": "wishes-unreal-past",
+      "type": "error",
+      "prompt": "I wish I can speak Japanese fluently.",
+      "errorWordIndex": 3,
+      "options": [
+        "could",
+        "will",
+        "might"
+      ],
+      "answer": "could",
+      "explanation": "После wish для сожалений о настоящем используется форма прошедшего времени (can → could)."
+    },
+    {
+      "id": "wish-2",
+      "topicId": "wishes-unreal-past",
+      "type": "cloze",
+      "prompt": "If only I ___ that backup before formatting the drive!",
+      "options": [
+        "had made",
+        "made",
+        "would make",
+        "make"
+      ],
+      "answer": "had made",
+      "explanation": "Сожаление о прошлом событии после wish / if only выражается через Past Perfect (had + V3)."
+    },
+    {
+      "id": "wish-3",
+      "topicId": "wishes-unreal-past",
+      "type": "input",
+      "prompt": "I'd rather you ___ (not / share) this link publicly.",
+      "hint": "would rather + someone + ?",
+      "answer": "didn't share",
+      "acceptedAnswers": [
+        "did not share"
+      ],
+      "explanation": "В конструкции «would rather + другое подлежащее» для настоящего/будущего используется Past Simple."
+    },
+    {
+      "id": "wish-4",
+      "topicId": "wishes-unreal-past",
+      "type": "cloze",
+      "prompt": "It's high time we ___ refactoring this legacy module.",
+      "options": [
+        "started",
+        "start",
+        "will start",
+        "have started"
+      ],
+      "answer": "started",
+      "explanation": "После «It's (high) time + subject» всегда ставится Past Simple, хотя речь идёт о настоящем."
+    },
+    {
+      "id": "subj-1",
+      "topicId": "subjunctive-formal",
+      "type": "error",
+      "prompt": "The board insisted that he resigns immediately.",
+      "errorWordIndex": 5,
+      "options": [
+        "resign",
+        "resigned",
+        "will resign"
+      ],
+      "answer": "resign",
+      "explanation": "После глаголов требования (insist, demand, recommend) в формальном стиле используется bare infinitive (без -s)."
+    },
+    {
+      "id": "subj-2",
+      "topicId": "subjunctive-formal",
+      "type": "cloze",
+      "prompt": "It is essential that every team member ___ notified in advance.",
+      "options": [
+        "be",
+        "is",
+        "was",
+        "will be"
+      ],
+      "answer": "be",
+      "explanation": "В безличном сослагательном наклонении (It is essential/vital that...) глагол be остаётся в начальной форме."
+    },
+    {
+      "id": "subj-3",
+      "topicId": "subjunctive-formal",
+      "type": "input",
+      "prompt": "The doctor recommended that she ___ (take) a week off.",
+      "hint": "mandative subjunctive",
+      "answer": "take",
+      "acceptedAnswers": [
+        "should take"
+      ],
+      "explanation": "Mandative Subjunctive: начальная форма глагола (take) либо конструкция should + V1."
+    },
+    {
+      "id": "subj-4",
+      "topicId": "subjunctive-formal",
+      "type": "cloze",
+      "prompt": "___ it not been for your help, we would have missed the deadline.",
+      "options": [
+        "Had",
+        "Were",
+        "If",
+        "Should"
+      ],
+      "answer": "Had",
+      "explanation": "Инверсия в Third Conditional без союза if: Had + подлежащее + (not) + V3."
+    },
+    {
+      "id": "comp-1",
+      "topicId": "comparisons-gradable",
+      "type": "error",
+      "prompt": "This monitor is much more sharper than my old one.",
+      "errorWordIndex": 4,
+      "options": [
+        "(remove 'more')",
+        "very",
+        "most"
+      ],
+      "answer": "(remove 'more')",
+      "explanation": "Нельзя совмещать аналитическую (more) и синтетическую (-er) формы сравнения."
+    },
+    {
+      "id": "comp-2",
+      "topicId": "comparisons-gradable",
+      "type": "cloze",
+      "prompt": "The earlier we start, ___ we'll finish.",
+      "options": [
+        "the sooner",
+        "sooner",
+        "the soonest",
+        "more soon"
+      ],
+      "answer": "the sooner",
+      "explanation": "Двойное сравнение строится строго по схеме «The + comparative..., the + comparative...»."
+    },
+    {
+      "id": "comp-3",
+      "topicId": "comparisons-gradable",
+      "type": "input",
+      "prompt": "This task is ___ (by far / complex) one in the entire test.",
+      "hint": "superlative + by far",
+      "answer": "by far the most complex",
+      "explanation": "Выражение «by far» усиливает превосходную степень прилагательного (the most complex)."
+    },
+    {
+      "id": "comp-4",
+      "topicId": "comparisons-gradable",
+      "type": "cloze",
+      "prompt": "He speaks twice as ___ as anyone else in the room.",
+      "options": [
+        "fast",
+        "faster",
+        "fastest",
+        "more fast"
+      ],
+      "answer": "fast",
+      "explanation": "В конструкции «twice / half as ... as» используется базовая степень прилагательного/наречия."
+    },
+    {
+      "id": "link-1",
+      "topicId": "linking-concession",
+      "type": "error",
+      "prompt": "Although the heavy rain, they continued the match.",
+      "errorWordIndex": 0,
+      "options": [
+        "Despite",
+        "Even",
+        "However"
+      ],
+      "answer": "Despite",
+      "explanation": "Although требует целого предложения (подлежащее + сказуемое), а перед существительным ставится Despite или In spite of."
+    },
+    {
+      "id": "link-2",
+      "topicId": "linking-concession",
+      "type": "cloze",
+      "prompt": "___ having very little experience, she handled the interview brilliantly.",
+      "options": [
+        "In spite of",
+        "Although",
+        "Even though",
+        "Whereas"
+      ],
+      "answer": "In spite of",
+      "explanation": "Перед герундием (having) используются предложные связки Despite или In spite of."
+    },
+    {
+      "id": "link-3",
+      "topicId": "linking-concession",
+      "type": "transform",
+      "prompt": "Although he was exhausted, he kept working.",
+      "hint": "Use: Despite...",
+      "tokens": [
+        "Despite",
+        "being",
+        "exhausted,",
+        "he",
+        "kept",
+        "working."
+      ],
+      "answer": "Despite being exhausted, he kept working.",
+      "explanation": "При одном подлежащем придаточное с although можно заменить на Despite + V-ing."
+    },
+    {
+      "id": "link-4",
+      "topicId": "linking-concession",
+      "type": "cloze",
+      "prompt": "The UI looks minimal; ___, it supports deep customization.",
+      "options": [
+        "nevertheless",
+        "despite",
+        "although",
+        "whereas"
+      ],
+      "answer": "nevertheless",
+      "explanation": "Для связки двух самостоятельных предложений после точки с запятой используется наречие nevertheless / however."
+    },
+    {
+      "id": "ell-1",
+      "topicId": "ellipsis-substitution",
+      "type": "error",
+      "prompt": "She asked me to help, and I did it so.",
+      "errorWordIndex": 8,
+      "options": [
+        "(remove 'it')",
+        "that",
+        "this"
+      ],
+      "answer": "(remove 'it')",
+      "explanation": "Глагольная замена звучит как «did so» (без лишнего it)."
+    },
+    {
+      "id": "ell-2",
+      "topicId": "ellipsis-substitution",
+      "type": "cloze",
+      "prompt": "Will the build succeed? — I hope ___.",
+      "options": [
+        "so",
+        "yes",
+        "it",
+        "that"
+      ],
+      "answer": "so",
+      "explanation": "После глаголов hope, think, believe, suppose утвердительное замещение придаточного — это «so»."
+    },
+    {
+      "id": "ell-3",
+      "topicId": "ellipsis-substitution",
+      "type": "cloze",
+      "prompt": "I didn't like the ending, and ___ did my friends.",
+      "options": [
+        "neither",
+        "so",
+        "either",
+        "too"
+      ],
+      "answer": "neither",
+      "explanation": "Согласие с отрицательным утверждением строится через «neither/nor + вспомогательный глагол + подлежащее»."
+    },
+    {
+      "id": "ell-4",
+      "topicId": "ellipsis-substitution",
+      "type": "input",
+      "prompt": "I haven't read that chapter yet, but I plan ___ (to).",
+      "hint": "ellipsis after plan",
+      "answer": "to",
+      "explanation": "В английском можно опустить повторяющийся инфинитив, оставив только частицу to (I plan to)."
+    },
+    {
+      "id": "ps-6",
+      "topicId": "tenses-present-simple-vs-cont",
+      "type": "error",
+      "prompt": "This jacket is belonging to my brother.",
+      "errorWordIndex": 2,
+      "options": [
+        "belongs",
+        "belonged",
+        "has belonged"
+      ],
+      "answer": "belongs",
+      "explanation": "Belong — стативный глагол принадлежности, он не употребляется в Continuous."
+    },
+    {
+      "id": "ps-7",
+      "topicId": "tenses-present-simple-vs-cont",
+      "type": "cloze",
+      "prompt": "Why ___ you always leaving your wet towel on the bed?",
+      "options": [
+        "are",
+        "do",
+        "have",
+        "were"
+      ],
+      "answer": "are",
+      "explanation": "Present Continuous со словом always выражает раздражение по поводу повторяющейся привычки."
+    },
+    {
+      "id": "pp-6",
+      "topicId": "tenses-pp-vs-past",
+      "type": "error",
+      "prompt": "I have been living here since five years.",
+      "errorWordIndex": 5,
+      "options": [
+        "for",
+        "from",
+        "during"
+      ],
+      "answer": "for",
+      "explanation": "Для длительности («пять лет») используется for, а since — только для точки начала отсчёта."
+    },
+    {
+      "id": "pp-7",
+      "topicId": "tenses-pp-vs-past",
+      "type": "cloze",
+      "prompt": "Where have you ___? I've been calling you for twenty minutes.",
+      "options": [
+        "been",
+        "gone",
+        "went",
+        "being"
+      ],
+      "answer": "been",
+      "explanation": "Have been означает «побывал и вернулся», тогда как have gone — «ушёл и всё ещё там»."
+    },
+    {
+      "id": "pperf-6",
+      "topicId": "tenses-past-perfect",
+      "type": "cloze",
+      "prompt": "No sooner ___ the door than the alarm went off.",
+      "options": [
+        "had he opened",
+        "he opened",
+        "did he opened",
+        "has he opened"
+      ],
+      "answer": "had he opened",
+      "explanation": "Конструкция «No sooner had + subject + V3 than...» объединяет Past Perfect и инверсию."
+    },
+    {
+      "id": "fut-6",
+      "topicId": "tenses-future-forms",
+      "type": "cloze",
+      "prompt": "We ___ to Berlin next Tuesday — the tickets are already booked.",
+      "options": [
+        "are flying",
+        "will fly",
+        "fly",
+        "will have flown"
+      ],
+      "answer": "are flying",
+      "explanation": "Твёрдые личные договорённости на ближайшее будущее с билетами/бронью — Present Continuous."
+    },
+    {
+      "id": "c1-6",
+      "topicId": "cond-zero-first",
+      "type": "cloze",
+      "prompt": "I'll lend you the book on condition that you ___ it by Monday.",
+      "options": [
+        "return",
+        "will return",
+        "returned",
+        "would return"
+      ],
+      "answer": "return",
+      "explanation": "После союзов условия (on condition that, provided that) используется Present Simple вместо will."
+    },
+    {
+      "id": "c2-6",
+      "topicId": "cond-second",
+      "type": "cloze",
+      "prompt": "Suppose you ___ a million dollars tomorrow — what would you build?",
+      "options": [
+        "inherited",
+        "inherit",
+        "would inherit",
+        "had inherited"
+      ],
+      "answer": "inherited",
+      "explanation": "Suppose / Imagine в значении «предположим, что» работают как if во Second Conditional (Past Simple)."
+    },
+    {
+      "id": "c3-6",
+      "topicId": "cond-third-mixed",
+      "type": "cloze",
+      "prompt": "If she weren't so stubborn, she ___ apologized yesterday.",
+      "options": [
+        "would have",
+        "would",
+        "will have",
+        "had"
+      ],
+      "answer": "would have",
+      "explanation": "Обратный Mixed Conditional: постоянная черта характера сейчас (weren't) объясняет действие в прошлом (would have apologized)."
+    },
+    {
+      "id": "mod-6",
+      "topicId": "modals-obligation",
+      "type": "error",
+      "prompt": "You should to back up your vault regularly.",
+      "errorWordIndex": 2,
+      "options": [
+        "(remove 'to')",
+        "for",
+        "of"
+      ],
+      "answer": "(remove 'to')",
+      "explanation": "После модального глагола should частица to не ставится."
+    },
+    {
+      "id": "modp-6",
+      "topicId": "modals-past-deduction",
+      "type": "cloze",
+      "prompt": "You ___ bought so much milk — we already had three cartons.",
+      "options": [
+        "needn't have",
+        "didn't need",
+        "mustn't have",
+        "can't have"
+      ],
+      "answer": "needn't have",
+      "explanation": "Needn't have + V3 означает, что действие было совершено, но в нём не было необходимости."
+    },
+    {
+      "id": "art-6",
+      "topicId": "articles-definite-indefinite",
+      "type": "error",
+      "prompt": "The happiness is something everyone looks for.",
+      "errorWordIndex": 0,
+      "options": [
+        "(remove 'The')",
+        "A",
+        "An"
+      ],
+      "answer": "(remove 'The')",
+      "explanation": "Абстрактные существительные в общем смысле используются без артикля."
+    },
+    {
+      "id": "art-7",
+      "topicId": "articles-definite-indefinite",
+      "type": "cloze",
+      "prompt": "___ rich often have very different priorities from ___ poor.",
+      "options": [
+        "The / the",
+        "— / —",
+        "A / a",
+        "The / —"
+      ],
+      "answer": "The / the",
+      "explanation": "Артикль the + прилагательное (the rich, the poor, the elderly) обозначает целую группу людей."
+    },
+    {
+      "id": "quant-6",
+      "topicId": "quantifiers-count-uncount",
+      "type": "cloze",
+      "prompt": "___ of the two solutions seems optimal at this stage.",
+      "options": [
+        "Neither",
+        "None",
+        "No",
+        "Both"
+      ],
+      "answer": "Neither",
+      "explanation": "Для двух вариантов в отрицании используется neither (+ глагол в единственном числе), для трёх и более — none."
+    },
+    {
+      "id": "quant-7",
+      "topicId": "quantifiers-count-uncount",
+      "type": "input",
+      "prompt": "The police ___ (be) investigating the incident right now.",
+      "hint": "police is plural",
+      "answer": "are",
+      "explanation": "Слово police в английском всегда согласуется с глаголом во множественном числе (are)."
+    },
+    {
+      "id": "prep-6",
+      "topicId": "prep-time-place",
+      "type": "cloze",
+      "prompt": "He'll be back ___ a couple of minutes.",
+      "options": [
+        "in",
+        "at",
+        "on",
+        "after"
+      ],
+      "answer": "in",
+      "explanation": "Значение «через (какое-то время от настоящего момента)» передаётся предлогом in."
+    },
+    {
+      "id": "prep-7",
+      "topicId": "prep-time-place",
+      "type": "input",
+      "prompt": "The file is ___ the top of the folder list.",
+      "hint": "preposition",
+      "answer": "at",
+      "explanation": "Устойчивое сочетание: at the top / at the bottom of something."
+    },
+    {
+      "id": "dprep-6",
+      "topicId": "prep-dependent",
+      "type": "cloze",
+      "prompt": "The delay was caused by factors ___ our control.",
+      "options": [
+        "beyond",
+        "over",
+        "above",
+        "without"
+      ],
+      "answer": "beyond",
+      "explanation": "Устойчивая идиома: beyond our control («вне нашего контроля»)."
+    },
+    {
+      "id": "dprep-7",
+      "topicId": "prep-dependent",
+      "type": "input",
+      "prompt": "She insisted ___ paying for the coffee.",
+      "hint": "insist + ?",
+      "answer": "on",
+      "explanation": "После глагола insist перед герундием или существительным ставится предлог on."
+    },
+    {
+      "id": "pas-6",
+      "topicId": "passive-tenses",
+      "type": "cloze",
+      "prompt": "He hates ___ waiting in long lines.",
+      "options": [
+        "being kept",
+        "keeping",
+        "to keeping",
+        "been kept"
+      ],
+      "answer": "being kept",
+      "explanation": "Пассивный герундий после hate: being + V3 (being kept waiting)."
+    },
+    {
+      "id": "pas-7",
+      "topicId": "passive-tenses",
+      "type": "transform",
+      "prompt": "People say that he is a brilliant architect.",
+      "hint": "Impersonal passive: He is said...",
+      "tokens": [
+        "He",
+        "is",
+        "said",
+        "to",
+        "be",
+        "a",
+        "brilliant",
+        "architect."
+      ],
+      "answer": "He is said to be a brilliant architect.",
+      "explanation": "Личный пассив с глаголами мнения (say, think, believe): Subject + is said + to V."
+    },
+    {
+      "id": "caus-6",
+      "topicId": "causative-have-get",
+      "type": "cloze",
+      "prompt": "We need to get the server ___ before Monday.",
+      "options": [
+        "upgraded",
+        "upgrade",
+        "to upgrade",
+        "upgrading"
+      ],
+      "answer": "upgraded",
+      "explanation": "В каузативе get + объект + V3 всегда ставится причастие прошедшего времени."
+    },
+    {
+      "id": "ger-6",
+      "topicId": "gerund-infinitive",
+      "type": "error",
+      "prompt": "I'm used to wake up at 6 AM.",
+      "errorWordIndex": 3,
+      "options": [
+        "waking",
+        "woke",
+        "woken"
+      ],
+      "answer": "waking",
+      "explanation": "В конструкции «be used to» («привыкнуть к») to — это предлог, поэтому далее идёт герундий (waking)."
+    },
+    {
+      "id": "ger-7",
+      "topicId": "gerund-infinitive",
+      "type": "cloze",
+      "prompt": "The screen needs ___; it's covered in fingerprints.",
+      "options": [
+        "cleaning",
+        "to clean",
+        "clean",
+        "cleaned"
+      ],
+      "answer": "cleaning",
+      "explanation": "После need/want/require в пассивном значении («нуждается в чистке») используется герундий (V-ing) или to be V3."
+    },
+    {
+      "id": "rel-6",
+      "topicId": "clauses-relative",
+      "type": "cloze",
+      "prompt": "He failed the test, ___ surprised everyone.",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "who"
+      ],
+      "answer": "which",
+      "explanation": "Когда придаточное относится ко всему предыдущему факту целиком (после запятой), используется только which."
+    },
+    {
+      "id": "rel-7",
+      "topicId": "clauses-relative",
+      "type": "input",
+      "prompt": "The hotel ___ we stayed was right by the station.",
+      "hint": "preposition + which (or where)",
+      "answer": "where",
+      "acceptedAnswers": [
+        "in which",
+        "at which"
+      ],
+      "explanation": "Для места используется where либо предлог + which (in which / at which)."
+    },
+    {
+      "id": "part-6",
+      "topicId": "clauses-participle",
+      "type": "cloze",
+      "prompt": "Not ___ what to say, he just nodded.",
+      "options": [
+        "knowing",
+        "known",
+        "to know",
+        "knew"
+      ],
+      "answer": "knowing",
+      "explanation": "Отрицательный причастный оборот строится с помощью Not + V-ing (Not knowing)."
+    },
+    {
+      "id": "rep-6",
+      "topicId": "reported-speech",
+      "type": "cloze",
+      "prompt": "She accused him ___ leaking the prototype.",
+      "options": [
+        "of",
+        "for",
+        "on",
+        "about"
+      ],
+      "answer": "of",
+      "explanation": "Устойчивая модель глагола: accuse someone of doing something."
+    },
+    {
+      "id": "rep-7",
+      "topicId": "reported-speech",
+      "type": "transform",
+      "prompt": "\"Don't touch that cable,\" he told me.",
+      "hint": "Reported: He warned me...",
+      "tokens": [
+        "He",
+        "warned",
+        "me",
+        "not",
+        "to",
+        "touch",
+        "that",
+        "cable."
+      ],
+      "answer": "He warned me not to touch that cable.",
+      "explanation": "Косвенная просьба/предупреждение с отрицанием: warned someone not to + V1."
+    },
+    {
+      "id": "inv-6",
+      "topicId": "syntax-inversion-cleft",
+      "type": "cloze",
+      "prompt": "Only after restarting Obsidian ___ the new layout appear.",
+      "options": [
+        "did",
+        "was",
+        "had",
+        "does"
+      ],
+      "answer": "did",
+      "explanation": "Инверсия после «Only after / Only when...» происходит не в первой части, а в главном предложении (did ... appear)."
     }
   ]
 }
