@@ -281,6 +281,41 @@
       "title": "So / Such Inversion & Prepositional Fronting",
       "level": "C1",
       "summary": "Инверсия с конструкциями «So + adj + verb...», «Such was...» и выносом предложных фраз."
+    },
+    {
+      "id": "participle-adjectives",
+      "category": "Modifiers",
+      "title": "-ed vs -ing Adjectives & Adjective Order",
+      "level": "B1",
+      "summary": "Чувства человека (-ed) против характеристики источника (-ing), а также естественный порядок прилагательных."
+    },
+    {
+      "id": "modals-ability-permission",
+      "category": "Modals",
+      "title": "Can, Could, Be able to & Managed to",
+      "level": "B1",
+      "summary": "Общая способность в прошлом (could) против конкретного успешного результата в сложной ситуации (managed to / was able to)."
+    },
+    {
+      "id": "future-in-the-past",
+      "category": "Tenses",
+      "title": "Future in the Past",
+      "level": "B2",
+      "summary": "Несостоявшиеся или прошлые планы относительно будущего: was going to, would, was about to."
+    },
+    {
+      "id": "clauses-nom-wh",
+      "category": "Clauses",
+      "title": "Nominal Clauses (What, Whatever, Whoever)",
+      "level": "B2",
+      "summary": "Придаточные-подлежащие и дополнения: отличие what от that, а также whatever / whoever / however."
+    },
+    {
+      "id": "negation-scope-double",
+      "category": "Syntax",
+      "title": "Negation & Negative Polarity",
+      "level": "B2",
+      "summary": "Запрет двойного отрицания (not... anything), слова с отрицательным значением (barely, hardly, seldom) и neither/nor."
     }
   ],
   "exercises": [
@@ -4452,6 +4487,681 @@
       ],
       "answer": "whom",
       "explanation": "Сразу после предлога (with, to, for, about) для людей используется только объектная форма whom."
+    },
+    {
+      "id": "padj-1",
+      "topicId": "participle-adjectives",
+      "type": "error",
+      "prompt": "I was very boring during the two-hour lecture.",
+      "errorWordIndex": 3,
+      "options": [
+        "bored",
+        "bore",
+        "boredom"
+      ],
+      "answer": "bored",
+      "explanation": "Прилагательное на -ed (bored) описывает внутреннее чувство человека, а на -ing (boring) — источник скуки."
+    },
+    {
+      "id": "padj-2",
+      "topicId": "participle-adjectives",
+      "type": "cloze",
+      "prompt": "That's the most ___ news I've heard all year!",
+      "options": [
+        "exciting",
+        "excited",
+        "excite",
+        "excitement"
+      ],
+      "answer": "exciting",
+      "explanation": "Новости сами вызывают эмоцию (источник), поэтому используется форма на -ing (exciting)."
+    },
+    {
+      "id": "padj-3",
+      "topicId": "participle-adjectives",
+      "type": "cloze",
+      "prompt": "She bought a ___ desk for her studio.",
+      "options": [
+        "minimalist black wooden",
+        "wooden black minimalist",
+        "black minimalist wooden",
+        "wooden minimalist black"
+      ],
+      "answer": "minimalist black wooden",
+      "explanation": "Порядок прилагательных: мнение/стиль (minimalist) → цвет (black) → материал (wooden)."
+    },
+    {
+      "id": "padj-4",
+      "topicId": "participle-adjectives",
+      "type": "input",
+      "prompt": "I'm really ___ (tire) after five hours of refactoring.",
+      "hint": "person's feeling",
+      "answer": "tired",
+      "explanation": "Состояние человека («уставший») передаётся формой на -ed (tired)."
+    },
+    {
+      "id": "abil-1",
+      "topicId": "modals-ability-permission",
+      "type": "error",
+      "prompt": "After trying three times, he could solve the puzzle.",
+      "errorWordIndex": 5,
+      "options": [
+        "managed to",
+        "can",
+        "may"
+      ],
+      "answer": "managed to",
+      "explanation": "Для разового успешного преодоления трудности в прошлом используется «managed to» или «was able to», а не could."
+    },
+    {
+      "id": "abil-2",
+      "topicId": "modals-ability-permission",
+      "type": "cloze",
+      "prompt": "By the age of six, Mozart ___ already compose music.",
+      "options": [
+        "could",
+        "managed to",
+        "can",
+        "is able to"
+      ],
+      "answer": "could",
+      "explanation": "Общая постоянная способность в прошлом («умел») выражается через could."
+    },
+    {
+      "id": "abil-3",
+      "topicId": "modals-ability-permission",
+      "type": "cloze",
+      "prompt": "Fortunately, the firefighters ___ rescue everyone from the building.",
+      "options": [
+        "were able to",
+        "could",
+        "can",
+        "might"
+      ],
+      "answer": "were able to",
+      "explanation": "Конкретное успешное действие в прошлом в утвердительном предложении — were able to / managed to."
+    },
+    {
+      "id": "abil-4",
+      "topicId": "modals-ability-permission",
+      "type": "input",
+      "prompt": "I hope I'll ___ (be able to) join the call tomorrow.",
+      "hint": "future of can",
+      "answer": "be able to",
+      "explanation": "У модального глагола can нет формы будущего времени с will; используется «will be able to»."
+    },
+    {
+      "id": "fitp-1",
+      "topicId": "future-in-the-past",
+      "type": "error",
+      "prompt": "She said she is going to call me later.",
+      "errorWordIndex": 3,
+      "options": [
+        "was",
+        "were",
+        "will be"
+      ],
+      "answer": "was",
+      "explanation": "В согласовании времён после said (прошлое) «is going to» переходит в «was going to»."
+    },
+    {
+      "id": "fitp-2",
+      "topicId": "future-in-the-past",
+      "type": "cloze",
+      "prompt": "I ___ leave the office when my laptop suddenly froze.",
+      "options": [
+        "was just about to",
+        "am about to",
+        "will",
+        "would have"
+      ],
+      "answer": "was just about to",
+      "explanation": "Действие, которое должно было вот-вот случиться в прошлом, но прервалось — was about to + V1."
+    },
+    {
+      "id": "fitp-3",
+      "topicId": "future-in-the-past",
+      "type": "cloze",
+      "prompt": "Nobody knew that this small script ___ become so popular.",
+      "options": [
+        "would",
+        "will",
+        "is going to",
+        "can"
+      ],
+      "answer": "would",
+      "explanation": "Будущее с точки зрения прошлого в повествовании выражается через would."
+    },
+    {
+      "id": "fitp-4",
+      "topicId": "future-in-the-past",
+      "type": "input",
+      "prompt": "We ___ (go) to visit Rome, but the flight got canceled.",
+      "hint": "unfulfilled past plan",
+      "answer": "were going",
+      "explanation": "Несостоявшийся план в прошлом передаётся через «was/were going to + V1»."
+    },
+    {
+      "id": "nom-1",
+      "topicId": "clauses-nom-wh",
+      "type": "error",
+      "prompt": "Tell me that you really want.",
+      "errorWordIndex": 2,
+      "options": [
+        "what",
+        "which",
+        "who"
+      ],
+      "answer": "what",
+      "explanation": "В значении «то, что» (the thing that) используется союзное слово what, а не that."
+    },
+    {
+      "id": "nom-2",
+      "topicId": "clauses-nom-wh",
+      "type": "cloze",
+      "prompt": "___ you decide to do, make sure you test it first.",
+      "options": [
+        "Whatever",
+        "That",
+        "What",
+        "Which"
+      ],
+      "answer": "Whatever",
+      "explanation": "Whatever означает «что бы ни» (любой выбор)."
+    },
+    {
+      "id": "nom-3",
+      "topicId": "clauses-nom-wh",
+      "type": "cloze",
+      "prompt": "___ broke the build should revert the last commit.",
+      "options": [
+        "Whoever",
+        "Whomever",
+        "Whatever",
+        "Which"
+      ],
+      "answer": "Whoever",
+      "explanation": "В роли подлежащего («кто бы ни...») используется именительная форма Whoever."
+    },
+    {
+      "id": "nom-4",
+      "topicId": "clauses-nom-wh",
+      "type": "input",
+      "prompt": "___ (What / That) surprised me most was how fast it rendered.",
+      "hint": "the thing that surprised me",
+      "answer": "What",
+      "explanation": "What = «то, что»; в начале предложения оно заменяет целое подлежащее («То, что меня удивило...»)."
+    },
+    {
+      "id": "neg-1",
+      "topicId": "negation-scope-double",
+      "type": "error",
+      "prompt": "I didn't see nobody at the office.",
+      "errorWordIndex": 3,
+      "options": [
+        "anybody",
+        "someone",
+        "everybody"
+      ],
+      "answer": "anybody",
+      "explanation": "В стандартном английском в одном простом предложении может быть только одно отрицание (didn't see anybody)."
+    },
+    {
+      "id": "neg-2",
+      "topicId": "negation-scope-double",
+      "type": "cloze",
+      "prompt": "She could ___ believe her eyes when the prototype worked.",
+      "options": [
+        "hardly",
+        "not hardly",
+        "never hardly",
+        "almost not"
+      ],
+      "answer": "hardly",
+      "explanation": "Hardly/barely/scarcely уже несут отрицательное значение и не сочетаются с not."
+    },
+    {
+      "id": "neg-3",
+      "topicId": "negation-scope-double",
+      "type": "cloze",
+      "prompt": "There was ___ milk left in the fridge.",
+      "options": [
+        "hardly any",
+        "hardly no",
+        "not no",
+        "almost none any"
+      ],
+      "answer": "hardly any",
+      "explanation": "После отрицательных наречий (hardly, barely, scarcely) используются слова ряда any (any, anything, anywhere)."
+    },
+    {
+      "id": "neg-4",
+      "topicId": "negation-scope-double",
+      "type": "input",
+      "prompt": "I don't think he ___ (have) finished yet.",
+      "hint": "transferred negation",
+      "answer": "has",
+      "explanation": "Так как отрицание уже вынесено в «I don't think...», вторая часть остаётся утвердительной (he has finished)."
+    },
+    {
+      "id": "noun-5",
+      "topicId": "nouns-uncountable-plural",
+      "type": "error",
+      "prompt": "The furnitures in this room are brand new.",
+      "errorWordIndex": 1,
+      "options": [
+        "furniture",
+        "pieces",
+        "equipments"
+      ],
+      "answer": "furniture",
+      "explanation": "Furniture — неисчисляемое существительное без окончания -s."
+    },
+    {
+      "id": "noun-6",
+      "topicId": "nouns-uncountable-plural",
+      "type": "cloze",
+      "prompt": "His trousers ___ soaked from the rain.",
+      "options": [
+        "were",
+        "was",
+        "is",
+        "has been"
+      ],
+      "answer": "were",
+      "explanation": "Trousers («брюки») — существительное только множественного числа, требует глагол were."
+    },
+    {
+      "id": "det-5",
+      "topicId": "determiners-both-all-every",
+      "type": "error",
+      "prompt": "Neither of the two answers are correct.",
+      "errorWordIndex": 5,
+      "options": [
+        "is",
+        "were",
+        "have"
+      ],
+      "answer": "is",
+      "explanation": "В формальном стиле после «Neither of + plural noun» сказуемое ставится в единственном числе (is)."
+    },
+    {
+      "id": "det-6",
+      "topicId": "determiners-both-all-every",
+      "type": "cloze",
+      "prompt": "___ student in the group received a personal link.",
+      "options": [
+        "Every",
+        "All",
+        "Both",
+        "Several"
+      ],
+      "answer": "Every",
+      "explanation": "Перед существительным в единственном числе (student) используется Every / Each, но не All."
+    },
+    {
+      "id": "mkdo-5",
+      "topicId": "collocations-make-do",
+      "type": "error",
+      "prompt": "She made a lot of research before buying.",
+      "errorWordIndex": 1,
+      "options": [
+        "did",
+        "took",
+        "had"
+      ],
+      "answer": "did",
+      "explanation": "Устойчивая коллокация со словом research — do research (а не make)."
+    },
+    {
+      "id": "mkdo-6",
+      "topicId": "collocations-make-do",
+      "type": "cloze",
+      "prompt": "Please ___ sure all files are saved in UTF-8 without BOM.",
+      "options": [
+        "make",
+        "do",
+        "take",
+        "keep"
+      ],
+      "answer": "make",
+      "explanation": "Устойчивое выражение: make sure («убедиться»)."
+    },
+    {
+      "id": "time-5",
+      "topicId": "clauses-time-contrast",
+      "type": "error",
+      "prompt": "We won't start until everyone will arrive.",
+      "errorWordIndex": 5,
+      "options": [
+        "(remove 'will')",
+        "shall",
+        "would"
+      ],
+      "answer": "(remove 'will')",
+      "explanation": "После союза until будущее время выражается формой Present Simple (arrives)."
+    },
+    {
+      "id": "time-6",
+      "topicId": "clauses-time-contrast",
+      "type": "cloze",
+      "prompt": "___ we got to the venue, the keynote had already begun.",
+      "options": [
+        "By the time",
+        "Until",
+        "During",
+        "While"
+      ],
+      "answer": "By the time",
+      "explanation": "«К тому моменту, как...» — устойчивый союз времени By the time."
+    },
+    {
+      "id": "soinv-5",
+      "topicId": "inversion-so-such",
+      "type": "error",
+      "prompt": "So clear were his notes that everyone understand them.",
+      "errorWordIndex": 7,
+      "options": [
+        "understood",
+        "understanding",
+        "to understand"
+      ],
+      "answer": "understood",
+      "explanation": "Обе части предложения в прошлом (were → understood)."
+    },
+    {
+      "id": "soinv-6",
+      "topicId": "inversion-so-such",
+      "type": "cloze",
+      "prompt": "Down the stairs ___ the excited kids.",
+      "options": [
+        "ran",
+        "did run",
+        "running",
+        "were run"
+      ],
+      "answer": "ran",
+      "explanation": "Локативное вынесение «Down the stairs» с глаголом движения (ran) ставит подлежащее после глагола без do."
+    },
+    {
+      "id": "agr-7",
+      "topicId": "agreement-subject-verb",
+      "type": "cloze",
+      "prompt": "Everyone in the room ___ waiting for the demo.",
+      "options": [
+        "was",
+        "were",
+        "are",
+        "have been"
+      ],
+      "answer": "was",
+      "explanation": "Неопределённые местоимения everyone, someone, nobody всегда согласуются с глаголом в ед. числе."
+    },
+    {
+      "id": "perm-7",
+      "topicId": "verbs-causative-perception",
+      "type": "cloze",
+      "prompt": "I heard someone ___ on the door twice.",
+      "options": [
+        "knock",
+        "to knock",
+        "knocked",
+        "to knocking"
+      ],
+      "answer": "knock",
+      "explanation": "После hear для законченного короткого действия целиком используется голый инфинитив (knock)."
+    },
+    {
+      "id": "hab-7",
+      "topicId": "habits-used-to-would",
+      "type": "cloze",
+      "prompt": "He's been in London for a year, so he ___ the weather now.",
+      "options": [
+        "is used to",
+        "used to",
+        "use to",
+        "would"
+      ],
+      "answer": "is used to",
+      "explanation": "«Уже привык к чему-то» (состояние в настоящем) — be used to + noun/V-ing."
+    },
+    {
+      "id": "purp-7",
+      "topicId": "clauses-purpose-reason",
+      "type": "cloze",
+      "prompt": "___ the heavy traffic, we arrived right on schedule.",
+      "options": [
+        "Despite",
+        "Due to",
+        "Because of",
+        "Since"
+      ],
+      "answer": "Despite",
+      "explanation": "По смыслу (пробки → приехали вовремя) здесь контраст, а не причина: Despite."
+    },
+    {
+      "id": "pinf-7",
+      "topicId": "infinitive-perfect-passive",
+      "type": "cloze",
+      "prompt": "I would love ___ that exhibition, but I was out of town.",
+      "options": [
+        "to have seen",
+        "to see",
+        "seeing",
+        "have seen"
+      ],
+      "answer": "to have seen",
+      "explanation": "Несбывшееся желание о прошлом после would love / would like передаётся через to have + V3."
+    },
+    {
+      "id": "phr-9",
+      "topicId": "phrasal-verbs-separable",
+      "type": "cloze",
+      "prompt": "The engineers are looking ___ the root cause of the crash.",
+      "options": [
+        "into",
+        "after",
+        "up",
+        "away"
+      ],
+      "answer": "into",
+      "explanation": "Look into something — «тщательно исследовать / разбираться в проблеме»."
+    },
+    {
+      "id": "adj-9",
+      "topicId": "modifiers-adj-vs-adv",
+      "type": "cloze",
+      "prompt": "He works ___ to finish his Master's thesis on time.",
+      "options": [
+        "hard",
+        "hardly",
+        "harder than",
+        "hardness"
+      ],
+      "answer": "hard",
+      "explanation": "Hard — наречие «усердно», а hardly означает «едва ли»."
+    },
+    {
+      "id": "pron-8",
+      "topicId": "pronouns-reflexive-reciprocal",
+      "type": "cloze",
+      "prompt": "Did you enjoy ___ at the cinema yesterday?",
+      "options": [
+        "yourselves",
+        "you",
+        "your",
+        "each other"
+      ],
+      "answer": "yourselves",
+      "explanation": "Устойчивая возвратная конструкция: enjoy oneself («хорошо провести время»)."
+    },
+    {
+      "id": "qtag-9",
+      "topicId": "questions-tags-indirect",
+      "type": "cloze",
+      "prompt": "Nothing went wrong during the deploy, ___?",
+      "options": [
+        "did it",
+        "didn't it",
+        "was it",
+        "did they"
+      ],
+      "answer": "did it",
+      "explanation": "Nothing имеет отрицательный смысл и заменяется на it (в отличие от nobody → they)."
+    },
+    {
+      "id": "emph-9",
+      "topicId": "emphasis-fronting-cleft",
+      "type": "cloze",
+      "prompt": "Never before ___ such a responsive mobile layout.",
+      "options": [
+        "have I seen",
+        "I have seen",
+        "did I saw",
+        "I saw"
+      ],
+      "answer": "have I seen",
+      "explanation": "После «Never before» в начале предложения требуется инверсия в Present Perfect (have I seen)."
+    },
+    {
+      "id": "wish-9",
+      "topicId": "wishes-unreal-past",
+      "type": "cloze",
+      "prompt": "I'd rather you ___ the details confidential for now.",
+      "options": [
+        "kept",
+        "keep",
+        "will keep",
+        "to keep"
+      ],
+      "answer": "kept",
+      "explanation": "Конструкция «would rather + другое лицо» для настоящего/будущего требует Past Simple (kept)."
+    },
+    {
+      "id": "subj-9",
+      "topicId": "subjunctive-formal",
+      "type": "cloze",
+      "prompt": "It is imperative that the user ___ notified before deletion.",
+      "options": [
+        "be",
+        "is",
+        "was",
+        "would be"
+      ],
+      "answer": "be",
+      "explanation": "После «It is imperative that...» в формальном стиле ставится bare infinitive (be)."
+    },
+    {
+      "id": "comp-9",
+      "topicId": "comparisons-gradable",
+      "type": "cloze",
+      "prompt": "The more I practice, ___ confident I feel.",
+      "options": [
+        "the more",
+        "more",
+        "the most",
+        "most"
+      ],
+      "answer": "the more",
+      "explanation": "Парная конструкция пропорционального роста: «The more..., the more...»."
+    },
+    {
+      "id": "link-9",
+      "topicId": "linking-concession",
+      "type": "cloze",
+      "prompt": "___ tired he felt, he finished reviewing the pull request.",
+      "options": [
+        "However",
+        "Despite",
+        "Although",
+        "Even"
+      ],
+      "answer": "However",
+      "explanation": "«However + adjective + subject + verb» означает «Как бы (ни)...»."
+    },
+    {
+      "id": "ell-9",
+      "topicId": "ellipsis-substitution",
+      "type": "cloze",
+      "prompt": "If you haven't backed up the folder yet, please ___ now.",
+      "options": [
+        "do so",
+        "make so",
+        "do it so",
+        "be so"
+      ],
+      "answer": "do so",
+      "explanation": "Формальное замещение ранее упомянутого действия — do so."
+    },
+    {
+      "id": "pperf-9",
+      "topicId": "tenses-past-perfect",
+      "type": "cloze",
+      "prompt": "Scarcely had he sat down ___ the phone started ringing.",
+      "options": [
+        "when",
+        "than",
+        "after",
+        "while"
+      ],
+      "answer": "when",
+      "explanation": "Scarcely/Hardly всегда образуют пару с союзом when."
+    },
+    {
+      "id": "fut-10",
+      "topicId": "tenses-future-forms",
+      "type": "cloze",
+      "prompt": "This time next month, we ___ in the new apartment for a year.",
+      "options": [
+        "will have been living",
+        "will live",
+        "are living",
+        "live"
+      ],
+      "answer": "will have been living",
+      "explanation": "Длительность процесса к конкретному моменту в будущем («for a year by next month») — Future Perfect Continuous."
+    },
+    {
+      "id": "c3-9",
+      "topicId": "cond-third-mixed",
+      "type": "cloze",
+      "prompt": "But for your quick reaction, we ___ the entire release.",
+      "options": [
+        "would have missed",
+        "missed",
+        "will miss",
+        "had missed"
+      ],
+      "answer": "would have missed",
+      "explanation": "«But for + noun» (= If it hadn't been for...) вводит условие для Third Conditional (would have + V3)."
+    },
+    {
+      "id": "modp-9",
+      "topicId": "modals-past-deduction",
+      "type": "cloze",
+      "prompt": "You ___ have left your umbrella on the bus — I saw you holding it outside.",
+      "options": [
+        "can't",
+        "must",
+        "might",
+        "should"
+      ],
+      "answer": "can't",
+      "explanation": "Логическая невозможность в прошлом («не мог оставить, ведь я видел его на улице») — can't have + V3."
+    },
+    {
+      "id": "dprep-10",
+      "topicId": "prep-dependent",
+      "type": "cloze",
+      "prompt": "The team congratulated her ___ winning the grant.",
+      "options": [
+        "on",
+        "for",
+        "with",
+        "about"
+      ],
+      "answer": "on",
+      "explanation": "Устойчивое управление: congratulate someone on (doing) something."
     }
   ]
 }
