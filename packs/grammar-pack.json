@@ -8898,6 +8898,1324 @@
       ],
       "answer": "It",
       "explanation": "Оценочная конструкция перед герундием/инфинитивом («It is a pleasure doing...») требует It."
+    },
+    {
+      "id": "ps-14",
+      "topicId": "tenses-present-simple-vs-cont",
+      "type": "error",
+      "prompt": "The printer isn't work right now.",
+      "errorWordIndex": 3,
+      "options": [
+        "working",
+        "works",
+        "worked"
+      ],
+      "answer": "working",
+      "explanation": "В Present Continuous после isn't требуется причастие на -ing (working)."
+    },
+    {
+      "id": "ps-15",
+      "topicId": "tenses-present-simple-vs-cont",
+      "type": "cloze",
+      "prompt": "Normally I ___ black coffee, but today I'm having a latte.",
+      "options": [
+        "drink",
+        "am drinking",
+        "drank",
+        "have drunk"
+      ],
+      "answer": "drink",
+      "explanation": "Постоянная привычка («Normally») — Present Simple, временное исключение («today») — Continuous."
+    },
+    {
+      "id": "pp-14",
+      "topicId": "tenses-pp-vs-past",
+      "type": "error",
+      "prompt": "We haven't met each other since three years.",
+      "errorWordIndex": 5,
+      "options": [
+        "for",
+        "from",
+        "during"
+      ],
+      "answer": "for",
+      "explanation": "Отрезок времени («три года») вводится предлогом for."
+    },
+    {
+      "id": "pp-15",
+      "topicId": "tenses-pp-vs-past",
+      "type": "cloze",
+      "prompt": "She ___ three chapters of Dracula so far this week.",
+      "options": [
+        "has read",
+        "read",
+        "reads",
+        "was reading"
+      ],
+      "answer": "has read",
+      "explanation": "Маркеры «so far» и незавершённый период «this week» требуют Present Perfect."
+    },
+    {
+      "id": "pperf-13",
+      "topicId": "tenses-past-perfect",
+      "type": "cloze",
+      "prompt": "The room was quiet because everyone ___ gone to sleep.",
+      "options": [
+        "had",
+        "has",
+        "was",
+        "did"
+      ],
+      "answer": "had",
+      "explanation": "Действие произошло раньше момента в прошлом (was quiet) — Past Perfect."
+    },
+    {
+      "id": "pperf-14",
+      "topicId": "tenses-past-perfect",
+      "type": "input",
+      "prompt": "By 2024, he ___ (live) in Moscow for four years.",
+      "hint": "duration up to a past year",
+      "answer": "had been living",
+      "acceptedAnswers": [
+        "had lived"
+      ],
+      "explanation": "Длительность до определённой точки в прошлом — Past Perfect (Continuous)."
+    },
+    {
+      "id": "fut-14",
+      "topicId": "tenses-future-forms",
+      "type": "error",
+      "prompt": "If they will finish early, we can catch the 7 PM show.",
+      "errorWordIndex": 2,
+      "options": [
+        "(remove 'will')",
+        "would",
+        "shall"
+      ],
+      "answer": "(remove 'will')",
+      "explanation": "После if для будущего времени используется Present Simple."
+    },
+    {
+      "id": "fut-15",
+      "topicId": "tenses-future-forms",
+      "type": "cloze",
+      "prompt": "Look at the timetable — our bus ___ at 18:20.",
+      "options": [
+        "departs",
+        "is going to depart",
+        "will departing",
+        "departed"
+      ],
+      "answer": "departs",
+      "explanation": "Точное расписание транспорта в будущем выражается через Present Simple."
+    },
+    {
+      "id": "c1-14",
+      "topicId": "cond-zero-first",
+      "type": "cloze",
+      "prompt": "If you ___ water to 0°C, it freezes.",
+      "options": [
+        "cool",
+        "will cool",
+        "cooled",
+        "would cool"
+      ],
+      "answer": "cool",
+      "explanation": "Zero Conditional (научный факт): Present Simple в обеих частях."
+    },
+    {
+      "id": "c1-15",
+      "topicId": "cond-zero-first",
+      "type": "input",
+      "prompt": "We'll go for a walk if it ___ (stop) snowing.",
+      "hint": "stop",
+      "answer": "stops",
+      "explanation": "В First Conditional после if ставится Present Simple (stops)."
+    },
+    {
+      "id": "c2-14",
+      "topicId": "cond-second",
+      "type": "cloze",
+      "prompt": "If I ___ speak Mandarin, I'd apply for that role.",
+      "options": [
+        "could",
+        "can",
+        "will",
+        "would"
+      ],
+      "answer": "could",
+      "explanation": "Воображаемая способность в настоящем во Second Conditional — could."
+    },
+    {
+      "id": "c2-15",
+      "topicId": "cond-second",
+      "type": "cloze",
+      "prompt": "Where would you live if you ___ work remotely from anywhere?",
+      "options": [
+        "could",
+        "can",
+        "will",
+        "have"
+      ],
+      "answer": "could",
+      "explanation": "Модальный глагол способности во Second Conditional — could."
+    },
+    {
+      "id": "c3-13",
+      "topicId": "cond-third-mixed",
+      "type": "cloze",
+      "prompt": "If he hadn't ignored the warning, the drive ___ failed.",
+      "options": [
+        "wouldn't have",
+        "wouldn't",
+        "won't have",
+        "hadn't"
+      ],
+      "answer": "wouldn't have",
+      "explanation": "Отрицательный результат в прошлом (Third Conditional): wouldn't have + V3."
+    },
+    {
+      "id": "c3-14",
+      "topicId": "cond-third-mixed",
+      "type": "cloze",
+      "prompt": "She would speak fluent French now if she ___ in Paris as a child.",
+      "options": [
+        "had grown up",
+        "grew up",
+        "would grow up",
+        "grows up"
+      ],
+      "answer": "had grown up",
+      "explanation": "Mixed Conditional: прошлое условие (had grown up) влияет на настоящее (would speak ... now)."
+    },
+    {
+      "id": "mod-14",
+      "topicId": "modals-obligation",
+      "type": "error",
+      "prompt": "He can't to drive because his license expired.",
+      "errorWordIndex": 2,
+      "options": [
+        "(remove 'to')",
+        "for",
+        "of"
+      ],
+      "answer": "(remove 'to')",
+      "explanation": "После модального глагола can't частица to не используется."
+    },
+    {
+      "id": "mod-15",
+      "topicId": "modals-obligation",
+      "type": "cloze",
+      "prompt": "You ___ leave your bike unlocked outside the metro.",
+      "options": [
+        "shouldn't",
+        "don't have to",
+        "needn't",
+        "mightn't"
+      ],
+      "answer": "shouldn't",
+      "explanation": "Дружеский совет/предостережение («не стоит») — shouldn't."
+    },
+    {
+      "id": "modp-13",
+      "topicId": "modals-past-deduction",
+      "type": "cloze",
+      "prompt": "The file isn't in the trash; I ___ deleted it permanently.",
+      "options": [
+        "must have",
+        "can't have",
+        "shouldn't have",
+        "needn't have"
+      ],
+      "answer": "must have",
+      "explanation": "Высокая уверенность в прошлом действии по уликам — must have + V3."
+    },
+    {
+      "id": "modp-14",
+      "topicId": "modals-past-deduction",
+      "type": "cloze",
+      "prompt": "You ___ brought a jacket; it's 28 degrees inside!",
+      "options": [
+        "needn't have",
+        "didn't need",
+        "mustn't have",
+        "can't have"
+      ],
+      "answer": "needn't have",
+      "explanation": "Действие было сделано зря (куртку уже принесли) — needn't have + V3."
+    },
+    {
+      "id": "art-14",
+      "topicId": "articles-definite-indefinite",
+      "type": "error",
+      "prompt": "I bought a new jeans yesterday.",
+      "errorWordIndex": 2,
+      "options": [
+        "(remove 'a')",
+        "an",
+        "one"
+      ],
+      "answer": "(remove 'a')",
+      "explanation": "Слово jeans стоит только во множественном числе, поэтому артикль a с ним невозможен."
+    },
+    {
+      "id": "art-15",
+      "topicId": "articles-definite-indefinite",
+      "type": "cloze",
+      "prompt": "___ Sahara is the largest hot desert on Earth.",
+      "options": [
+        "The",
+        "A",
+        "An",
+        "—"
+      ],
+      "answer": "The",
+      "explanation": "Названия пустынь пишутся с определённым артиклем the."
+    },
+    {
+      "id": "quant-13",
+      "topicId": "quantifiers-count-uncount",
+      "type": "cloze",
+      "prompt": "There are ___ typos in the draft, so we can publish it right away.",
+      "options": [
+        "very few",
+        "very little",
+        "much",
+        "a little"
+      ],
+      "answer": "very few",
+      "explanation": "Typos — исчисляемое мн. число; «very few» = «почти нет»."
+    },
+    {
+      "id": "quant-14",
+      "topicId": "quantifiers-count-uncount",
+      "type": "cloze",
+      "prompt": "How ___ sugar do you take in your tea?",
+      "options": [
+        "much",
+        "many",
+        "few",
+        "several"
+      ],
+      "answer": "much",
+      "explanation": "Sugar — неисчисляемое существительное (How much)."
+    },
+    {
+      "id": "prep-14",
+      "topicId": "prep-time-place",
+      "type": "error",
+      "prompt": "The meeting starts on 10:30 AM sharp.",
+      "errorWordIndex": 3,
+      "options": [
+        "at",
+        "in",
+        "by"
+      ],
+      "answer": "at",
+      "explanation": "Точное время на часах всегда вводится предлогом at."
+    },
+    {
+      "id": "prep-15",
+      "topicId": "prep-time-place",
+      "type": "cloze",
+      "prompt": "We usually go hiking ___ the summer.",
+      "options": [
+        "in",
+        "at",
+        "on",
+        "by"
+      ],
+      "answer": "in",
+      "explanation": "С временами года используется предлог in."
+    },
+    {
+      "id": "dprep-14",
+      "topicId": "prep-dependent",
+      "type": "cloze",
+      "prompt": "I'm tired ___ fixing the same CSS bug twice.",
+      "options": [
+        "of",
+        "from",
+        "with",
+        "by"
+      ],
+      "answer": "of",
+      "explanation": "Устойчивое управление: tired of (doing) something."
+    },
+    {
+      "id": "dprep-15",
+      "topicId": "prep-dependent",
+      "type": "cloze",
+      "prompt": "This shortcut is very similar ___ the one in VS Code.",
+      "options": [
+        "to",
+        "with",
+        "from",
+        "as"
+      ],
+      "answer": "to",
+      "explanation": "Устойчивое управление: similar to («похожий на»)."
+    },
+    {
+      "id": "pas-14",
+      "topicId": "passive-tenses",
+      "type": "error",
+      "prompt": "My bike was stole outside the library.",
+      "errorWordIndex": 3,
+      "options": [
+        "stolen",
+        "stealing",
+        "steals"
+      ],
+      "answer": "stolen",
+      "explanation": "В пассивном залоге нужна третья форма глагола V3 (stolen)."
+    },
+    {
+      "id": "pas-15",
+      "topicId": "passive-tenses",
+      "type": "cloze",
+      "prompt": "Coffee ___ in Colombia and exported worldwide.",
+      "options": [
+        "is grown",
+        "grows",
+        "is growing",
+        "has grown"
+      ],
+      "answer": "is grown",
+      "explanation": "Постоянный факт в пассиве (кофе выращивают) — Present Simple Passive."
+    },
+    {
+      "id": "caus-11",
+      "topicId": "causative-have-get",
+      "type": "cloze",
+      "prompt": "I got my laptop battery ___ at the service center.",
+      "options": [
+        "replaced",
+        "replace",
+        "to replace",
+        "replacing"
+      ],
+      "answer": "replaced",
+      "explanation": "Конструкция get + object + V3 (got ... replaced)."
+    },
+    {
+      "id": "caus-12",
+      "topicId": "causative-have-get",
+      "type": "input",
+      "prompt": "We're ___ (have / the roof / repair) next Monday.",
+      "hint": "Present Continuous causative",
+      "answer": "having the roof repaired",
+      "explanation": "Present Continuous Causative: are having + объект + V3."
+    },
+    {
+      "id": "ger-14",
+      "topicId": "gerund-infinitive",
+      "type": "error",
+      "prompt": "She's afraid of fly at night.",
+      "errorWordIndex": 3,
+      "options": [
+        "flying",
+        "flew",
+        "flown"
+      ],
+      "answer": "flying",
+      "explanation": "После предлога of ставится герундий (flying)."
+    },
+    {
+      "id": "ger-15",
+      "topicId": "gerund-infinitive",
+      "type": "cloze",
+      "prompt": "He promised ___ me as soon as the train arrived.",
+      "options": [
+        "to text",
+        "texting",
+        "text",
+        "texted"
+      ],
+      "answer": "to text",
+      "explanation": "После глагола promise всегда идёт инфинитив с частицей to."
+    },
+    {
+      "id": "rel-14",
+      "topicId": "clauses-relative",
+      "type": "error",
+      "prompt": "The developer which wrote this parser left last year.",
+      "errorWordIndex": 2,
+      "options": [
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer": "who",
+      "explanation": "Для людей в роли подлежащего используется who или that, но не which."
+    },
+    {
+      "id": "rel-15",
+      "topicId": "clauses-relative",
+      "type": "cloze",
+      "prompt": "Do you know the year ___ Obsidian 1.0 was released?",
+      "options": [
+        "when",
+        "which",
+        "what",
+        "where"
+      ],
+      "answer": "when",
+      "explanation": "Для обозначения времени после «the year / day» используется when."
+    },
+    {
+      "id": "part-11",
+      "topicId": "clauses-participle",
+      "type": "cloze",
+      "prompt": "___ in Moscow for five years, he knows the metro inside out.",
+      "options": [
+        "Having lived",
+        "Lived",
+        "To live",
+        "Live"
+      ],
+      "answer": "Having lived",
+      "explanation": "Предшествующий длительный опыт субъекта: Having + V3."
+    },
+    {
+      "id": "part-12",
+      "topicId": "clauses-participle",
+      "type": "cloze",
+      "prompt": "The notes ___ on the desk belong to the lab assistant.",
+      "options": [
+        "lying",
+        "lain",
+        "to lie",
+        "lie"
+      ],
+      "answer": "lying",
+      "explanation": "Активное определение («лежащие на столе») сжимается через V-ing (lying)."
+    },
+    {
+      "id": "rep-12",
+      "topicId": "reported-speech",
+      "type": "error",
+      "prompt": "She said me to wait outside.",
+      "errorWordIndex": 1,
+      "options": [
+        "told",
+        "spoke",
+        "talked"
+      ],
+      "answer": "told",
+      "explanation": "Просьба/приказ с адресатом строится через told someone to do, а не said."
+    },
+    {
+      "id": "rep-13",
+      "topicId": "reported-speech",
+      "type": "cloze",
+      "prompt": "They denied ___ anything about the missing key.",
+      "options": [
+        "knowing",
+        "to know",
+        "know",
+        "knew"
+      ],
+      "answer": "knowing",
+      "explanation": "После глагола deny используется герундий (V-ing)."
+    },
+    {
+      "id": "inv-12",
+      "topicId": "syntax-inversion-cleft",
+      "type": "cloze",
+      "prompt": "Not only ___ on time, but he also brought coffee.",
+      "options": [
+        "did he arrive",
+        "he arrived",
+        "arrived he",
+        "was he arrive"
+      ],
+      "answer": "did he arrive",
+      "explanation": "Инверсия после «Not only» в Past Simple: did + подлежащее + V1."
+    },
+    {
+      "id": "inv-13",
+      "topicId": "syntax-inversion-cleft",
+      "type": "cloze",
+      "prompt": "Rarely ___ such attention to typography in a CLI tool.",
+      "options": [
+        "do we see",
+        "we see",
+        "see we",
+        "are we see"
+      ],
+      "answer": "do we see",
+      "explanation": "После Rarely в начале предложения выносится вспомогательный глагол (do we see)."
+    },
+    {
+      "id": "wish-14",
+      "topicId": "wishes-unreal-past",
+      "type": "cloze",
+      "prompt": "I wish I ___ live closer to the campus.",
+      "options": [
+        "lived",
+        "live",
+        "will live",
+        "have lived"
+      ],
+      "answer": "lived",
+      "explanation": "Сожаление о текущем факте после wish выражается через Past Simple (lived)."
+    },
+    {
+      "id": "wish-15",
+      "topicId": "wishes-unreal-past",
+      "type": "cloze",
+      "prompt": "She'd rather we ___ the meeting until tomorrow.",
+      "options": [
+        "postponed",
+        "postpone",
+        "will postpone",
+        "have postponed"
+      ],
+      "answer": "postponed",
+      "explanation": "Конструкция «would rather + другое лицо» для настоящего/будущего требует Past Simple."
+    },
+    {
+      "id": "subj-14",
+      "topicId": "subjunctive-formal",
+      "type": "cloze",
+      "prompt": "The judge ordered that the witness ___ questioned again.",
+      "options": [
+        "be",
+        "is",
+        "was",
+        "will be"
+      ],
+      "answer": "be",
+      "explanation": "Пассивное сослагательное наклонение после ordered that: bare infinitive be + V3."
+    },
+    {
+      "id": "subj-15",
+      "topicId": "subjunctive-formal",
+      "type": "cloze",
+      "prompt": "___ they to accept the offer, we would start in January.",
+      "options": [
+        "Were",
+        "Was",
+        "Had",
+        "Should"
+      ],
+      "answer": "Were",
+      "explanation": "Инверсия во Second Conditional: «Were + subject + to V...»."
+    },
+    {
+      "id": "comp-14",
+      "topicId": "comparisons-gradable",
+      "type": "cloze",
+      "prompt": "That was by far ___ movie I've seen this year.",
+      "options": [
+        "the best",
+        "better",
+        "good",
+        "most good"
+      ],
+      "answer": "the best",
+      "explanation": "Усилитель «by far» сочетается с превосходной степенью (the best)."
+    },
+    {
+      "id": "comp-15",
+      "topicId": "comparisons-gradable",
+      "type": "cloze",
+      "prompt": "This SSD is slightly ___ than the older model.",
+      "options": [
+        "quieter",
+        "more quiet",
+        "quietest",
+        "quiet"
+      ],
+      "answer": "quieter",
+      "explanation": "Обычная сравнительная степень прилагательного quiet — quieter."
+    },
+    {
+      "id": "link-14",
+      "topicId": "linking-concession",
+      "type": "cloze",
+      "prompt": "___ the cold wind, they walked across the bridge.",
+      "options": [
+        "In spite of",
+        "Although",
+        "Even though",
+        "Whereas"
+      ],
+      "answer": "In spite of",
+      "explanation": "Перед существительным (the cold wind) используется In spite of / Despite."
+    },
+    {
+      "id": "link-15",
+      "topicId": "linking-concession",
+      "type": "cloze",
+      "prompt": "He's great at math, ___ his brother prefers literature.",
+      "options": [
+        "whereas",
+        "despite",
+        "even though",
+        "in spite of"
+      ],
+      "answer": "whereas",
+      "explanation": "Прямое сопоставление двух разных фактов — whereas («тогда как»)."
+    },
+    {
+      "id": "ell-14",
+      "topicId": "ellipsis-substitution",
+      "type": "cloze",
+      "prompt": "She wanted to join us, but she wasn't able ___.",
+      "options": [
+        "to",
+        "so",
+        "it",
+        "do"
+      ],
+      "answer": "to",
+      "explanation": "Эллипсис инфинитива после be able: «wasn't able to»."
+    },
+    {
+      "id": "ell-15",
+      "topicId": "ellipsis-substitution",
+      "type": "cloze",
+      "prompt": "I've already backed up the vault. — So ___ I.",
+      "options": [
+        "have",
+        "did",
+        "am",
+        "do"
+      ],
+      "answer": "have",
+      "explanation": "В кратком согласии «So + aux + I» повторяется вспомогательный глагол исходного времени (have)."
+    },
+    {
+      "id": "phr-14",
+      "topicId": "phrasal-verbs-separable",
+      "type": "cloze",
+      "prompt": "Please ___ off your shoes before stepping onto the rug.",
+      "options": [
+        "take",
+        "put",
+        "turn",
+        "give"
+      ],
+      "answer": "take",
+      "explanation": "Take off — «снимать» (одежду/обувь)."
+    },
+    {
+      "id": "phr-15",
+      "topicId": "phrasal-verbs-separable",
+      "type": "cloze",
+      "prompt": "He finally gave ___ smoking after ten years.",
+      "options": [
+        "up",
+        "out",
+        "off",
+        "away"
+      ],
+      "answer": "up",
+      "explanation": "Give up + V-ing — «бросить вредную привычку»."
+    },
+    {
+      "id": "adj-14",
+      "topicId": "modifiers-adj-vs-adv",
+      "type": "cloze",
+      "prompt": "The explanation was ___ simple to follow.",
+      "options": [
+        "surprisingly",
+        "surprising",
+        "surprise",
+        "surprised"
+      ],
+      "answer": "surprisingly",
+      "explanation": "Перед прилагательным (simple) используется наречие степени (surprisingly)."
+    },
+    {
+      "id": "adj-15",
+      "topicId": "modifiers-adj-vs-adv",
+      "type": "cloze",
+      "prompt": "Drive ___ — the roads are icy tonight.",
+      "options": [
+        "carefully",
+        "careful",
+        "carefulness",
+        "care"
+      ],
+      "answer": "carefully",
+      "explanation": "Действие (Drive) характеризуется наречием образа действия (carefully)."
+    },
+    {
+      "id": "pron-13",
+      "topicId": "pronouns-reflexive-reciprocal",
+      "type": "cloze",
+      "prompt": "The cat washed ___ on the sunny windowsill.",
+      "options": [
+        "itself",
+        "it",
+        "its",
+        "herself"
+      ],
+      "answer": "itself",
+      "explanation": "Для животного (без персонификации) возвратное местоимение — itself."
+    },
+    {
+      "id": "pron-14",
+      "topicId": "pronouns-reflexive-reciprocal",
+      "type": "cloze",
+      "prompt": "You shouldn't blame ___ for a server outage.",
+      "options": [
+        "yourself",
+        "you",
+        "your",
+        "yours"
+      ],
+      "answer": "yourself",
+      "explanation": "Действие направлено на того же субъекта (you → yourself)."
+    },
+    {
+      "id": "qtag-14",
+      "topicId": "questions-tags-indirect",
+      "type": "cloze",
+      "prompt": "Pass me the salt, ___?",
+      "options": [
+        "could you",
+        "shall we",
+        "aren't I",
+        "didn't you"
+      ],
+      "answer": "could you",
+      "explanation": "После вежливой просьбы в императиве используются will you / would you / could you."
+    },
+    {
+      "id": "qtag-15",
+      "topicId": "questions-tags-indirect",
+      "type": "cloze",
+      "prompt": "I'd like to know how much ___.",
+      "options": [
+        "it costs",
+        "does it cost",
+        "costs it",
+        "is it cost"
+      ],
+      "answer": "it costs",
+      "explanation": "В косвенном вопросе порядок слов прямой (it costs)."
+    },
+    {
+      "id": "emph-14",
+      "topicId": "emphasis-fronting-cleft",
+      "type": "cloze",
+      "prompt": "What bothers me most ___ the lack of error logs.",
+      "options": [
+        "is",
+        "are",
+        "were",
+        "have"
+      ],
+      "answer": "is",
+      "explanation": "Фокус в конце единственного числа (the lack) → сказуемое is."
+    },
+    {
+      "id": "emph-15",
+      "topicId": "emphasis-fronting-cleft",
+      "type": "cloze",
+      "prompt": "Tired ___ she was, she stayed up to finish the chapter.",
+      "options": [
+        "as",
+        "like",
+        "so",
+        "how"
+      ],
+      "answer": "as",
+      "explanation": "Уступительный fronting: «Tired as she was...» («Как бы она ни устала...»)."
+    },
+    {
+      "id": "agr-13",
+      "topicId": "agreement-subject-verb",
+      "type": "cloze",
+      "prompt": "News of the breakthrough ___ spreading fast.",
+      "options": [
+        "is",
+        "are",
+        "were",
+        "have been"
+      ],
+      "answer": "is",
+      "explanation": "Слово news — неисчисляемое и всегда согласуется с глаголом в ед. числе (is)."
+    },
+    {
+      "id": "agr-14",
+      "topicId": "agreement-subject-verb",
+      "type": "cloze",
+      "prompt": "Both of these approaches ___ pros and cons.",
+      "options": [
+        "have",
+        "has",
+        "is",
+        "was"
+      ],
+      "answer": "have",
+      "explanation": "«Both of...» всегда требует глагол во множественном числе (have)."
+    },
+    {
+      "id": "perm-13",
+      "topicId": "verbs-causative-perception",
+      "type": "cloze",
+      "prompt": "His joke made everyone in the room ___.",
+      "options": [
+        "laugh",
+        "to laugh",
+        "laughed",
+        "laughing"
+      ],
+      "answer": "laugh",
+      "explanation": "После make в активе («заставить/вызвать реакцию») идёт голый инфинитив (laugh)."
+    },
+    {
+      "id": "perm-14",
+      "topicId": "verbs-causative-perception",
+      "type": "cloze",
+      "prompt": "I felt the floor ___ slightly as the metro passed underneath.",
+      "options": [
+        "vibrate",
+        "to vibrate",
+        "vibrated",
+        "vibrates"
+      ],
+      "answer": "vibrate",
+      "explanation": "После глагола восприятия feel используется голый инфинитив (vibrate) или V-ing."
+    },
+    {
+      "id": "hab-13",
+      "topicId": "habits-used-to-would",
+      "type": "cloze",
+      "prompt": "She's a nurse, so she's used to ___ night shifts.",
+      "options": [
+        "working",
+        "work",
+        "worked",
+        "to work"
+      ],
+      "answer": "working",
+      "explanation": "После «be used to» ставится герундий (working)."
+    },
+    {
+      "id": "hab-14",
+      "topicId": "habits-used-to-would",
+      "type": "cloze",
+      "prompt": "My grandfather ___ tell us stories about astronomy every evening.",
+      "options": [
+        "would",
+        "is used to",
+        "got used to",
+        "use to"
+      ],
+      "answer": "would",
+      "explanation": "Повторяющиеся действия в далёком прошлом — would."
+    },
+    {
+      "id": "purp-13",
+      "topicId": "clauses-purpose-reason",
+      "type": "cloze",
+      "prompt": "We encrypted the archive ___ keep the tokens private.",
+      "options": [
+        "in order to",
+        "so that",
+        "due to",
+        "for"
+      ],
+      "answer": "in order to",
+      "explanation": "Цель перед начальной формой глагола (keep) — to / in order to."
+    },
+    {
+      "id": "purp-14",
+      "topicId": "clauses-purpose-reason",
+      "type": "cloze",
+      "prompt": "The event was postponed ___ unforeseen circumstances.",
+      "options": [
+        "due to",
+        "because",
+        "since",
+        "as"
+      ],
+      "answer": "due to",
+      "explanation": "Перед именной группой (unforeseen circumstances) ставится due to / because of."
+    },
+    {
+      "id": "pinf-13",
+      "topicId": "infinitive-perfect-passive",
+      "type": "cloze",
+      "prompt": "They appear ___ forgotten about our call.",
+      "options": [
+        "to have",
+        "having",
+        "to",
+        "had"
+      ],
+      "answer": "to have",
+      "explanation": "Предшествующее действие после appear: to have + V3 (to have forgotten)."
+    },
+    {
+      "id": "pinf-14",
+      "topicId": "infinitive-perfect-passive",
+      "type": "cloze",
+      "prompt": "The server seems ___ running much smoother after the patch.",
+      "options": [
+        "to be",
+        "be",
+        "being",
+        "been"
+      ],
+      "answer": "to be",
+      "explanation": "Длительное состояние в настоящем после seem: to be + V-ing."
+    },
+    {
+      "id": "noun-12",
+      "topicId": "nouns-uncountable-plural",
+      "type": "cloze",
+      "prompt": "Those jeans ___ a bit too loose around the waist.",
+      "options": [
+        "are",
+        "is",
+        "was",
+        "has been"
+      ],
+      "answer": "are",
+      "explanation": "Jeans — существительное только множественного числа (are)."
+    },
+    {
+      "id": "noun-13",
+      "topicId": "nouns-uncountable-plural",
+      "type": "cloze",
+      "prompt": "We need more ___ before drawing a final conclusion.",
+      "options": [
+        "research",
+        "researches",
+        "informations",
+        "evidences"
+      ],
+      "answer": "research",
+      "explanation": "Research, information и evidence в английском неисчисляемы."
+    },
+    {
+      "id": "det-12",
+      "topicId": "determiners-both-all-every",
+      "type": "cloze",
+      "prompt": "___ of the three candidates had the required certificate.",
+      "options": [
+        "None",
+        "Neither",
+        "Both",
+        "Every"
+      ],
+      "answer": "None",
+      "explanation": "Для трёх и более объектов в отрицании используется None."
+    },
+    {
+      "id": "det-13",
+      "topicId": "determiners-both-all-every",
+      "type": "cloze",
+      "prompt": "I've read ___ book on that shelf.",
+      "options": [
+        "every",
+        "all",
+        "both",
+        "neither of"
+      ],
+      "answer": "every",
+      "explanation": "Перед исчисляемым существительным в ед. числе (book) ставится every / each."
+    },
+    {
+      "id": "mkdo-12",
+      "topicId": "collocations-make-do",
+      "type": "cloze",
+      "prompt": "Try not to ___ the same mistake twice.",
+      "options": [
+        "make",
+        "do",
+        "take",
+        "have"
+      ],
+      "answer": "make",
+      "explanation": "Устойчивая коллокация: make a mistake."
+    },
+    {
+      "id": "mkdo-13",
+      "topicId": "collocations-make-do",
+      "type": "cloze",
+      "prompt": "She ___ a quick shower before heading to the lab.",
+      "options": [
+        "took",
+        "made",
+        "did",
+        "put"
+      ],
+      "answer": "took",
+      "explanation": "Слово shower сочетается с глаголами take или have (take a shower)."
+    },
+    {
+      "id": "time-12",
+      "topicId": "clauses-time-contrast",
+      "type": "cloze",
+      "prompt": "___ the time you read this, I'll already be on the plane.",
+      "options": [
+        "By",
+        "Until",
+        "During",
+        "While"
+      ],
+      "answer": "By",
+      "explanation": "Устойчивый союз: «By the time...» («К тому моменту, как...»)."
+    },
+    {
+      "id": "time-13",
+      "topicId": "clauses-time-contrast",
+      "type": "cloze",
+      "prompt": "We stayed indoors ___ the storm.",
+      "options": [
+        "during",
+        "while",
+        "until",
+        "by"
+      ],
+      "answer": "during",
+      "explanation": "Перед существительным (the storm) используется предлог during, а перед глаголом — while."
+    },
+    {
+      "id": "soinv-12",
+      "topicId": "inversion-so-such",
+      "type": "cloze",
+      "prompt": "So fast ___ that nobody could time his lap.",
+      "options": [
+        "did he run",
+        "he ran",
+        "ran he",
+        "was he run"
+      ],
+      "answer": "did he run",
+      "explanation": "Инверсия с «So + adverb»: did he run."
+    },
+    {
+      "id": "soinv-13",
+      "topicId": "inversion-so-such",
+      "type": "cloze",
+      "prompt": "Behind the curtain ___ a small hidden door.",
+      "options": [
+        "lay",
+        "did lie",
+        "lying",
+        "was lie"
+      ],
+      "answer": "lay",
+      "explanation": "Локативное вынесение «Behind the curtain» ставит глагол состояния (lay — прош. от lie) перед подлежащим."
+    },
+    {
+      "id": "padj-11",
+      "topicId": "participle-adjectives",
+      "type": "cloze",
+      "prompt": "After a ten-hour flight, everyone looked completely ___.",
+      "options": [
+        "exhausted",
+        "exhausting",
+        "exhaust",
+        "exhaustion"
+      ],
+      "answer": "exhausted",
+      "explanation": "Состояние людей («измотанные») — форма на -ed (exhausted)."
+    },
+    {
+      "id": "abil-11",
+      "topicId": "modals-ability-permission",
+      "type": "cloze",
+      "prompt": "I ___ swim across the river when I was ten.",
+      "options": [
+        "could",
+        "managed",
+        "can",
+        "was able"
+      ],
+      "answer": "could",
+      "explanation": "Общая способность в прошлом без указания конкретного разового случая — could."
+    },
+    {
+      "id": "fitp-11",
+      "topicId": "future-in-the-past",
+      "type": "cloze",
+      "prompt": "I knew you ___ love that thriller.",
+      "options": [
+        "would",
+        "will",
+        "are going to",
+        "can"
+      ],
+      "answer": "would",
+      "explanation": "Уверенность в будущем из прошлого («I knew...») — would."
+    },
+    {
+      "id": "nom-11",
+      "topicId": "clauses-nom-wh",
+      "type": "cloze",
+      "prompt": "That's exactly ___ I was trying to explain.",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "whom"
+      ],
+      "answer": "what",
+      "explanation": "В значении «то, что» после глагола-связки is ставится what."
+    },
+    {
+      "id": "neg-11",
+      "topicId": "negation-scope-double",
+      "type": "cloze",
+      "prompt": "I haven't told ___ about the surprise party yet.",
+      "options": [
+        "anyone",
+        "no one",
+        "nobody",
+        "nothing"
+      ],
+      "answer": "anyone",
+      "explanation": "В отрицании (haven't told) используется anyone вместо no one / nobody."
+    },
+    {
+      "id": "fprep-10",
+      "topicId": "prepositions-at-in-on-edge",
+      "type": "cloze",
+      "prompt": "We signed the contract ___ the beginning of March.",
+      "options": [
+        "at",
+        "in",
+        "on",
+        "by"
+      ],
+      "answer": "at",
+      "explanation": "Устойчивый предлог для границ периода: at the beginning of / at the end of."
+    },
+    {
+      "id": "say-10",
+      "topicId": "verb-say-tell-speak-talk",
+      "type": "cloze",
+      "prompt": "Could you ___ a bit louder? The connection is choppy.",
+      "options": [
+        "speak",
+        "tell",
+        "say",
+        "inform"
+      ],
+      "answer": "speak",
+      "explanation": "Для громкости, манеры речи и языков используется speak (или talk)."
+    },
+    {
+      "id": "sotoo-10",
+      "topicId": "quantifiers-so-such-too-enough",
+      "type": "cloze",
+      "prompt": "He's old ___ to make his own decisions.",
+      "options": [
+        "enough",
+        "too",
+        "so",
+        "such"
+      ],
+      "answer": "enough",
+      "explanation": "Enough ставится после прилагательного (old enough to...)."
+    },
+    {
+      "id": "noif-10",
+      "topicId": "clauses-if-unless-otherwise",
+      "type": "cloze",
+      "prompt": "Bring a power bank ___ the outlet isn't working.",
+      "options": [
+        "in case",
+        "unless",
+        "otherwise",
+        "provided"
+      ],
+      "answer": "in case",
+      "explanation": "Мера предосторожности на случай проблемы — in case."
+    },
+    {
+      "id": "cleft-10",
+      "topicId": "cleft-what-it-wh",
+      "type": "cloze",
+      "prompt": "It was only yesterday ___ I noticed that shortcut.",
+      "options": [
+        "that",
+        "when",
+        "which",
+        "what"
+      ],
+      "answer": "that",
+      "explanation": "В Cleft Sentence «It was [time] that...» используется связка that."
+    },
+    {
+      "id": "advp-9",
+      "topicId": "adverbs-position-focus",
+      "type": "cloze",
+      "prompt": "She ___ goes to the cinema on Fridays — almost every week.",
+      "options": [
+        "often",
+        "never",
+        "seldom",
+        "hardly"
+      ],
+      "answer": "often",
+      "explanation": "По смыслу («почти каждую неделю») подходит частотное наречие often перед основным глаголом."
+    },
+    {
+      "id": "vprep-9",
+      "topicId": "prepositions-verbs-adjectives-2",
+      "type": "cloze",
+      "prompt": "He apologized ___ interrupting the presentation.",
+      "options": [
+        "for",
+        "on",
+        "about",
+        "of"
+      ],
+      "answer": "for",
+      "explanation": "Устойчивое управление: apologize for (doing) something."
+    },
+    {
+      "id": "aslk-9",
+      "topicId": "comparisons-as-like",
+      "type": "cloze",
+      "prompt": "Why are you acting ___ a stranger? We've known each other for years!",
+      "options": [
+        "like",
+        "as",
+        "how",
+        "so"
+      ],
+      "answer": "like",
+      "explanation": "Сравнение поведения («вести себя подобно кому-то») вводится через like."
+    },
+    {
+      "id": "gerp-9",
+      "topicId": "gerund-prepositions-it",
+      "type": "cloze",
+      "prompt": "Before ___ the terminal, check the exit code.",
+      "options": [
+        "closing",
+        "to close",
+        "close",
+        "closed"
+      ],
+      "answer": "closing",
+      "explanation": "После предлога/союза времени before без подлежащего используется герундий (closing)."
+    },
+    {
+      "id": "thit-9",
+      "topicId": "syntax-there-it-cleft",
+      "type": "cloze",
+      "prompt": "___ is no point in waiting for a manual miracle — automate it.",
+      "options": [
+        "There",
+        "It",
+        "This",
+        "That"
+      ],
+      "answer": "There",
+      "explanation": "Устойчивая конструкция: «There is no point in doing something»."
     }
   ]
 }
