@@ -750,6 +750,315 @@
         }
       ],
       "pitfall": "Suggest не принимает конструкцию «suggest someone to do»: правильно «suggested that I take» или «suggested taking»."
+    },
+    {
+      "topicId": "comparisons-gradable",
+      "formula": "far / much / slightly + comparative  |  by far + superlative  |  The + comp..., the + comp...",
+      "points": [
+        "Сравнительную степень усиливают слова much, far, considerably, even, slightly (но не very!).",
+        "Двойное сравнение строится строго симметрично: «The earlier..., the sooner...».",
+        "Превосходная степень усиливается через «by far» (by far the most complex)."
+      ],
+      "examples": [
+        {
+          "en": "This build is far better than yesterday's.",
+          "note": "Усиление сравнительной степени."
+        },
+        {
+          "en": "The less clutter there is, the easier it is to focus.",
+          "note": "Пропорциональная связь."
+        }
+      ],
+      "pitfall": "Не совмещайте more и -er одновременно: «more sharper» или «most smartest» — ошибка."
+    },
+    {
+      "topicId": "comparisons-as-like",
+      "formula": "as + роль / полное предложение  |  like + существительное / местоимение (сходство)",
+      "points": [
+        "As обозначает реальную функцию, должность или статус («работать в качестве...»).",
+        "Like означает внешнее сходство или сравнение («похож на...», «как будто»)."
+      ],
+      "examples": [
+        {
+          "en": "He works as a senior architect.",
+          "note": "Его реальная должность."
+        },
+        {
+          "en": "That cloud looks like a giant whale.",
+          "note": "Визуальное сходство."
+        }
+      ],
+      "pitfall": "После «as if / as though» для нереального сравнения в настоящем ставится Past Simple (were), а о прошлом — Past Perfect (had)."
+    },
+    {
+      "topicId": "modifiers-adj-vs-adv",
+      "formula": "Глагол восприятия (look, sound, smell, taste, feel) + Прилагательное  |  Действие + Наречие (-ly)",
+      "points": [
+        "Обычные глаголы действия требуют наречия (speaks fluently, runs smoothly), а глаголы восприятия — прилагательного (sounds logical, feels soft).",
+        "Hard — «усердно», hardly — «едва/почти не»; late — «поздно», lately — «в последнее время»."
+      ],
+      "examples": [
+        {
+          "en": "Your proposal sounds promising.",
+          "note": "Глагол восприятия sound + adj."
+        },
+        {
+          "en": "She handled the question remarkably well.",
+          "note": "Наречие от good — well."
+        }
+      ],
+      "pitfall": "Слова friendly, lovely, silly — это прилагательные; наречие от них строится через «in a friendly way»."
+    },
+    {
+      "topicId": "participle-adjectives",
+      "formula": "-ed (чувство человека) vs -ing (свойство источника)  |  Мнение → Размер → Возраст → Цвет → Материал",
+      "points": [
+        "Прилагательные на -ed описывают, что испытывает человек (bored, tired, amazed, puzzled).",
+        "Прилагательные на -ing характеризуют объект или событие, вызывающее это чувство (boring, confusing, exciting)."
+      ],
+      "examples": [
+        {
+          "en": "I was bored during the two-hour lecture.",
+          "note": "Моё внутреннее состояние (-ed)."
+        },
+        {
+          "en": "She bought a minimalist black wooden desk.",
+          "note": "Мнение → цвет → материал."
+        }
+      ],
+      "pitfall": "«I am boring» означает «я скучный (для других)», а «мне скучно» — это «I am bored»."
+    },
+    {
+      "topicId": "quantifiers-so-such-too-enough",
+      "formula": "so + adj/adv  |  such + (a/an) + adj + noun  |  adj + enough  |  enough + noun",
+      "points": [
+        "So ставится перед прилагательным/наречием без существительного (а также перед many/much/few/little).",
+        "Such ставится перед именной группой (such a cold day, such helpful feedback).",
+        "Enough идёт ПОСЛЕ прилагательного (large enough), но ПЕРЕД существительным (enough time)."
+      ],
+      "examples": [
+        {
+          "en": "It was such a good book that I finished it in two days.",
+          "note": "Есть сущ. book → such a."
+        },
+        {
+          "en": "Is the font crisp enough?",
+          "note": "После прилагательного → crisp enough."
+        }
+      ],
+      "pitfall": "Нельзя ставить дублирующее it в конце «too ... to»: «too heavy to lift» (без it)."
+    },
+    {
+      "topicId": "adverbs-position-focus",
+      "formula": "already / just / nearly / often (перед смысловым глаголом)  |  yet / anymore (в конце)",
+      "points": [
+        "Already и just в утверждениях ставятся между вспомогательным и смысловым глаголом (have just finished).",
+        "Yet («уже/ещё») обычно стоит в конце вопросов и отрицаний; still («всё ещё») — перед отрицанием (still hasn't)."
+      ],
+      "examples": [
+        {
+          "en": "She still hasn't replied to my email.",
+          "note": "Still перед hasn't."
+        },
+        {
+          "en": "He doesn't live here anymore.",
+          "note": "Anymore в конце отрицания."
+        }
+      ],
+      "pitfall": "В утверждении нельзя говорить «I have yet seen» — в значении «уже» в утверждении ставится already."
+    },
+    {
+      "topicId": "pronouns-reflexive-reciprocal",
+      "formula": "myself / itself (на себя)  |  each other / one another (друг друга)",
+      "points": [
+        "Возвратные местоимения (myself, herself, themselves) используются, когда субъект и объект действия совпадают.",
+        "Для взаимного действия двух и более людей («друг друга») используется each other / one another."
+      ],
+      "examples": [
+        {
+          "en": "She taught herself TypeScript.",
+          "note": "Научила саму себя."
+        },
+        {
+          "en": "They looked at each other and laughed.",
+          "note": "Друг на друга."
+        }
+      ],
+      "pitfall": "После предлогов (between, for, with) ставится объектный падеж me, а не I («Between you and me»)."
+    },
+    {
+      "topicId": "questions-tags-indirect",
+      "formula": "+ утверждение, - хвост?  |  - утверждение, + хвост?  |  Встроенный вопрос: прямой порядок слов",
+      "points": [
+        "Особые хвосты: I am → aren't I?; Let's → shall we?; императив → will/could you?; nobody/everyone → they.",
+        "Слова never, rarely, seldom, nothing, hardly делают первую часть отрицательной, поэтому хвост должен быть положительным."
+      ],
+      "examples": [
+        {
+          "en": "I'm on the right track, aren't I?",
+          "note": "Исключение для I am."
+        },
+        {
+          "en": "Could you tell me what time the train leaves?",
+          "note": "Прямой порядок слов в косвенном вопросе."
+        }
+      ],
+      "pitfall": "Во встроенном вопросе («Do you know where...») вспомогательный do/does/did не ставится."
+    },
+    {
+      "topicId": "agreement-subject-verb",
+      "formula": "each / every / neither / the number of + V(sg)  |  both / a number of + V(pl)",
+      "points": [
+        "«The number of...» («количество») согласуется с ед. числом, а «A number of...» («ряд/много») — со множественным.",
+        "В «Neither A nor B» и «Either A or B» глагол согласуется с ближайшим подлежащим.",
+        "Суммы денег, расстояния, время и объёмы данных как единое целое идут с глаголом в ед. числе."
+      ],
+      "examples": [
+        {
+          "en": "Each of the plugins has been tested.",
+          "note": "Each of → ед. число (has)."
+        },
+        {
+          "en": "Ten kilometers is a long distance.",
+          "note": "Единая дистанция → is."
+        }
+      ],
+      "pitfall": "Слово «A pair of + парный предмет» (a pair of scissors/headphones) требует глагола в ед. числе (is)."
+    },
+    {
+      "topicId": "negation-scope-double",
+      "formula": "Одно отрицание на простое предложение: not + any / anything / anyone / anywhere",
+      "points": [
+        "В стандартном английском нельзя совмещать два отрицания (didn't see nobody → didn't see anybody).",
+        "Слова hardly, barely, scarcely, seldom, rarely уже являются отрицательными и не сочетаются с not."
+      ],
+      "examples": [
+        {
+          "en": "There was hardly any milk left.",
+          "note": "Hardly + any."
+        },
+        {
+          "en": "Nowhere in the docs did it mention this flag.",
+          "note": "Отрицание в начале → инверсия."
+        }
+      ],
+      "pitfall": "С «I don't think...» отрицание уже перенесено в первую часть, поэтому вторая остаётся положительной (I don't think he has finished)."
+    },
+    {
+      "topicId": "syntax-there-it-cleft",
+      "formula": "There + be (существование объекта)  |  It + takes / is + adj + to V (время, оценка, погода)",
+      "points": [
+        "There вводит наличие или появление объекта в определённом месте (There seems to be a typo).",
+        "It служит формальным подлежащим для затрат времени (It took two minutes), оценки (It's a waste of time) и расстояния."
+      ],
+      "examples": [
+        {
+          "en": "There is no point in waiting.",
+          "note": "Существование смысла/причины."
+        },
+        {
+          "en": "How long does it take to compile?",
+          "note": "Затраты времени → it."
+        }
+      ],
+      "pitfall": "Не заменяйте «There seems to be» на «It seems to be» при указании на наличие объекта."
+    },
+    {
+      "topicId": "subjunctive-formal",
+      "formula": "insist / recommend / suggest / vital / essential + that + subject + V1 (bare infinitive)",
+      "points": [
+        "В формальном сослагательном наклонении глагол после that стоит в начальной форме без -s, даже для he/she/it (that he resign, that it be).",
+        "Условная инверсия без if: Were I..., Had it not been for..., Should you need...."
+      ],
+      "examples": [
+        {
+          "en": "It is essential that every member be notified.",
+          "note": "Форма be вместо is."
+        },
+        {
+          "en": "Had it not been for your help, we'd have failed.",
+          "note": "Инверсия Third Conditional."
+        }
+      ],
+      "pitfall": "В отрицании сослагательного наклонения ставится просто «not + V1» (that he not leave), без don't/doesn't."
+    },
+    {
+      "topicId": "ellipsis-substitution",
+      "formula": "I hope/think so  |  I hope not  |  neither/nor + aux + S  |  plan to / able to (без глагола)",
+      "points": [
+        "Чтобы не повторять придаточное предложение, после think/hope/suppose используют so (или not для hope).",
+        "Инфинитив можно опускать, оставляя только частицу to (unless you want to); после модальных глаголов опускается и to.",
+        "Исчисляемые существительные заменяются на one / ones; глагольное действие — на do so."
+      ],
+      "examples": [
+        {
+          "en": "Will the build succeed? — I hope so.",
+          "note": "Замещение целой фразы."
+        },
+        {
+          "en": "I won't be able to attend, and neither will Alex.",
+          "note": "Согласие с отрицанием."
+        }
+      ],
+      "pitfall": "После think используется «I don't think so», а после hope — только «I hope not»."
+    },
+    {
+      "topicId": "emphasis-fronting-cleft",
+      "formula": "What I need is...  |  All I want is...  |  Adjective + as + S + V  |  do/did + V1",
+      "points": [
+        "What-cleft и All-cleft концентрируют внимание на главном элементе после связки is/was.",
+        "Уступительный fronting («Strange as it may seem...», «Hard as he tried...») усиливает контраст.",
+        "Усилительное do/does/did перед V1 подчёркивает искренность или опровергает сомнения."
+      ],
+      "examples": [
+        {
+          "en": "What I really need is a long vacation.",
+          "note": "Сказуемое is по фокусу."
+        },
+        {
+          "en": "I did check the commit hash twice.",
+          "note": "Усилительное did."
+        }
+      ],
+      "pitfall": "В «What I need is/are...» глагол согласуется с тем, что стоит ПОСЛЕ него."
+    },
+    {
+      "topicId": "inversion-so-such",
+      "formula": "So + adj + be + S + that...  |  Such + be + noun + that...  |  Place + V + S",
+      "points": [
+        "Вынесение «So + прилагательное/наречие» или «Such» в начало предложения требует инверсии глагола и подлежащего.",
+        "При выносе обстоятельства места или направления (On the shelf, Down the stairs) непереходный глагол ставится перед подлежащим без do."
+      ],
+      "examples": [
+        {
+          "en": "So convincing was his argument that everyone agreed.",
+          "note": "was перед his argument."
+        },
+        {
+          "en": "Such was the impact that downloads doubled.",
+          "note": "Such + was + noun."
+        }
+      ],
+      "pitfall": "При инверсии с глаголом действия в Present/Past Simple (So fast...) обязательно выносится do/did (So fast did he run)."
+    },
+    {
+      "topicId": "cleft-what-it-wh",
+      "formula": "It is/was + [фокус] + that/who...  |  The reason why... is...  |  The place where... is...",
+      "points": [
+        "It-cleft разбивает предложение на две части, чтобы выделить время, место, причину или конкретного человека.",
+        "Даже если выделяется время или место (yesterday, in this café), второй связкой в It-cleft классически служит that (не when/where)."
+      ],
+      "examples": [
+        {
+          "en": "It wasn't until midnight that the build passed.",
+          "note": "It wasn't until ... that..."
+        },
+        {
+          "en": "The reason why I switched is strict type safety.",
+          "note": "Псевдо-расщепление причины."
+        }
+      ],
+      "pitfall": "Не используйте which для выделения человека в It-cleft — только who или that."
     }
   ]
 }
