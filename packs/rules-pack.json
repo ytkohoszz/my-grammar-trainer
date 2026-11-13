@@ -10,8 +10,14 @@
         "Стативные глаголы (know, understand, belong, believe, want, contain) обычно не ставятся в Continuous."
       ],
       "examples": [
-        { "en": "The train leaves at 07:45.", "note": "Расписание — Present Simple." },
-        { "en": "I'm trying to concentrate right now.", "note": "Действие в моменте — Present Continuous." }
+        {
+          "en": "The train leaves at 07:45.",
+          "note": "Расписание — Present Simple."
+        },
+        {
+          "en": "I'm trying to concentrate right now.",
+          "note": "Действие в моменте — Present Continuous."
+        }
       ],
       "pitfall": "Think и taste меняют значение: «I think» (мнение — Simple) vs «I'm thinking of moving» (обдумываю — Continuous)."
     },
@@ -23,8 +29,14 @@
         "Past Simple — завершённое событие в конкретном прошлом (yesterday, last year, three days ago, in 2022)."
       ],
       "examples": [
-        { "en": "I have lost my keys.", "note": "Не могу открыть дверь сейчас (результат)." },
-        { "en": "She visited London three years ago.", "note": "Есть закрытый маркер ago → Past Simple." }
+        {
+          "en": "I have lost my keys.",
+          "note": "Не могу открыть дверь сейчас (результат)."
+        },
+        {
+          "en": "She visited London three years ago.",
+          "note": "Есть закрытый маркер ago → Past Simple."
+        }
       ],
       "pitfall": "Вопрос «How long ago...?» всегда требует Past Simple, а «How long have you...?» — Present Perfect."
     },
@@ -36,8 +48,14 @@
         "First Conditional — реальные события в будущем (вместо if часто используют unless = «если не»)."
       ],
       "examples": [
-        { "en": "If you heat ice, it melts.", "note": "Факт (Zero)." },
-        { "en": "Unless you leave now, you'll miss the train.", "note": "Unless + утвердительный глагол (First)." }
+        {
+          "en": "If you heat ice, it melts.",
+          "note": "Факт (Zero)."
+        },
+        {
+          "en": "Unless you leave now, you'll miss the train.",
+          "note": "Unless + утвердительный глагол (First)."
+        }
       ],
       "pitfall": "После if, unless, when, as soon as, until в условии будущего времени will не ставится."
     },
@@ -49,8 +67,14 @@
         "Глагол be в условии формально ставится в форму were для всех лиц (If I were you)."
       ],
       "examples": [
-        { "en": "If I had more time, I would redesign the UI.", "note": "Воображаемое настоящее." },
-        { "en": "If I were you, I'd accept the offer.", "note": "Конструкция совета." }
+        {
+          "en": "If I had more time, I would redesign the UI.",
+          "note": "Воображаемое настоящее."
+        },
+        {
+          "en": "If I were you, I'd accept the offer.",
+          "note": "Конструкция совета."
+        }
       ],
       "pitfall": "В части с if во Second Conditional используется Past Simple, а не would."
     },
@@ -62,8 +86,14 @@
         "Mixed Conditional — нереальное прошлое действие, которое влияет на текущую ситуацию (now, today)."
       ],
       "examples": [
-        { "en": "If I had known, I would have left earlier.", "note": "Всё в прошлом (Third)." },
-{ "en": "If he had taken the earlier train, he would be here by now.", "note": "Прошлое → сейчас (Mixed)." }
+        {
+          "en": "If I had known, I would have left earlier.",
+          "note": "Всё в прошлом (Third)."
+        },
+        {
+          "en": "If he had taken the earlier train, he would be here by now.",
+          "note": "Прошлое → сейчас (Mixed)."
+        }
       ],
       "pitfall": "Никогда не ставьте would have в придаточное с if."
     },
@@ -75,10 +105,347 @@
         "Cleft Sentences («It was X that...» / «What I need is...») выделяют ключевой элемент фразы."
       ],
       "examples": [
-        { "en": "Never have I seen such a clean UI.", "note": "Инверсия: have перед I." },
-        { "en": "It was the syntax error that broke the build.", "note": "Cleft-выделение причины." }
+        {
+          "en": "Never have I seen such a clean UI.",
+          "note": "Инверсия: have перед I."
+        },
+        {
+          "en": "It was the syntax error that broke the build.",
+          "note": "Cleft-выделение причины."
+        }
       ],
       "pitfall": "После «Not until / Only after» инверсия делается во второй (главной) части предложения."
+    },
+    {
+      "topicId": "tenses-past-perfect",
+      "formula": "had + V3  |  Continuous: had been + V-ing",
+      "points": [
+        "Показывает действие, которое завершилось ДО другого момента или события в прошлом.",
+        "Past Perfect Continuous подчёркивает длительность процесса до этой прошлой точки."
+      ],
+      "examples": [
+        {
+          "en": "By the time we arrived, the film had already started.",
+          "note": "Фильм начался раньше нашего прихода."
+        },
+        {
+          "en": "They had been waiting for an hour before the bus arrived.",
+          "note": "Длительность до прошлого события."
+        }
+      ],
+      "pitfall": "С союзами Hardly/Scarcely ... when и No sooner ... than используется инверсия: «Had he opened...»."
+    },
+    {
+      "topicId": "tenses-future-forms",
+      "formula": "will + V1  |  am/is/are going to + V1  |  Present Continuous",
+      "points": [
+        "Will — спонтанные решения в момент речи, обещания и предсказания без видимых улик.",
+        "Be going to — заранее принятые намерения или очевидные признаки прямо сейчас (тёмные тучи).",
+        "Present Continuous — твёрдые личные договорённости на ближайшее будущее (билеты, бронь); Present Simple — расписания."
+      ],
+      "examples": [
+        {
+          "en": "The phone is ringing. — I'll get it!",
+          "note": "Спонтанное решение."
+        },
+        {
+          "en": "We're flying to Berlin next Tuesday.",
+          "note": "Билеты уже куплены."
+        }
+      ],
+      "pitfall": "В придаточных времени после when, as soon as, until, before вместо will ставится Present Simple."
+    },
+    {
+      "topicId": "habits-used-to-would",
+      "formula": "used to + V1  |  would + V1  |  be/get used to + V-ing / noun",
+      "points": [
+        "Used to — прошлые регулярные привычки и состояния (live, have, be), которых больше нет.",
+        "Would — только повторяющиеся действия в прошлом (не состояния!).",
+        "Be used to / Get used to — «быть привыкшим» / «привыкать к» (после to идёт герундий или существительное)."
+      ],
+      "examples": [
+        {
+          "en": "There used to be a bookshop on this corner.",
+          "note": "Состояние в прошлом (would нельзя)."
+        },
+        {
+          "en": "You'll soon get used to working with a strict linter.",
+          "note": "После get used to — V-ing."
+        }
+      ],
+      "pitfall": "В вопросах и отрицаниях с did/didn't буква -d исчезает: «Did you use to...?»."
+    },
+    {
+      "topicId": "future-in-the-past",
+      "formula": "was/were going to + V1  |  would + V1  |  was/were about to + V1",
+      "points": [
+        "Was/were going to — прошлые планы, которые часто так и не состоялись.",
+        "Would — будущее с точки зрения прошлого в косвенной речи и повествовании.",
+        "Was/were about to — действие, которое должно было случиться в ту же секунду, но прервалось."
+      ],
+      "examples": [
+        {
+          "en": "We were going to visit Rome, but the flight got canceled.",
+          "note": "Несостоявшийся план."
+        },
+        {
+          "en": "I was just about to leave when my laptop froze.",
+          "note": "Прерванное действие в моменте."
+        }
+      ],
+      "pitfall": "После глаголов в прошлом (said, promised, knew) will обязательно сдвигается в would."
+    },
+    {
+      "topicId": "wishes-unreal-past",
+      "formula": "wish / if only + Past Simple (настоящее)  |  + Past Perfect (прошлое)  |  + would V1 (раздражение)",
+      "points": [
+        "Сожаление о текущей ситуации — сдвиг на шаг назад в Past Simple (I wish I lived closer).",
+        "Сожаление о прошлом — Past Perfect (If only I had made a backup!).",
+        "Would rather + другое лицо для настоящего/будущего тоже требует Past Simple (I'd rather you didn't share this)."
+      ],
+      "examples": [
+        {
+          "en": "If only I hadn't deleted that folder yesterday!",
+          "note": "Сожаление о прошлом."
+        },
+        {
+          "en": "I wish my laptop wouldn't freeze.",
+          "note": "Раздражающее поведение, которое хочется изменить."
+        }
+      ],
+      "pitfall": "Нельзя говорить «I wish I would» про самого себя — только «I wish I could»."
+    },
+    {
+      "topicId": "clauses-if-unless-otherwise",
+      "formula": "unless (= if not)  |  provided (that) / as long as  |  in case  |  otherwise",
+      "points": [
+        "Unless означает «если не» и требует после себя утвердительного глагола.",
+        "Provided (that) / as long as / on condition that задают строгое условие («при условии, что»).",
+        "In case — предосторожность на случай возможной проблемы («на случай, если вдруг»)."
+      ],
+      "examples": [
+        {
+          "en": "You won't see the update unless you reload.",
+          "note": "Без отрицания после unless."
+        },
+        {
+          "en": "Keep a local backup in case the server goes down.",
+          "note": "Заранее подстраховаться."
+        }
+      ],
+      "pitfall": "После unless, in case, provided that в значении будущего используется Present Simple, а не will."
+    },
+    {
+      "topicId": "modals-obligation",
+      "formula": "must / have to (обязанность)  |  mustn't (запрет)  |  don't have to (необязательно)",
+      "points": [
+        "Must — внутреннее убеждение или строгое правило; have to — внешнее требование обстоятельств.",
+        "Mustn't означает жёсткий запрет, а don't have to / don't need to — отсутствие необходимости.",
+        "Для прошедшего времени обязательства используется had to, а для совета — should / ought to / had better."
+      ],
+      "examples": [
+        {
+          "en": "You don't have to pay today; entry is free.",
+          "note": "Не обязательно."
+        },
+        {
+          "en": "Visitors mustn't touch the exhibits.",
+          "note": "Запрещено."
+        }
+      ],
+      "pitfall": "После модальных глаголов (must, should, can, had better) частица to не ставится (кроме ought to и have to)."
+    },
+    {
+      "topicId": "modals-past-deduction",
+      "formula": "must / can't / might / should / needn't + have + V3",
+      "points": [
+        "Must have V3 — почти полная уверенность, что это произошло; can't/couldn't have V3 — точно не могло произойти.",
+        "Might / may / could have V3 — допущение вероятности («возможно, случилось»).",
+        "Should have V3 — упрёк/сожаление («следовало сделать»); needn't have V3 — «сделали зря»."
+      ],
+      "examples": [
+        {
+          "en": "The ground is wet. It must have rained.",
+          "note": "Логический вывод по факту."
+        },
+        {
+          "en": "You needn't have bought milk — we had three cartons.",
+          "note": "Купили, хотя не было нужно."
+        }
+      ],
+      "pitfall": "Разница: «didn't need to do» (не нужно было, и не делали) vs «needn't have done» (не нужно было, но сделали)."
+    },
+    {
+      "topicId": "modals-ability-permission",
+      "formula": "can / could (общая способность)  |  was able to / managed to (разовый успех)",
+      "points": [
+        "Could в утверждениях описывает постоянный навык в прошлом («умел плавать в детстве»).",
+        "Для единичного успешного преодоления трудности в прошлом используется was/were able to или managed to."
+      ],
+      "examples": [
+        {
+          "en": "By age six, Mozart could compose music.",
+          "note": "Общая способность."
+        },
+        {
+          "en": "The fog was thick, but we managed to land safely.",
+          "note": "Конкретный разовый успех."
+        }
+      ],
+      "pitfall": "Два модальных глагола рядом невозможны: вместо «will can» всегда используйте «will be able to»."
+    },
+    {
+      "topicId": "articles-definite-indefinite",
+      "formula": "a/an (любой/впервые)  |  the (конкретный/уникальный)  |  Ø (обобщения)",
+      "points": [
+        "Выбор a/an зависит от звука, а не буквы: an honest man (немая h), a university (звук [j]).",
+        "The используется для уже известного или уточнённого объекта, рек/океанов/пустынь, стран во мн. числе и групп (the rich).",
+        "Без артикля (Ø) идут абстрактные неисчисляемые понятия в общем смысле (patience, happiness) и отдельные вершины (Mount Everest)."
+      ],
+      "examples": [
+        {
+          "en": "The information you sent me was useful.",
+          "note": "Уточнено («you sent me») → the."
+        },
+        {
+          "en": "Patience is essential when learning a skill.",
+          "note": "Обобщение → без артикля."
+        }
+      ],
+      "pitfall": "Существительные school, hospital, prison без артикля означают «учиться/лечиться там», а с the — само здание."
+    },
+    {
+      "topicId": "quantifiers-count-uncount",
+      "formula": "Исчисляемые: many / (a) few / number of  |  Неисчисляемые: much / (a) little / amount of",
+      "points": [
+        "A few / a little — позитивный оттенок («немного, но достаточно»).",
+        "Few / little без артикля — негативный оттенок («мало, почти недостаточно»)."
+      ],
+      "examples": [
+        {
+          "en": "We have a little time left — let's grab tea.",
+          "note": "Времени хватит (a little)."
+        },
+        {
+          "en": "Unfortunately, few students understood the proof.",
+          "note": "Почти никто не понял (few)."
+        }
+      ],
+      "pitfall": "News, advice, information, space, luggage, furniture, traffic — неисчисляемые (нельзя ставить many или a/an)."
+    },
+    {
+      "topicId": "determiners-both-all-every",
+      "formula": "Для двух: both / either / neither  |  Для 3+: all / every / each / none",
+      "points": [
+        "Both + мн. число; either («любой из двух») и neither («ни один из двух») + ед. число.",
+        "Every и each ставятся перед исчисляемым существительным в ед. числе."
+      ],
+      "examples": [
+        {
+          "en": "Neither of the two options is ideal.",
+          "note": "Два варианта, глагол в ед. ч."
+        },
+        {
+          "en": "None of the three browsers reproduced the bug.",
+          "note": "Три и более → none."
+        }
+      ],
+      "pitfall": "Нельзя говорить «Every of the students» — только «Each of the students» или «Every one of...»."
+    },
+    {
+      "topicId": "nouns-uncountable-plural",
+      "formula": "Неисчисляемые (sg): advice, research, equipment  |  Только pl: scissors, trousers, glasses, police",
+      "points": [
+        "Неисчисляемые слова (advice, information, luggage, furniture, equipment, news) никогда не имеют -s и согласуются с is/was.",
+        "Парные предметы (scissors, jeans, glasses) и слово police всегда требуют глагол во множественном числе (are/have)."
+      ],
+      "examples": [
+        {
+          "en": "Where are my scissors?",
+          "note": "Всегда мн. число."
+        },
+        {
+          "en": "Physics was my favorite subject.",
+          "note": "Науки на -ics согласуются с ед. числом."
+        }
+      ],
+      "pitfall": "Слова means, series, species имеют одинаковую форму с -s и в единственном, и во множественном числе."
+    },
+    {
+      "topicId": "prep-time-place",
+      "formula": "at (точка/время)  |  on (поверхность/день)  |  in (объём/месяц/год/город)",
+      "points": [
+        "Время: at 10:30 / at noon / at night; on Monday / on Friday morning; in July / in 2026 / in the morning.",
+        "Место: arrive in (город/страна) vs arrive at (аэропорт, станция, здание)."
+      ],
+      "examples": [
+        {
+          "en": "He'll be back in a couple of minutes.",
+          "note": "Через какой-то срок — in."
+        },
+        {
+          "en": "Sign your name at the bottom of the page.",
+          "note": "Граница/точка — at."
+        }
+      ],
+      "pitfall": "После arrive никогда не ставится предлог to — только in или at."
+    },
+    {
+      "topicId": "prep-dependent",
+      "formula": "responsible for · aware of · keen on · compatible with · succeed in · insist on",
+      "points": [
+        "Многие глаголы и прилагательные жёстко привязаны к конкретному предлогу.",
+        "Если после такого предлога идёт действие, оно всегда ставится в герундий (V-ing)."
+      ],
+      "examples": [
+        {
+          "en": "She succeeded in solving the leak.",
+          "note": "succeed in + V-ing."
+        },
+        {
+          "en": "The team congratulated her on winning.",
+          "note": "congratulate on + V-ing."
+        }
+      ],
+      "pitfall": "Despite употребляется без предлога of, а in spite — всегда с of."
+    },
+    {
+      "topicId": "prepositions-at-in-on-edge",
+      "formula": "on time (по расписанию) vs in time (успеть)  |  at the end of (точка) vs in the end (в итоге)",
+      "points": [
+        "On time — пунктуально, ровно по графику; in time — вовремя, с запасом до дедлайна.",
+        "At the end of + сущ. — физический или временной конец чего-то; in the end — «в конце концов / в итоге»."
+      ],
+      "examples": [
+        {
+          "en": "The flight departed right on time.",
+          "note": "По расписанию."
+        },
+        {
+          "en": "In the end, we kept the UI minimal.",
+          "note": "Итог размышлений."
+        }
+      ],
+      "pitfall": "Ошибки делаются «by mistake / by accident», а не «on mistake»."
+    },
+    {
+      "topicId": "prepositions-verbs-adjectives-2",
+      "formula": "consist of · depend on · prevent from · result from/in · proud of · rich in",
+      "points": [
+        "Result from указывает на причину («вытекать из»), result in — на следствие («приводить к»).",
+        "Prevent someone from doing something — «помешать кому-то сделать что-то»."
+      ],
+      "examples": [
+        {
+          "en": "This course consists of twelve modules.",
+          "note": "consist of (не from!)."
+        },
+        {
+          "en": "This error results from a missing comma.",
+          "note": "Причина — result from."
+        }
+      ],
+      "pitfall": "После depend всегда идёт предлог on/upon, а не of или from."
     }
   ]
 }
