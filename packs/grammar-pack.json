@@ -246,6 +246,41 @@
       "title": "Perfect & Continuous Infinitives",
       "level": "C1",
       "summary": "Выражение предшествующих (to have V3) и длительных (to be V-ing) действий после seem, appear, claim."
+    },
+    {
+      "id": "nouns-uncountable-plural",
+      "category": "Nouns",
+      "title": "Uncountable & Plural-Only Nouns",
+      "level": "B1",
+      "summary": "Неисчисляемые существительные (advice, luggage, research) и существительные только во множественном числе (scissors, trousers)."
+    },
+    {
+      "id": "determiners-both-all-every",
+      "category": "Articles",
+      "title": "Both, Either, Neither, All & Every",
+      "level": "B1",
+      "summary": "Выбор определителей для пар объектов (both/either/neither) и групп (all/every/each)."
+    },
+    {
+      "id": "collocations-make-do",
+      "category": "Verb Patterns",
+      "title": "Make vs Do & Have vs Take",
+      "level": "B1",
+      "summary": "Устойчивые глагольные коллокации: make a decision/mistake, do research/your best, take a break."
+    },
+    {
+      "id": "clauses-time-contrast",
+      "category": "Discourse",
+      "title": "Time & Contrast Conjunctions",
+      "level": "B2",
+      "summary": "Союзы времени и противопоставления (by the time, until, as long as, whereas, provided)."
+    },
+    {
+      "id": "inversion-so-such",
+      "category": "Advanced Syntax",
+      "title": "So / Such Inversion & Prepositional Fronting",
+      "level": "C1",
+      "summary": "Инверсия с конструкциями «So + adj + verb...», «Such was...» и выносом предложных фраз."
     }
   ],
   "exercises": [
@@ -3730,6 +3765,693 @@
       ],
       "answer": "restarting",
       "explanation": "Try + V-ing означает «попробовать что-то как эксперимент/способ решить проблему»."
+    },
+    {
+      "id": "noun-1",
+      "topicId": "nouns-uncountable-plural",
+      "type": "error",
+      "prompt": "She gave me a very useful advice.",
+      "errorWordIndex": 3,
+      "options": [
+        "some",
+        "an",
+        "many"
+      ],
+      "answer": "some",
+      "explanation": "Advice — неисчисляемое существительное; перед ним нельзя ставить артикль a/an (используется some или a piece of)."
+    },
+    {
+      "id": "noun-2",
+      "topicId": "nouns-uncountable-plural",
+      "type": "cloze",
+      "prompt": "Where ___ my scissors? I left them on the desk.",
+      "options": [
+        "are",
+        "is",
+        "was",
+        "has been"
+      ],
+      "answer": "are",
+      "explanation": "Парные предметы (scissors, glasses, trousers, jeans) всегда согласуются с глаголом во множественном числе."
+    },
+    {
+      "id": "noun-3",
+      "topicId": "nouns-uncountable-plural",
+      "type": "cloze",
+      "prompt": "All our ___ was lost during the connecting flight.",
+      "options": [
+        "luggage",
+        "luggages",
+        "baggages",
+        "suitcases"
+      ],
+      "answer": "luggage",
+      "explanation": "Luggage / baggage — неисчисляемые собирательные существительные без формы множественного числа."
+    },
+    {
+      "id": "noun-4",
+      "topicId": "nouns-uncountable-plural",
+      "type": "input",
+      "prompt": "The ___ (means) of transport in this city is very reliable.",
+      "hint": "singular/plural form is identical",
+      "answer": "means",
+      "explanation": "Слова means, series и species имеют одинаковую форму в единственном и множественном числе."
+    },
+    {
+      "id": "det-1",
+      "topicId": "determiners-both-all-every",
+      "type": "error",
+      "prompt": "Every of the students passed the exam.",
+      "errorWordIndex": 0,
+      "options": [
+        "Each",
+        "All",
+        "Both"
+      ],
+      "answer": "Each",
+      "explanation": "Конструкция «Every of...» невозможна; перед «of the + plural» используется «Each of» или «Every one of»."
+    },
+    {
+      "id": "det-2",
+      "topicId": "determiners-both-all-every",
+      "type": "cloze",
+      "prompt": "We have two options, and ___ of them looks promising.",
+      "options": [
+        "either",
+        "all",
+        "every",
+        "none"
+      ],
+      "answer": "either",
+      "explanation": "Для выбора одного из двух вариантов в единственном числе (looks) используется either (или neither)."
+    },
+    {
+      "id": "det-3",
+      "topicId": "determiners-both-all-every",
+      "type": "cloze",
+      "prompt": "She spent ___ day debugging the layout.",
+      "options": [
+        "all",
+        "every",
+        "both",
+        "each"
+      ],
+      "answer": "all",
+      "explanation": "«All day» означает «весь день целиком (от начала до конца)», тогда как «every day» — «каждый день (регулярно)»."
+    },
+    {
+      "id": "det-4",
+      "topicId": "determiners-both-all-every",
+      "type": "input",
+      "prompt": "___ (Neither / None) of the three browsers reproduced the bug.",
+      "hint": "more than two items",
+      "answer": "None",
+      "explanation": "Для трёх и более объектов в отрицании используется none, а neither — только для двух."
+    },
+    {
+      "id": "mkdo-1",
+      "topicId": "collocations-make-do",
+      "type": "error",
+      "prompt": "I need to do a phone call before noon.",
+      "errorWordIndex": 3,
+      "options": [
+        "make",
+        "take",
+        "have"
+      ],
+      "answer": "make",
+      "explanation": "Устойчивая коллокация: make a phone call (а также make a decision, make progress)."
+    },
+    {
+      "id": "mkdo-2",
+      "topicId": "collocations-make-do",
+      "type": "cloze",
+      "prompt": "Don't worry, just ___ your best on the presentation.",
+      "options": [
+        "do",
+        "make",
+        "take",
+        "give"
+      ],
+      "answer": "do",
+      "explanation": "Устойчивое выражение: do your best, do homework, do research."
+    },
+    {
+      "id": "mkdo-3",
+      "topicId": "collocations-make-do",
+      "type": "cloze",
+      "prompt": "This small tweak will ___ a huge difference to performance.",
+      "options": [
+        "make",
+        "do",
+        "create",
+        "bring"
+      ],
+      "answer": "make",
+      "explanation": "Устойчивая коллокация: make a difference («иметь значение / изменить ситуацию»)."
+    },
+    {
+      "id": "mkdo-4",
+      "topicId": "collocations-make-do",
+      "type": "input",
+      "prompt": "Let's ___ (make/take) a five-minute break.",
+      "hint": "collocation with break",
+      "answer": "take",
+      "acceptedAnswers": [
+        "have"
+      ],
+      "explanation": "Слово break сочетается с глаголами take или have (take a break), но не make."
+    },
+    {
+      "id": "time-1",
+      "topicId": "clauses-time-contrast",
+      "type": "error",
+      "prompt": "Wait here until I will come back.",
+      "errorWordIndex": 4,
+      "options": [
+        "(remove 'will')",
+        "shall",
+        "would"
+      ],
+      "answer": "(remove 'will')",
+      "explanation": "В придаточном времени после until, by the time, as soon as будущее время выражается через Present Simple."
+    },
+    {
+      "id": "time-2",
+      "topicId": "clauses-time-contrast",
+      "type": "cloze",
+      "prompt": "You can stay here ___ you keep the noise down.",
+      "options": [
+        "as long as",
+        "unless",
+        "whereas",
+        "until"
+      ],
+      "answer": "as long as",
+      "explanation": "As long as / provided that означает условие «при условии, что / пока»."
+    },
+    {
+      "id": "time-3",
+      "topicId": "clauses-time-contrast",
+      "type": "cloze",
+      "prompt": "Desktop users prefer shortcuts, ___ iPad users rely on touch gestures.",
+      "options": [
+        "whereas",
+        "despite",
+        "unless",
+        "until"
+      ],
+      "answer": "whereas",
+      "explanation": "Whereas («тогда как / в то время как») противопоставляет два факта."
+    },
+    {
+      "id": "time-4",
+      "topicId": "clauses-time-contrast",
+      "type": "input",
+      "prompt": "We have to submit the report ___ (by / until) Friday at 5 PM.",
+      "hint": "deadline point",
+      "answer": "by",
+      "explanation": "Для крайнего срока (дедлайна) используется предлог by («не позднее»), а для длительности процесса — until («вплоть до»)."
+    },
+    {
+      "id": "soinv-1",
+      "topicId": "inversion-so-such",
+      "type": "error",
+      "prompt": "Such was the noise that nobody could heard him.",
+      "errorWordIndex": 7,
+      "options": [
+        "hear",
+        "hearing",
+        "to hear"
+      ],
+      "answer": "hear",
+      "explanation": "После модального глагола could основной глагол всегда стоит в начальной форме (hear)."
+    },
+    {
+      "id": "soinv-2",
+      "topicId": "inversion-so-such",
+      "type": "cloze",
+      "prompt": "So convincing ___ that everyone agreed immediately.",
+      "options": [
+        "was his argument",
+        "his argument was",
+        "did his argument",
+        "were his argument"
+      ],
+      "answer": "was his argument",
+      "explanation": "Инверсия с «So + adjective»: So convincing was his argument that..."
+    },
+    {
+      "id": "soinv-3",
+      "topicId": "inversion-so-such",
+      "type": "transform",
+      "prompt": "The impact of the update was so strong that downloads doubled.",
+      "hint": "Start with: Such was...",
+      "tokens": [
+        "Such",
+        "was",
+        "the",
+        "impact",
+        "that",
+        "downloads",
+        "doubled."
+      ],
+      "answer": "Such was the impact that downloads doubled.",
+      "explanation": "Конструкция «Such + be + noun + that...» выделяет степень проявления качества."
+    },
+    {
+      "id": "soinv-4",
+      "topicId": "inversion-so-such",
+      "type": "cloze",
+      "prompt": "On the top shelf ___ a stack of vintage notebooks.",
+      "options": [
+        "sat",
+        "did sit",
+        "sitting",
+        "is sit"
+      ],
+      "answer": "sat",
+      "explanation": "При выносе обстоятельства места в начало (On the top shelf) с непереходными глаголами (sit, stand, lie) подлежащее идёт после глагола без do."
+    },
+    {
+      "id": "agr-5",
+      "topicId": "agreement-subject-verb",
+      "type": "error",
+      "prompt": "A number of bugs has been fixed today.",
+      "errorWordIndex": 4,
+      "options": [
+        "have",
+        "is",
+        "was"
+      ],
+      "answer": "have",
+      "explanation": "«A number of + plural noun» («несколько/ряд») требует глагол во множественном числе (have been fixed)."
+    },
+    {
+      "id": "agr-6",
+      "topicId": "agreement-subject-verb",
+      "type": "cloze",
+      "prompt": "Mathematics ___ always been my strongest subject.",
+      "options": [
+        "has",
+        "have",
+        "are",
+        "were"
+      ],
+      "answer": "has",
+      "explanation": "Названия наук и дисциплин на -ics (mathematics, physics, economics) согласуются с глаголом в ед. числе."
+    },
+    {
+      "id": "perm-5",
+      "topicId": "verbs-causative-perception",
+      "type": "error",
+      "prompt": "Let me to explain how this works.",
+      "errorWordIndex": 2,
+      "options": [
+        "(remove 'to')",
+        "for",
+        "of"
+      ],
+      "answer": "(remove 'to')",
+      "explanation": "После глагола let используется голый инфинитив без частицы to (Let me explain)."
+    },
+    {
+      "id": "perm-6",
+      "topicId": "verbs-causative-perception",
+      "type": "cloze",
+      "prompt": "They don't allow ___ inside the reading room.",
+      "options": [
+        "eating",
+        "to eat",
+        "eat",
+        "eaten"
+      ],
+      "answer": "eating",
+      "explanation": "Глагол allow без указания объекта-лица принимает герундий (allow eating), а с объектом — to V (allow us to eat)."
+    },
+    {
+      "id": "hab-5",
+      "topicId": "habits-used-to-would",
+      "type": "error",
+      "prompt": "I'm not used to drive on the left.",
+      "errorWordIndex": 4,
+      "options": [
+        "driving",
+        "drove",
+        "driven"
+      ],
+      "answer": "driving",
+      "explanation": "В «be used to» слово to — предлог, поэтому после него ставится герундий (driving)."
+    },
+    {
+      "id": "hab-6",
+      "topicId": "habits-used-to-would",
+      "type": "cloze",
+      "prompt": "There ___ be a small bookshop on this corner.",
+      "options": [
+        "used to",
+        "would",
+        "was used to",
+        "got used to"
+      ],
+      "answer": "used to",
+      "explanation": "Для прошлых состояний и расположения объектов («раньше был») используется только used to, но не would."
+    },
+    {
+      "id": "purp-5",
+      "topicId": "clauses-purpose-reason",
+      "type": "error",
+      "prompt": "The server crashed because the sudden spike in traffic.",
+      "errorWordIndex": 3,
+      "options": [
+        "because of",
+        "since",
+        "as"
+      ],
+      "answer": "because of",
+      "explanation": "Перед именной группой («the sudden spike») ставится предлог because of, а не союз because."
+    },
+    {
+      "id": "purp-6",
+      "topicId": "clauses-purpose-reason",
+      "type": "cloze",
+      "prompt": "He turned off notifications ___ focus on his thesis.",
+      "options": [
+        "in order to",
+        "so that",
+        "for",
+        "due to"
+      ],
+      "answer": "in order to",
+      "explanation": "Цель перед начальной формой глагола (focus) вводится через to / in order to / so as to."
+    },
+    {
+      "id": "pinf-5",
+      "topicId": "infinitive-perfect-passive",
+      "type": "error",
+      "prompt": "She is believed to left the country yesterday.",
+      "errorWordIndex": 4,
+      "options": [
+        "have left",
+        "leave",
+        "leaving"
+      ],
+      "answer": "have left",
+      "explanation": "Прошлое действие после «is believed to...» требует перфектного инфинитива (to have left)."
+    },
+    {
+      "id": "pinf-6",
+      "topicId": "infinitive-perfect-passive",
+      "type": "cloze",
+      "prompt": "The parcel appears ___ damaged during shipping.",
+      "options": [
+        "to have been",
+        "to be been",
+        "having been",
+        "been"
+      ],
+      "answer": "to have been",
+      "explanation": "Перфектный пассивный инфинитив (произошло до настоящего момента): to have been + V3."
+    },
+    {
+      "id": "phr-8",
+      "topicId": "phrasal-verbs-separable",
+      "type": "cloze",
+      "prompt": "Don't worry, I'll ___ you up at the station at 7.",
+      "options": [
+        "pick",
+        "take",
+        "bring",
+        "get"
+      ],
+      "answer": "pick",
+      "explanation": "Pick someone up — «забрать/подвезти кого-либо»."
+    },
+    {
+      "id": "adj-8",
+      "topicId": "modifiers-adj-vs-adv",
+      "type": "cloze",
+      "prompt": "This coffee tastes ___ — did you change the beans?",
+      "options": [
+        "different",
+        "differently",
+        "difference",
+        "differ"
+      ],
+      "answer": "different",
+      "explanation": "После глагола восприятия taste («имеет вкус») ставится прилагательное (different)."
+    },
+    {
+      "id": "pron-7",
+      "topicId": "pronouns-reflexive-reciprocal",
+      "type": "cloze",
+      "prompt": "___ is important to keep the UI clean on small screens.",
+      "options": [
+        "It",
+        "There",
+        "That",
+        "This"
+      ],
+      "answer": "It",
+      "explanation": "Формальное подлежащее перед «is + adjective + to V» — всегда It."
+    },
+    {
+      "id": "qtag-8",
+      "topicId": "questions-tags-indirect",
+      "type": "cloze",
+      "prompt": "Everyone enjoyed the workshop, ___?",
+      "options": [
+        "didn't they",
+        "didn't he",
+        "wasn't it",
+        "don't they"
+      ],
+      "answer": "didn't they",
+      "explanation": "Местоимения everyone/everybody в разделительном вопросе заменяются на they."
+    },
+    {
+      "id": "emph-8",
+      "topicId": "emphasis-fronting-cleft",
+      "type": "cloze",
+      "prompt": "It was only when I checked the logs ___ I found the typo.",
+      "options": [
+        "that",
+        "when",
+        "which",
+        "what"
+      ],
+      "answer": "that",
+      "explanation": "В эмфатической конструкции «It was ... that...» второй связкой всегда служит that (даже если речь о времени)."
+    },
+    {
+      "id": "wish-8",
+      "topicId": "wishes-unreal-past",
+      "type": "cloze",
+      "prompt": "If only we ___ more time to polish the animations.",
+      "options": [
+        "had",
+        "have",
+        "would have",
+        "will have"
+      ],
+      "answer": "had",
+      "explanation": "Сожаление о текущей нехватке времени после If only выражается через Past Simple (had)."
+    },
+    {
+      "id": "subj-8",
+      "topicId": "subjunctive-formal",
+      "type": "cloze",
+      "prompt": "The contract stipulates that the fee ___ paid within 14 days.",
+      "options": [
+        "be",
+        "is",
+        "will be",
+        "was"
+      ],
+      "answer": "be",
+      "explanation": "После юридических глаголов требования (stipulate, require, demand + that) используется bare infinitive (be)."
+    },
+    {
+      "id": "comp-8",
+      "topicId": "comparisons-gradable",
+      "type": "cloze",
+      "prompt": "She's not ___ as patient as her sister.",
+      "options": [
+        "nearly",
+        "far",
+        "much",
+        "slightly"
+      ],
+      "answer": "nearly",
+      "explanation": "С конструкцией «not ... as + adj + as» используется модификатор nearly («совсем не так...»)."
+    },
+    {
+      "id": "link-8",
+      "topicId": "linking-concession",
+      "type": "cloze",
+      "prompt": "___ the fact that it was midnight, the street was crowded.",
+      "options": [
+        "Despite",
+        "Although",
+        "Even though",
+        "However"
+      ],
+      "answer": "Despite",
+      "explanation": "Перед конструкцией «the fact that...» ставится предлог Despite / In spite of."
+    },
+    {
+      "id": "ell-8",
+      "topicId": "ellipsis-substitution",
+      "type": "cloze",
+      "prompt": "You don't have to rewrite the test unless you want ___.",
+      "options": [
+        "to",
+        "so",
+        "it",
+        "do"
+      ],
+      "answer": "to",
+      "explanation": "Эллипсис инфинитива после want/need/have: «unless you want to»."
+    },
+    {
+      "id": "ps-10",
+      "topicId": "tenses-present-simple-vs-cont",
+      "type": "cloze",
+      "prompt": "More and more people ___ to digital notes these days.",
+      "options": [
+        "are switching",
+        "switch",
+        "switched",
+        "have switch"
+      ],
+      "answer": "are switching",
+      "explanation": "Меняющиеся тренды и тенденции вокруг нас («these days») передаются через Present Continuous."
+    },
+    {
+      "id": "pp-10",
+      "topicId": "tenses-pp-vs-past",
+      "type": "cloze",
+      "prompt": "Have you finished reading that chapter ___?",
+      "options": [
+        "yet",
+        "already",
+        "still",
+        "just"
+      ],
+      "answer": "yet",
+      "explanation": "В вопросах и отрицаниях Present Perfect в конце предложения обычно ставится yet («уже / ещё нет»)."
+    },
+    {
+      "id": "fut-9",
+      "topicId": "tenses-future-forms",
+      "type": "cloze",
+      "prompt": "I promise I ___ let you down.",
+      "options": [
+        "won't",
+        "am not going to",
+        "don't",
+        "shan't be"
+      ],
+      "answer": "won't",
+      "explanation": "Обещания, предложения помощи и угрозы выражаются через will / won't."
+    },
+    {
+      "id": "c2-9",
+      "topicId": "cond-second",
+      "type": "cloze",
+      "prompt": "If you ___ to lose your key, how would you unlock the vault?",
+      "options": [
+        "were",
+        "are",
+        "would",
+        "had"
+      ],
+      "answer": "were",
+      "explanation": "Конструкция «If + subject + were to + V1» подчёркивает маловероятность воображаемого события."
+    },
+    {
+      "id": "mod-9",
+      "topicId": "modals-obligation",
+      "type": "cloze",
+      "prompt": "Students ___ wear a uniform at this university — it's completely optional.",
+      "options": [
+        "don't have to",
+        "mustn't",
+        "can't",
+        "shouldn't"
+      ],
+      "answer": "don't have to",
+      "explanation": "Отсутствие обязательства («необязательно») — don't have to."
+    },
+    {
+      "id": "art-10",
+      "topicId": "articles-definite-indefinite",
+      "type": "cloze",
+      "prompt": "She was elected ___ president of the club.",
+      "options": [
+        "—",
+        "a",
+        "the",
+        "an"
+      ],
+      "answer": "—",
+      "explanation": "Уникальная должность после глаголов elect, appoint, become, make (в одном лице) часто употребляется без артикля."
+    },
+    {
+      "id": "prep-10",
+      "topicId": "prep-time-place",
+      "type": "cloze",
+      "prompt": "Please sign your name ___ the bottom of the page.",
+      "options": [
+        "at",
+        "in",
+        "on",
+        "by"
+      ],
+      "answer": "at",
+      "explanation": "Устойчивый предлог для границ/краёв страницы: at the top / at the bottom."
+    },
+    {
+      "id": "pas-10",
+      "topicId": "passive-tenses",
+      "type": "cloze",
+      "prompt": "The new bridge ___ right now, so take the detour.",
+      "options": [
+        "is being built",
+        "is building",
+        "has been built",
+        "was built"
+      ],
+      "answer": "is being built",
+      "explanation": "Пассивное действие в процессе прямо сейчас — Present Continuous Passive (is being + V3)."
+    },
+    {
+      "id": "ger-10",
+      "topicId": "gerund-infinitive",
+      "type": "cloze",
+      "prompt": "It's no use ___ over spilled milk.",
+      "options": [
+        "crying",
+        "to cry",
+        "cry",
+        "cried"
+      ],
+      "answer": "crying",
+      "explanation": "После идиомы «It's no use / It's no good» всегда следует герундий (V-ing)."
+    },
+    {
+      "id": "rel-9",
+      "topicId": "clauses-relative",
+      "type": "cloze",
+      "prompt": "The colleague with ___ I worked on this feature moved to Munich.",
+      "options": [
+        "whom",
+        "who",
+        "that",
+        "which"
+      ],
+      "answer": "whom",
+      "explanation": "Сразу после предлога (with, to, for, about) для людей используется только объектная форма whom."
     }
   ]
 }
