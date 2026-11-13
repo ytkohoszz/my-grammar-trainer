@@ -1,7 +1,7 @@
 {
     "id":  "my-grammar-trainer",
     "name":  "Grammar Trainer",
-    "version":  "1.0.0",
+    "version":  "1.0.1",
     "minAppVersion":  "1.5.0",
     "description":  "Minimalist adaptive English grammar trainer (Desktop + iPadOS).",
     "author":  "ytkohoszz",

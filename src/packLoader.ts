@@ -133,9 +133,11 @@ export async function fetchAndCachePack(url: string): Promise<CachedPack> {
     throw new Error("Pack URL must start with https:// or http://");
   }
 
+const sep = trimmedUrl.includes("?") ? "&" : "?";
   const response = await requestUrl({
-    url: trimmedUrl,
-    method: "GET"
+    url: `${trimmedUrl}${sep}t=${Date.now()}`,
+    method: "GET",
+    headers: { "Cache-Control": "no-cache" }
   });
 
   if (response.status < 200 || response.status >= 300) {
