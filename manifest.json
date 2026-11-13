@@ -1,11 +1,9 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
-	"minAppVersion": "1.0.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": false
+    "id":  "my-grammar-trainer",
+    "name":  "Grammar Trainer",
+    "version":  "1.0.0",
+    "minAppVersion":  "1.5.0",
+    "description":  "Minimalist adaptive English grammar trainer (Desktop + iPadOS).",
+    "author":  "ytkohoszz",
+    "isDesktopOnly":  false
 }

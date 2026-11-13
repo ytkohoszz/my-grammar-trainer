@@ -1,114 +1,179 @@
+import { Plugin, WorkspaceLeaf } from "obsidian";
 import {
-	Editor,
-	MarkdownView,
-	MarkdownFileInfo,
-	Modal,
-	Notice,
-	Plugin,
-} from 'obsidian';
+  getLocalDateKey,
+  getMistakeCount,
+  getOverallMastery,
+  getWeakestTopics,
+  recordExerciseAnswer
+} from "./engine";
+import { fetchAndCachePack, getActivePack } from "./packLoader";
+import { GrammarTrainerSettingTab } from "./settings";
 import {
-	DEFAULT_SETTINGS,
-	MyPluginSettings,
-	SampleSettingTab,
-} from './settings';
+  DEFAULT_PLUGIN_DATA,
+  GrammarDashboardSnapshot,
+  GrammarExercise,
+  PluginData,
+  SHARED_GRAMMAR_STATE_KEY,
+  SessionMode
+} from "./types";
+import { GRAMMAR_VIEW_TYPE, GrammarTrainerView } from "./view";
 
-// Remember to rename these classes and interfaces!
+export default class GrammarTrainerPlugin extends Plugin {
+  data: PluginData = { ...DEFAULT_PLUGIN_DATA };
 
-export default class MyPlugin extends Plugin {
-	settings!: MyPluginSettings;
+  async onload(): Promise<void> {
+    await this.loadPluginData();
 
-	async onload() {
-		await this.loadSettings();
+    this.addSettingTab(new GrammarTrainerSettingTab(this.app, this));
 
-		// This creates an icon in the left ribbon.
-		this.addRibbonIcon('dice', 'Sample', (_evt: MouseEvent) => {
-			// Called when the user clicks the icon.
-			new Notice('This is a notice!');
-		});
+    this.registerView(
+      GRAMMAR_VIEW_TYPE,
+      (leaf: WorkspaceLeaf) => new GrammarTrainerView(leaf, this)
+    );
 
-		// This adds a status bar item to the bottom of the app. Does not work on mobile apps.
-		const statusBarItemEl = this.addStatusBarItem();
-		statusBarItemEl.setText('Status bar text');
+    this.addRibbonIcon("graduation-cap", "Open Grammar Trainer", () => {
+      void this.activateView();
+    });
 
-		// This adds a simple command that can be triggered anywhere
-		this.addCommand({
-			id: 'open-modal-simple',
-			name: 'Open modal (simple)',
-			callback: () => {
-				new SampleModal(this.app).open();
-			},
-		});
-		// This adds an editor command that can perform some operation on the current editor instance
-		this.addCommand({
-			id: 'replace-selected',
-			name: 'Replace selected content',
-			editorCallback: (
-				editor: Editor,
-				_ctx: MarkdownView | MarkdownFileInfo,
-			) => {
-				editor.replaceSelection('Sample editor command');
-			},
-		});
-		// This adds a complex command that can check whether the current state of the app allows execution of the command
-		this.addCommand({
-			id: 'open-modal-complex',
-			name: 'Open modal (complex)',
-			checkCallback: (checking: boolean) => {
-				// Conditions to check
-				const markdownView =
-					this.app.workspace.getActiveViewOfType(MarkdownView);
-				if (markdownView) {
-					// If checking is true, we're simply "checking" if the command can be run.
-					// If checking is false, then we want to actually perform the operation.
-					if (!checking) {
-						new SampleModal(this.app).open();
-					}
+this.addCommand({
+      id: "open-grammar-trainer",
+      name: "Open Grammar Trainer",
+      callback: () => {
+        void this.activateView();
+      }
+    });
 
-					// This command will only show up in Command Palette when the check function returns true
-					return true;
-				}
-				return false;
-			},
-		});
+    this.registerObsidianProtocolHandler("grammar-trainer", (params) => {
+      const rawMode = params.mode;
+      const mode: SessionMode =
+        rawMode === "mistakes" || rawMode === "topic" ? rawMode : "smart";
+      const topicId = params.topicId || undefined;
+      void this.openTrainer(mode, topicId);
+    });
 
-		// This adds a settings tab so the user can configure various aspects of the plugin
-		this.addSettingTab(new SampleSettingTab(this.app, this));
+    this.syncDashboardSnapshot();
+  }
 
-		// If the plugin hooks up any global DOM events (on parts of the app that doesn't belong to this plugin)
-		// Using this function will automatically remove the event listener when this plugin is disabled.
-		this.registerDomEvent(activeDocument, 'click', (_evt: MouseEvent) => {
-			new Notice('Click');
-		});
+  onunload(): void {
+    // Leaves are automatically cleaned up by Obsidian when unloading,
+    // or kept if needed; no custom global listeners yet.
+  }
 
-		// When registering intervals, this function will automatically clear the interval when the plugin is disabled.
-		this.registerInterval(
-			window.setInterval(() => console.log('setInterval'), 5 * 60 * 1000),
-		);
-	}
+async openTrainer(mode: SessionMode = "smart", topicId?: string): Promise<void> {
+    await this.activateView(mode, topicId);
+  }
 
-	onunload() {}
+  async activateView(mode?: SessionMode, topicId?: string): Promise<void> {
+    const { workspace } = this.app;
+    const existing = workspace.getLeavesOfType(GRAMMAR_VIEW_TYPE);
 
-	async loadSettings() {
-		this.settings = Object.assign(
-			{},
-			DEFAULT_SETTINGS,
-			(await this.loadData()) as Partial<MyPluginSettings>,
-		);
-	}
+    let targetLeaf: WorkspaceLeaf;
+    if (existing.length > 0) {
+      targetLeaf = existing[0];
+      workspace.revealLeaf(targetLeaf);
+    } else {
+      targetLeaf = workspace.getLeaf(false);
+      await targetLeaf.setViewState({
+        type: GRAMMAR_VIEW_TYPE,
+        active: true
+      });
+      workspace.revealLeaf(targetLeaf);
+    }
 
-	async saveSettings() {
-		await this.saveData(this.settings);
-	}
-}
+    if (mode && targetLeaf.view instanceof GrammarTrainerView) {
+      targetLeaf.view.startSession(mode, topicId);
+    }
+  }
 
-class SampleModal extends Modal {
-	onOpen() {
-		const { contentEl } = this;
-		contentEl.setText('Woah!');
-	}
+async syncRemotePack(): Promise<void> {
+    const url = this.data.settings.packSourceUrl.trim();
+    if (!url) {
+      this.data.cachedPack = null;
+      await this.savePluginData();
+      this.syncDashboardSnapshot();
+      this.refreshOpenViews();
+      return;
+    }
 
-	onClose() {
-		const { contentEl } = this;
-		contentEl.empty();
-	}
+    const cached = await fetchAndCachePack(url);
+    this.data.cachedPack = cached;
+    await this.savePluginData();
+    this.syncDashboardSnapshot();
+    this.refreshOpenViews();
+  }
+
+  refreshOpenViews(): void {
+    const leaves = this.app.workspace.getLeavesOfType(GRAMMAR_VIEW_TYPE);
+    for (const leaf of leaves) {
+      if (leaf.view instanceof GrammarTrainerView) {
+        leaf.view.refresh();
+      }
+    }
+  }
+
+async recordExerciseResult(
+    exercise: GrammarExercise,
+    isCorrect: boolean
+  ): Promise<void> {
+    recordExerciseAnswer(this.data.progress, exercise, isCorrect);
+    await this.savePluginData();
+    this.syncDashboardSnapshot();
+  }
+
+  getDashboardSnapshot(): GrammarDashboardSnapshot {
+    const { pack } = getActivePack(this.data);
+    const todayKey = getLocalDateKey();
+    const today = this.data.progress.daily[todayKey];
+
+    return {
+      updatedAt: Date.now(),
+      overallMastery: getOverallMastery(pack, this.data.progress),
+      mistakesCount: getMistakeCount(pack, this.data.progress),
+      todayAnswered: today?.answered ?? 0,
+      todayCorrect: today?.correct ?? 0,
+      totalTopics: pack.topics.length,
+      weakestTopics: getWeakestTopics(pack, this.data.progress, 3).map((item) => ({
+        id: item.topic.id,
+        title: item.topic.title,
+        level: item.topic.level,
+        mastery: item.mastery,
+        attempts: item.attempts
+      }))
+    };
+  }
+
+  private syncDashboardSnapshot(): void {
+    const snapshot = this.getDashboardSnapshot();
+    try {
+      window.localStorage.setItem(
+        SHARED_GRAMMAR_STATE_KEY,
+        JSON.stringify(snapshot)
+      );
+      window.dispatchEvent(
+        new CustomEvent("my-grammar-trainer:updated", { detail: snapshot })
+      );
+    } catch {
+      // Ignore storage quota errors
+    }
+  }
+
+  private async loadPluginData(): Promise<void> {
+    const raw = (await this.loadData()) as Partial<PluginData> | null;
+    this.data = {
+      settings: {
+        ...DEFAULT_PLUGIN_DATA.settings,
+        ...(raw?.settings ?? {})
+      },
+      cachedPack: raw?.cachedPack ?? null,
+      progress: {
+        topics: raw?.progress?.topics ?? {},
+        exercises: raw?.progress?.exercises ?? {},
+        daily: raw?.progress?.daily ?? {}
+      }
+    };
+  }
+
+  async savePluginData(): Promise<void> {
+    await this.saveData(this.data);
+  }
 }
