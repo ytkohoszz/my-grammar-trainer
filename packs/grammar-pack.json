@@ -351,6 +351,41 @@
       "title": "Advanced Clefts & Pseudo-Clefts",
       "level": "C2",
       "summary": "Сложные выделительные конструкции (It was..., The reason why..., The place where...)."
+    },
+    {
+      "id": "adverbs-position-focus",
+      "category": "Modifiers",
+      "title": "Adverb Placement (still, yet, already, quite, rather)",
+      "level": "B2",
+      "summary": "Позиция наречий частоты и времени в предложении, разница между still / yet / already и quite / rather."
+    },
+    {
+      "id": "prepositions-verbs-adjectives-2",
+      "category": "Prepositions",
+      "title": "Verb & Adjective Prepositions II",
+      "level": "B2",
+      "summary": "Управление глаголов и прилагательных: consist of, depend on, prevent from, famous for, proud of."
+    },
+    {
+      "id": "comparisons-as-like",
+      "category": "Modifiers",
+      "title": "As vs Like & As if / As though",
+      "level": "B1",
+      "summary": "Различие между реальной ролью/функцией (work as) и сравнением/подобием (look like)."
+    },
+    {
+      "id": "gerund-prepositions-it",
+      "category": "Verb Patterns",
+      "title": "Gerunds After Prepositions & Worth/Busy",
+      "level": "B2",
+      "summary": "Обязательный герундий после любых предлогов (thank for, instead of, without) и выражений be worth, be busy, have trouble."
+    },
+    {
+      "id": "syntax-there-it-cleft",
+      "category": "Syntax",
+      "title": "There vs It (There seems to be / It takes)",
+      "level": "B2",
+      "summary": "Вводное There для существования объекта и безличное It для времени, расстояния, погоды и оценки."
     }
   ],
   "exercises": [
@@ -5887,6 +5922,688 @@
       ],
       "answer": "neither",
       "explanation": "Присоединение к отрицательному утверждению: «neither/nor + вспомогательный глагол + подлежащее»."
+    },
+    {
+      "id": "advp-1",
+      "topicId": "adverbs-position-focus",
+      "type": "error",
+      "prompt": "I have yet seen that film twice.",
+      "errorWordIndex": 2,
+      "options": [
+        "already",
+        "ever",
+        "never"
+      ],
+      "answer": "already",
+      "explanation": "Yet используется в вопросах и отрицаниях, а в утверждении в значении «уже» ставится already."
+    },
+    {
+      "id": "advp-2",
+      "topicId": "adverbs-position-focus",
+      "type": "cloze",
+      "prompt": "She ___ hasn't answered my message from yesterday.",
+      "options": [
+        "still",
+        "yet",
+        "already",
+        "anymore"
+      ],
+      "answer": "still",
+      "explanation": "Перед отрицательным вспомогательным глаголом (hasn't / doesn't) для усиления «до сих пор не» ставится still."
+    },
+    {
+      "id": "advp-3",
+      "topicId": "adverbs-position-focus",
+      "type": "cloze",
+      "prompt": "The interface is ___ intuitive, though a bit unusual at first.",
+      "options": [
+        "rather",
+        "yet",
+        "still",
+        "anymore"
+      ],
+      "answer": "rather",
+      "explanation": "Rather («довольно / пожалуй») часто используется с оттенком удивления или контраста."
+    },
+    {
+      "id": "advp-4",
+      "topicId": "adverbs-position-focus",
+      "type": "input",
+      "prompt": "He doesn't live in Samara ___ (уже не).",
+      "hint": "negative end-of-sentence adverb",
+      "answer": "anymore",
+      "acceptedAnswers": [
+        "any more",
+        "any longer"
+      ],
+      "explanation": "В конце отрицательного предложения для значения «больше не» используется anymore / any longer."
+    },
+    {
+      "id": "vprep-1",
+      "topicId": "prepositions-verbs-adjectives-2",
+      "type": "error",
+      "prompt": "This course consists from twelve short modules.",
+      "errorWordIndex": 3,
+      "options": [
+        "of",
+        "in",
+        "with"
+      ],
+      "answer": "of",
+      "explanation": "Устойчивое управление: consist of («состоять из»)."
+    },
+    {
+      "id": "vprep-2",
+      "topicId": "prepositions-verbs-adjectives-2",
+      "type": "cloze",
+      "prompt": "Whether we launch today depends ___ the final test results.",
+      "options": [
+        "on",
+        "from",
+        "of",
+        "by"
+      ],
+      "answer": "on",
+      "explanation": "Глагол depend всегда требует предлога on (или upon)."
+    },
+    {
+      "id": "vprep-3",
+      "topicId": "prepositions-verbs-adjectives-2",
+      "type": "cloze",
+      "prompt": "The strict linter prevented me ___ shipping a broken build.",
+      "options": [
+        "from",
+        "of",
+        "to",
+        "against"
+      ],
+      "answer": "from",
+      "explanation": "Конструкция: prevent someone from doing something («помешать/предотвратить»)."
+    },
+    {
+      "id": "vprep-4",
+      "topicId": "prepositions-verbs-adjectives-2",
+      "type": "input",
+      "prompt": "You should be proud ___ (preposition) how clean this code is.",
+      "hint": "proud + ?",
+      "answer": "of",
+      "explanation": "Прилагательное proud употребляется с предлогом of (proud of)."
+    },
+    {
+      "id": "aslk-1",
+      "topicId": "comparisons-as-like",
+      "type": "error",
+      "prompt": "He works like a senior architect at a studio.",
+      "errorWordIndex": 2,
+      "options": [
+        "as",
+        "for",
+        "by"
+      ],
+      "answer": "as",
+      "explanation": "Реальная должность или профессия («в качестве кого-то») вводится через as, а like означает лишь сходство."
+    },
+    {
+      "id": "aslk-2",
+      "topicId": "comparisons-as-like",
+      "type": "cloze",
+      "prompt": "That cloud looks ___ a giant whale.",
+      "options": [
+        "like",
+        "as",
+        "how",
+        "so"
+      ],
+      "answer": "like",
+      "explanation": "Внешнее сходство с существительным передаётся через look like."
+    },
+    {
+      "id": "aslk-3",
+      "topicId": "comparisons-as-like",
+      "type": "cloze",
+      "prompt": "Please leave the config ___ it is for now.",
+      "options": [
+        "as",
+        "like",
+        "how",
+        "such"
+      ],
+      "answer": "as",
+      "explanation": "Перед целым придаточным предложением (it is) используется союз as («так, как»)."
+    },
+    {
+      "id": "aslk-4",
+      "topicId": "comparisons-as-like",
+      "type": "input",
+      "prompt": "She used a folded magazine ___ (в качестве) an umbrella.",
+      "hint": "function/role",
+      "answer": "as",
+      "explanation": "Функция предмета («использовать в качестве чего-то») вводится словом as."
+    },
+    {
+      "id": "gerp-1",
+      "topicId": "gerund-prepositions-it",
+      "type": "error",
+      "prompt": "Thank you for help me yesterday.",
+      "errorWordIndex": 3,
+      "options": [
+        "helping",
+        "helped",
+        "to help"
+      ],
+      "answer": "helping",
+      "explanation": "После любого предлога (for, without, instead of) глагол ставится в форму герундия (V-ing)."
+    },
+    {
+      "id": "gerp-2",
+      "topicId": "gerund-prepositions-it",
+      "type": "cloze",
+      "prompt": "This book is definitely worth ___ twice.",
+      "options": [
+        "reading",
+        "to read",
+        "read",
+        "to reading"
+      ],
+      "answer": "reading",
+      "explanation": "После прилагательного worth всегда идёт герундий (worth reading), без to."
+    },
+    {
+      "id": "gerp-3",
+      "topicId": "gerund-prepositions-it",
+      "type": "cloze",
+      "prompt": "She left the room without ___ a single word.",
+      "options": [
+        "saying",
+        "to say",
+        "say",
+        "said"
+      ],
+      "answer": "saying",
+      "explanation": "Предлог without требует герундия (without saying)."
+    },
+    {
+      "id": "gerp-4",
+      "topicId": "gerund-prepositions-it",
+      "type": "input",
+      "prompt": "I had trouble ___ (find) the right folder on Windows.",
+      "hint": "have trouble + ?",
+      "answer": "finding",
+      "explanation": "После «have trouble / difficulty (in)» используется герундий (finding)."
+    },
+    {
+      "id": "thit-1",
+      "topicId": "syntax-there-it-cleft",
+      "type": "error",
+      "prompt": "It seems to be a typo on line twelve.",
+      "errorWordIndex": 0,
+      "options": [
+        "There",
+        "That",
+        "This"
+      ],
+      "answer": "There",
+      "explanation": "Указание на наличие/существование объекта («кажется, там есть опечатка») строится через «There seems to be...»."
+    },
+    {
+      "id": "thit-2",
+      "topicId": "syntax-there-it-cleft",
+      "type": "cloze",
+      "prompt": "How long does ___ take to compile the whole project?",
+      "options": [
+        "it",
+        "there",
+        "this",
+        "that"
+      ],
+      "answer": "it",
+      "explanation": "Затраты времени на действие всегда выражаются безличной конструкцией «It takes [time] to V»."
+    },
+    {
+      "id": "thit-3",
+      "topicId": "syntax-there-it-cleft",
+      "type": "cloze",
+      "prompt": "___ used to be an old cinema on this street.",
+      "options": [
+        "There",
+        "It",
+        "They",
+        "That"
+      ],
+      "answer": "There",
+      "explanation": "Наличие объекта в прошлом: «There used to be...»."
+    },
+    {
+      "id": "thit-4",
+      "topicId": "syntax-there-it-cleft",
+      "type": "input",
+      "prompt": "___ (There / It) is a waste of time arguing about tabs vs spaces.",
+      "hint": "evaluative dummy subject",
+      "answer": "It",
+      "explanation": "Оценочная конструкция перед герундием/инфинитивом («It is a waste of time doing...») начинается с It."
+    },
+    {
+      "id": "fprep-5",
+      "topicId": "prepositions-at-in-on-edge",
+      "type": "error",
+      "prompt": "We will be in Paris on the end of August.",
+      "errorWordIndex": 5,
+      "options": [
+        "at",
+        "in",
+        "by"
+      ],
+      "answer": "at",
+      "explanation": "С указанием месяца/события используется «at the end of...» (в конце августа)."
+    },
+    {
+      "id": "fprep-6",
+      "topicId": "prepositions-at-in-on-edge",
+      "type": "cloze",
+      "prompt": "I'm sorry, I deleted that note ___ mistake.",
+      "options": [
+        "by",
+        "on",
+        "in",
+        "with"
+      ],
+      "answer": "by",
+      "explanation": "Устойчивое сочетание: by mistake / by accident («по ошибке / случайно»)."
+    },
+    {
+      "id": "say-5",
+      "topicId": "verb-say-tell-speak-talk",
+      "type": "error",
+      "prompt": "Please say me your honest opinion.",
+      "errorWordIndex": 1,
+      "options": [
+        "tell",
+        "speak",
+        "talk"
+      ],
+      "answer": "tell",
+      "explanation": "Перед косвенным дополнением (me) используется tell (tell me), а не say."
+    },
+    {
+      "id": "say-6",
+      "topicId": "verb-say-tell-speak-talk",
+      "type": "cloze",
+      "prompt": "Can you ___ the difference between these two fonts?",
+      "options": [
+        "tell",
+        "say",
+        "speak",
+        "talk"
+      ],
+      "answer": "tell",
+      "explanation": "Идиома «tell the difference» означает «различать / видеть разницу»."
+    },
+    {
+      "id": "sotoo-5",
+      "topicId": "quantifiers-so-such-too-enough",
+      "type": "error",
+      "prompt": "This suitcase is too heavy for me to lift it.",
+      "errorWordIndex": 9,
+      "options": [
+        "(remove 'it')",
+        "this",
+        "one"
+      ],
+      "answer": "(remove 'it')",
+      "explanation": "Если подлежащее (This suitcase) уже является объектом инфинитива (to lift), дублирующее it в конце не ставится."
+    },
+    {
+      "id": "sotoo-6",
+      "topicId": "quantifiers-so-such-too-enough",
+      "type": "cloze",
+      "prompt": "They gave us ___ helpful feedback that we fixed everything in an hour.",
+      "options": [
+        "such",
+        "so",
+        "such a",
+        "too"
+      ],
+      "answer": "such",
+      "explanation": "Feedback — неисчисляемое существительное, поэтому перед ним ставится such (без артикля a)."
+    },
+    {
+      "id": "noif-5",
+      "topicId": "clauses-if-unless-otherwise",
+      "type": "error",
+      "prompt": "I'll set an alarm in case I will oversleep.",
+      "errorWordIndex": 7,
+      "options": [
+        "(remove 'will')",
+        "would",
+        "shall"
+      ],
+      "answer": "(remove 'will')",
+      "explanation": "После «in case» для будущего используется Present Simple (oversleep), без will."
+    },
+    {
+      "id": "noif-6",
+      "topicId": "clauses-if-unless-otherwise",
+      "type": "cloze",
+      "prompt": "Save your changes now; ___, you might lose them on restart.",
+      "options": [
+        "otherwise",
+        "in case",
+        "unless",
+        "provided"
+      ],
+      "answer": "otherwise",
+      "explanation": "Otherwise вводит негативное последствие («в противном случае»)."
+    },
+    {
+      "id": "cleft-5",
+      "topicId": "cleft-what-it-wh",
+      "type": "error",
+      "prompt": "It was yesterday when we launched the new dashboard.",
+      "errorWordIndex": 3,
+      "options": [
+        "that",
+        "which",
+        "what"
+      ],
+      "answer": "that",
+      "explanation": "В расщеплённом предложении «It was [time] that...» используется связка that, а не when."
+    },
+    {
+      "id": "cleft-6",
+      "topicId": "cleft-what-it-wh",
+      "type": "transform",
+      "prompt": "I only care about performance.",
+      "hint": "Pseudo-cleft: All I care...",
+      "tokens": [
+        "All",
+        "I",
+        "care",
+        "about",
+        "is",
+        "performance."
+      ],
+      "answer": "All I care about is performance.",
+      "explanation": "Конструкция «All + subject + verb + is...» фокусирует внимание на единственно важном элементе."
+    },
+    {
+      "id": "padj-7",
+      "topicId": "participle-adjectives",
+      "type": "cloze",
+      "prompt": "The error message was really ___; nobody understood what failed.",
+      "options": [
+        "confusing",
+        "confused",
+        "confuse",
+        "confusion"
+      ],
+      "answer": "confusing",
+      "explanation": "Сообщение само сбивает с толку (источник) — форма на -ing (confusing)."
+    },
+    {
+      "id": "abil-7",
+      "topicId": "modals-ability-permission",
+      "type": "cloze",
+      "prompt": "I've never ___ understand why this CSS rule gets overridden.",
+      "options": [
+        "been able to",
+        "could",
+        "can",
+        "managed"
+      ],
+      "answer": "been able to",
+      "explanation": "После have/has (Present Perfect) модальный can заменяется на been able to."
+    },
+    {
+      "id": "fitp-7",
+      "topicId": "future-in-the-past",
+      "type": "cloze",
+      "prompt": "We thought the flight ___ land on time, but it was delayed.",
+      "options": [
+        "would",
+        "will",
+        "is going to",
+        "shall"
+      ],
+      "answer": "would",
+      "explanation": "Прогноз будущего из точки в прошлом (We thought...) передаётся через would."
+    },
+    {
+      "id": "nom-7",
+      "topicId": "clauses-nom-wh",
+      "type": "cloze",
+      "prompt": "Choose ___ color palette suits your eyes best.",
+      "options": [
+        "whichever",
+        "whatever",
+        "whoever",
+        "that"
+      ],
+      "answer": "whichever",
+      "explanation": "При выборе из ограниченного набора вариантов («какой бы ни из этих») используется whichever."
+    },
+    {
+      "id": "neg-7",
+      "topicId": "negation-scope-double",
+      "type": "cloze",
+      "prompt": "Seldom ___ such a clean separation of concerns.",
+      "options": [
+        "have I seen",
+        "I have seen",
+        "did I saw",
+        "I saw"
+      ],
+      "answer": "have I seen",
+      "explanation": "Отрицательное наречие Seldom в начале предложения требует инверсии (have I seen)."
+    },
+    {
+      "id": "noun-8",
+      "topicId": "nouns-uncountable-plural",
+      "type": "cloze",
+      "prompt": "Your glasses ___ on the desk right next to the monitor.",
+      "options": [
+        "are",
+        "is",
+        "was",
+        "has been"
+      ],
+      "answer": "are",
+      "explanation": "Glasses («очки») — парное существительное множественного числа (are)."
+    },
+    {
+      "id": "det-8",
+      "topicId": "determiners-both-all-every",
+      "type": "cloze",
+      "prompt": "I checked ___ file in the directory, and all of them compiled.",
+      "options": [
+        "every",
+        "all",
+        "both",
+        "either"
+      ],
+      "answer": "every",
+      "explanation": "Перед исчисляемым существительным в ед. числе (file) используется every / each."
+    },
+    {
+      "id": "mkdo-8",
+      "topicId": "collocations-make-do",
+      "type": "cloze",
+      "prompt": "Could you ___ me a favor and test this on your iPad?",
+      "options": [
+        "do",
+        "make",
+        "give",
+        "take"
+      ],
+      "answer": "do",
+      "explanation": "Устойчивая коллокация: do someone a favor («оказать услугу»)."
+    },
+    {
+      "id": "time-8",
+      "topicId": "clauses-time-contrast",
+      "type": "cloze",
+      "prompt": "Don't close the terminal ___ the script finishes executing.",
+      "options": [
+        "until",
+        "by",
+        "during",
+        "while"
+      ],
+      "answer": "until",
+      "explanation": "Действие (не закрывать) длится вплоть до момента завершения — until."
+    },
+    {
+      "id": "soinv-8",
+      "topicId": "inversion-so-such",
+      "type": "cloze",
+      "prompt": "Such ___ of the response that the server timed out.",
+      "options": [
+        "was the size",
+        "the size was",
+        "did the size",
+        "were the size"
+      ],
+      "answer": "was the size",
+      "explanation": "Инверсия: «Such + was + noun + that...»."
+    },
+    {
+      "id": "agr-9",
+      "topicId": "agreement-subject-verb",
+      "type": "cloze",
+      "prompt": "Fifty dollars ___ a fair price for that ergonomic mouse.",
+      "options": [
+        "is",
+        "are",
+        "were",
+        "have been"
+      ],
+      "answer": "is",
+      "explanation": "Денежная сумма как единая величина согласуется с глаголом в ед. числе (is)."
+    },
+    {
+      "id": "perm-9",
+      "topicId": "verbs-causative-perception",
+      "type": "cloze",
+      "prompt": "When I walked past the studio, I heard them ___ a new track.",
+      "options": [
+        "recording",
+        "to record",
+        "recorded",
+        "to recording"
+      ],
+      "answer": "recording",
+      "explanation": "Незавершённый процесс, за которым вы застали действие на полпути («слышал, как они записывали») — hear + object + V-ing."
+    },
+    {
+      "id": "hab-9",
+      "topicId": "habits-used-to-would",
+      "type": "cloze",
+      "prompt": "It took me a week to ___ the new keyboard layout.",
+      "options": [
+        "get used to",
+        "used to",
+        "be use to",
+        "use to"
+      ],
+      "answer": "get used to",
+      "explanation": "Приобретение привычки («привыкнуть к») — get used to + noun."
+    },
+    {
+      "id": "purp-9",
+      "topicId": "clauses-purpose-reason",
+      "type": "cloze",
+      "prompt": "She spoke slowly ___ everyone could follow the argument.",
+      "options": [
+        "so that",
+        "in order to",
+        "due to",
+        "for"
+      ],
+      "answer": "so that",
+      "explanation": "Перед полным предложением с подлежащим (everyone) используется so that."
+    },
+    {
+      "id": "pinf-9",
+      "topicId": "infinitive-perfect-passive",
+      "type": "cloze",
+      "prompt": "You seem ___ a lot of progress since last month.",
+      "options": [
+        "to have made",
+        "to make",
+        "making",
+        "made"
+      ],
+      "answer": "to have made",
+      "explanation": "Действие, совершившееся до настоящего момента (since last month) — перфектный инфинитив to have made."
+    },
+    {
+      "id": "advp-5",
+      "topicId": "adverbs-position-focus",
+      "type": "cloze",
+      "prompt": "Have you ___ tried running the build in production mode?",
+      "options": [
+        "ever",
+        "already",
+        "still",
+        "anymore"
+      ],
+      "answer": "ever",
+      "explanation": "В вопросе о жизненном опыте («когда-либо») перед причастием ставится ever."
+    },
+    {
+      "id": "vprep-5",
+      "topicId": "prepositions-verbs-adjectives-2",
+      "type": "cloze",
+      "prompt": "This city is famous ___ its historic bookstores.",
+      "options": [
+        "for",
+        "of",
+        "with",
+        "about"
+      ],
+      "answer": "for",
+      "explanation": "Устойчивое управление: famous for something."
+    },
+    {
+      "id": "aslk-5",
+      "topicId": "comparisons-as-like",
+      "type": "cloze",
+      "prompt": "He acts as if he ___ never seen a tablet before.",
+      "options": [
+        "had",
+        "has",
+        "was",
+        "would"
+      ],
+      "answer": "had",
+      "explanation": "Нереальное сравнение о прошлом после «as if» выражается через Past Perfect (had never seen)."
+    },
+    {
+      "id": "gerp-5",
+      "topicId": "gerund-prepositions-it",
+      "type": "cloze",
+      "prompt": "Instead of ___ the whole file, just apply a targeted patch.",
+      "options": [
+        "rewriting",
+        "to rewrite",
+        "rewrite",
+        "rewrote"
+      ],
+      "answer": "rewriting",
+      "explanation": "После сложного предлога «Instead of» всегда используется герундий (rewriting)."
+    },
+    {
+      "id": "thit-5",
+      "topicId": "syntax-there-it-cleft",
+      "type": "cloze",
+      "prompt": "___ is no need to restart the whole computer.",
+      "options": [
+        "There",
+        "It",
+        "This",
+        "That"
+      ],
+      "answer": "There",
+      "explanation": "Устойчивая конструкция отсутствия необходимости: «There is no need to...»."
     }
   ]
 }
