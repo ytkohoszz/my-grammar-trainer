@@ -150,7 +150,11 @@
       "type": "error",
       "prompt": "I am knowing him since 2020.",
       "errorWordIndex": 1,
-      "options": ["have known", "knew", "know"],
+      "options": [
+        "have known",
+        "knew",
+        "know"
+      ],
       "answer": "have known",
       "explanation": "Know — стативный глагол, он не используется в Continuous; с маркером длительности since нужен Present Perfect."
     },
@@ -159,7 +163,12 @@
       "topicId": "tenses-present-simple-vs-cont",
       "type": "cloze",
       "prompt": "The train ___ at 07:45 every morning.",
-      "options": ["leaves", "is leaving", "will leave", "has left"],
+      "options": [
+        "leaves",
+        "is leaving",
+        "will leave",
+        "has left"
+      ],
       "answer": "leaves",
       "explanation": "Для расписаний транспорта и регулярных событий используется Present Simple."
     },
@@ -168,7 +177,12 @@
       "topicId": "tenses-pp-vs-past",
       "type": "cloze",
       "prompt": "I ___ my keys, so I can't get into the apartment right now.",
-      "options": ["lost", "have lost", "had lost", "was losing"],
+      "options": [
+        "lost",
+        "have lost",
+        "had lost",
+        "was losing"
+      ],
       "answer": "have lost",
       "explanation": "Результат важен в настоящем (нет ключей сейчас), а точное время потери не указано — Present Perfect."
     },
@@ -178,7 +192,11 @@
       "type": "error",
       "prompt": "She has visited London three years ago.",
       "errorWordIndex": 1,
-      "options": ["visited", "was visiting", "had visited"],
+      "options": [
+        "visited",
+        "was visiting",
+        "had visited"
+      ],
       "answer": "visited",
       "explanation": "Указание завершённого времени в прошлом (three years ago) требует Past Simple."
     },
@@ -189,7 +207,9 @@
       "prompt": "By the time we arrived at the cinema, the film ___ (already / start).",
       "hint": "already + start",
       "answer": "had already started",
-      "acceptedAnswers": ["'d already started"],
+      "acceptedAnswers": [
+        "'d already started"
+      ],
       "explanation": "Действие началось раньше другого события в прошлом (we arrived), поэтому используется Past Perfect."
     },
     {
@@ -197,7 +217,12 @@
       "topicId": "tenses-past-perfect",
       "type": "cloze",
       "prompt": "While I ___ dinner, the lights suddenly went out.",
-      "options": ["was cooking", "cooked", "had cooked", "cook"],
+      "options": [
+        "was cooking",
+        "cooked",
+        "had cooked",
+        "cook"
+      ],
       "answer": "was cooking",
       "explanation": "Длительный фон в прошлом (Past Continuous), прерванный коротким действием (Past Simple)."
     },
@@ -206,7 +231,12 @@
       "topicId": "tenses-future-forms",
       "type": "cloze",
       "prompt": "Look at those dark clouds — it ___ rain.",
-      "options": ["is going to", "will", "shall", "rains"],
+      "options": [
+        "is going to",
+        "will",
+        "shall",
+        "rains"
+      ],
       "answer": "is going to",
       "explanation": "Предсказание на основе очевидных признаков в настоящем (тёмные тучи) выражается через be going to."
     },
@@ -215,7 +245,12 @@
       "topicId": "tenses-future-forms",
       "type": "cloze",
       "prompt": "Don't call me at 8 PM; I ___ a meeting then.",
-      "options": ["will be having", "will have", "am having", "have"],
+      "options": [
+        "will be having",
+        "will have",
+        "am having",
+        "have"
+      ],
       "answer": "will be having",
       "explanation": "Действие, которое будет находиться в процессе в конкретный момент будущего — Future Continuous."
     },
@@ -224,7 +259,12 @@
       "topicId": "cond-zero-first",
       "type": "cloze",
       "prompt": "If you heat ice, it ___.",
-      "options": ["melts", "will melt", "melted", "would melt"],
+      "options": [
+        "melts",
+        "will melt",
+        "melted",
+        "would melt"
+      ],
       "answer": "melts",
       "explanation": "Zero Conditional: научные факты и законы природы — Present Simple в обеих частях."
     },
@@ -243,7 +283,11 @@
       "type": "error",
       "prompt": "If I would have time, I would call you.",
       "errorWordIndex": 2,
-      "options": ["had", "have", "will have"],
+      "options": [
+        "had",
+        "have",
+        "will have"
+      ],
       "answer": "had",
       "explanation": "В условии (if-clause) Second Conditional ставится Past Simple (had), а не would."
     },
@@ -252,7 +296,12 @@
       "topicId": "cond-second",
       "type": "cloze",
       "prompt": "If I ___ you, I would accept the offer immediately.",
-      "options": ["were", "am", "would be", "had been"],
+      "options": [
+        "were",
+        "am",
+        "would be",
+        "had been"
+      ],
       "answer": "were",
       "explanation": "В устойчивой конструкции совета во Second Conditional используется форма were для всех лиц."
     },
@@ -261,7 +310,12 @@
       "topicId": "cond-third-mixed",
       "type": "cloze",
       "prompt": "If he had taken the earlier train, he ___ here by now.",
-      "options": ["would be", "would have been", "will be", "was"],
+      "options": [
+        "would be",
+        "would have been",
+        "will be",
+        "was"
+      ],
       "answer": "would be",
       "explanation": "Mixed Conditional: нереальное прошлое (had taken) определяет результат в настоящем (by now → would be)."
     },
@@ -272,7 +326,9 @@
       "prompt": "If I ___ (know) about the traffic, I would have left earlier.",
       "hint": "know",
       "answer": "had known",
-      "acceptedAnswers": ["'d known"],
+      "acceptedAnswers": [
+        "'d known"
+      ],
       "explanation": "Third Conditional описывает нереальное прошлое: в части if используется Past Perfect."
     },
     {
@@ -280,7 +336,12 @@
       "topicId": "modals-obligation",
       "type": "cloze",
       "prompt": "You ___ pay for the museum today; entry is free on Sundays.",
-      "options": ["don't have to", "mustn't", "shouldn't", "can't"],
+      "options": [
+        "don't have to",
+        "mustn't",
+        "shouldn't",
+        "can't"
+      ],
       "answer": "don't have to",
       "explanation": "Don't have to означает отсутствие необходимости, тогда как mustn't — строгий запрет."
     },
@@ -289,7 +350,12 @@
       "topicId": "modals-obligation",
       "type": "cloze",
       "prompt": "Visitors ___ touch the exhibits under any circumstances.",
-      "options": ["mustn't", "don't have to", "needn't", "might not"],
+      "options": [
+        "mustn't",
+        "don't have to",
+        "needn't",
+        "might not"
+      ],
       "answer": "mustn't",
       "explanation": "Прямой запрет выражается через must not (mustn't)."
     },
@@ -298,7 +364,12 @@
       "topicId": "modals-past-deduction",
       "type": "cloze",
       "prompt": "The ground is completely wet. It ___ heavily last night.",
-      "options": ["must have rained", "should have rained", "can't have rained", "would rain"],
+      "options": [
+        "must have rained",
+        "should have rained",
+        "can't have rained",
+        "would rain"
+      ],
       "answer": "must have rained",
       "explanation": "Высокая степень уверенности в том, что событие произошло в прошлом — must have + V3."
     },
@@ -309,7 +380,10 @@
       "prompt": "You ___ (can / not / see) Mark yesterday — he's in Tokyo.",
       "hint": "negative past deduction",
       "answer": "can't have seen",
-      "acceptedAnswers": ["cannot have seen", "couldn't have seen"],
+      "acceptedAnswers": [
+        "cannot have seen",
+        "couldn't have seen"
+      ],
       "explanation": "Уверенность в том, что действие в прошлом было невозможно, передаётся через can't have + V3."
     },
     {
@@ -317,7 +391,12 @@
       "topicId": "articles-definite-indefinite",
       "type": "cloze",
       "prompt": "___ information you sent me yesterday was extremely useful.",
-      "options": ["The", "An", "A", "—"],
+      "options": [
+        "The",
+        "An",
+        "A",
+        "—"
+      ],
       "answer": "The",
       "explanation": "Конкретная информация, уточнённая определением (you sent me yesterday), требует артикля the."
     },
@@ -328,7 +407,11 @@
       "prompt": "___ patience is essential when learning a new skill.",
       "hint": "article or -",
       "answer": "-",
-      "acceptedAnswers": ["—", "none", ""],
+      "acceptedAnswers": [
+        "—",
+        "none",
+        ""
+      ],
       "explanation": "Абстрактные неисчисляемые существительные в общем смысле употребляются без артикля."
     },
     {
@@ -337,7 +420,11 @@
       "type": "error",
       "prompt": "The news are very encouraging today.",
       "errorWordIndex": 2,
-      "options": ["is", "were", "have been"],
+      "options": [
+        "is",
+        "were",
+        "have been"
+      ],
       "answer": "is",
       "explanation": "News — неисчисляемое существительное в единственном числе, поэтому согласуется с глаголом is."
     },
@@ -346,7 +433,12 @@
       "topicId": "quantifiers-count-uncount",
       "type": "cloze",
       "prompt": "We have ___ time left, so we can still grab a coffee.",
-      "options": ["a little", "little", "a few", "few"],
+      "options": [
+        "a little",
+        "little",
+        "a few",
+        "few"
+      ],
       "answer": "a little",
       "explanation": "Time неисчисляемо, а «a little» имеет позитивный оттенок («немного, но достаточно»)."
     },
@@ -364,7 +456,12 @@
       "topicId": "prep-time-place",
       "type": "cloze",
       "prompt": "I usually do my reading ___ night before sleeping.",
-      "options": ["at", "in", "on", "by"],
+      "options": [
+        "at",
+        "in",
+        "on",
+        "by"
+      ],
       "answer": "at",
       "explanation": "Устойчивое сочетание «at night» (в отличие от in the morning/afternoon/evening)."
     },
@@ -383,7 +480,11 @@
       "type": "error",
       "prompt": "Despite of the rain, we went out.",
       "errorWordIndex": 1,
-      "options": ["(remove 'of')", "from", "about"],
+      "options": [
+        "(remove 'of')",
+        "from",
+        "about"
+      ],
       "answer": "(remove 'of')",
       "explanation": "Despite используется без предлога of (в отличие от in spite of)."
     },
@@ -393,7 +494,16 @@
       "type": "transform",
       "prompt": "They are renovating the main hall right now.",
       "hint": "Passive: The main hall...",
-      "tokens": ["The", "main", "hall", "is", "being", "renovated", "right", "now."],
+      "tokens": [
+        "The",
+        "main",
+        "hall",
+        "is",
+        "being",
+        "renovated",
+        "right",
+        "now."
+      ],
       "answer": "The main hall is being renovated right now.",
       "explanation": "Present Continuous Passive строится по схеме am/is/are + being + V3."
     },
@@ -402,7 +512,12 @@
       "topicId": "passive-tenses",
       "type": "cloze",
       "prompt": "All the documents ___ by the time the director arrived.",
-      "options": ["had been signed", "were signing", "have been signed", "are signed"],
+      "options": [
+        "had been signed",
+        "were signing",
+        "have been signed",
+        "are signed"
+      ],
       "answer": "had been signed",
       "explanation": "Пассивное действие, завершившееся до момента в прошлом — Past Perfect Passive."
     },
@@ -411,7 +526,12 @@
       "topicId": "causative-have-get",
       "type": "cloze",
       "prompt": "I need to ___ my laptop repaired before the trip.",
-      "options": ["have", "make", "do", "let"],
+      "options": [
+        "have",
+        "make",
+        "do",
+        "let"
+      ],
       "answer": "have",
       "explanation": "Каузативная конструкция have/get + object + V3 означает, что услугу оказывает специалист."
     },
@@ -421,7 +541,14 @@
       "type": "transform",
       "prompt": "A tailor shortened my coat yesterday.",
       "hint": "Causative: I had...",
-      "tokens": ["I", "had", "my", "coat", "shortened", "yesterday."],
+      "tokens": [
+        "I",
+        "had",
+        "my",
+        "coat",
+        "shortened",
+        "yesterday."
+      ],
       "answer": "I had my coat shortened yesterday.",
       "explanation": "Past Simple Causative: had + объект + V3."
     },
@@ -431,7 +558,11 @@
       "type": "error",
       "prompt": "She is looking forward to meet you.",
       "errorWordIndex": 5,
-      "options": ["meeting", "met", "have met"],
+      "options": [
+        "meeting",
+        "met",
+        "have met"
+      ],
       "answer": "meeting",
       "explanation": "В выражении «look forward to» слово to — это предлог, поэтому после него идёт герундий (V-ing)."
     },
@@ -440,7 +571,12 @@
       "topicId": "gerund-infinitive",
       "type": "cloze",
       "prompt": "I stopped ___ a coffee on my way to the office.",
-      "options": ["to buy", "buying", "buy", "bought"],
+      "options": [
+        "to buy",
+        "buying",
+        "buy",
+        "bought"
+      ],
       "answer": "to buy",
       "explanation": "Stop + to V означает «остановиться с целью сделать что-то», а stop + V-ing — «прекратить действие»."
     },
@@ -449,7 +585,12 @@
       "topicId": "clauses-relative",
       "type": "cloze",
       "prompt": "This is the café ___ we met for the first time.",
-      "options": ["where", "which", "that", "whom"],
+      "options": [
+        "where",
+        "which",
+        "that",
+        "whom"
+      ],
       "answer": "where",
       "explanation": "Место действия без предлога в конце вводится относительным наречием where."
     },
@@ -458,7 +599,12 @@
       "topicId": "clauses-relative",
       "type": "cloze",
       "prompt": "My brother, ___ lives in Berlin, is visiting next week.",
-      "options": ["who", "that", "which", "whom"],
+      "options": [
+        "who",
+        "that",
+        "which",
+        "whom"
+      ],
       "answer": "who",
       "explanation": "В non-defining relative clauses (выделенных запятыми) союз that использовать нельзя — только who/which."
     },
@@ -468,7 +614,15 @@
       "type": "transform",
       "prompt": "Because he felt tired, he went to bed early.",
       "hint": "Participle clause: Feeling...",
-      "tokens": ["Feeling", "tired,", "he", "went", "to", "bed", "early."],
+      "tokens": [
+        "Feeling",
+        "tired,",
+        "he",
+        "went",
+        "to",
+        "bed",
+        "early."
+      ],
       "answer": "Feeling tired, he went to bed early.",
       "explanation": "При одном подлежащем причину с активным значением можно сжать в причастный оборот с V-ing."
     },
@@ -477,7 +631,12 @@
       "topicId": "clauses-participle",
       "type": "cloze",
       "prompt": "___ in 1995, the building is still in great condition.",
-      "options": ["Built", "Building", "Having built", "To build"],
+      "options": [
+        "Built",
+        "Building",
+        "Having built",
+        "To build"
+      ],
       "answer": "Built",
       "explanation": "Пассивное значение («будучи построенным») в начале предложения передаётся формой V3 (Built)."
     },
@@ -487,7 +646,11 @@
       "type": "error",
       "prompt": "He suggested me to take a break.",
       "errorWordIndex": 2,
-      "options": ["that I take", "for me taking", "to me take"],
+      "options": [
+        "that I take",
+        "for me taking",
+        "to me take"
+      ],
       "answer": "that I take",
       "explanation": "Глагол suggest не принимает конструкцию suggest + someone + to do; правильно: suggest doing или suggest that someone (should) do."
     },
@@ -496,7 +659,12 @@
       "topicId": "reported-speech",
       "type": "cloze",
       "prompt": "She denied ___ the confidential file.",
-      "options": ["taking", "to take", "take", "took"],
+      "options": [
+        "taking",
+        "to take",
+        "take",
+        "took"
+      ],
       "answer": "taking",
       "explanation": "После глагола deny всегда используется герундий (V-ing) или having + V3."
     },
@@ -506,7 +674,16 @@
       "type": "transform",
       "prompt": "I have never seen such a clean implementation.",
       "hint": "Start with: Never...",
-      "tokens": ["Never", "have", "I", "seen", "such", "a", "clean", "implementation."],
+      "tokens": [
+        "Never",
+        "have",
+        "I",
+        "seen",
+        "such",
+        "a",
+        "clean",
+        "implementation."
+      ],
       "answer": "Never have I seen such a clean implementation.",
       "explanation": "Вынос отрицательного наречия Never в начало предложения требует инверсии: вспомогательный глагол перед подлежащим."
     },
@@ -516,9 +693,819 @@
       "type": "error",
       "prompt": "Hardly I had arrived when the phone rang.",
       "errorWordIndex": 1,
-      "options": ["had I", "did I", "was I"],
+      "options": [
+        "had I",
+        "did I",
+        "was I"
+      ],
       "answer": "had I",
       "explanation": "После Hardly / Scarcely / Seldom в начале предложения вспомогательный глагол had ставится перед подлежащим I."
+    },
+    {
+      "id": "ps-3",
+      "topicId": "tenses-present-simple-vs-cont",
+      "type": "error",
+      "prompt": "She is understanding the problem very well.",
+      "errorWordIndex": 1,
+      "options": [
+        "understands",
+        "understood",
+        "has understood"
+      ],
+      "answer": "understands",
+      "explanation": "Understand — стативный глагол состояния, в значении «понимать» он не ставится в Continuous."
+    },
+    {
+      "id": "ps-4",
+      "topicId": "tenses-present-simple-vs-cont",
+      "type": "cloze",
+      "prompt": "Be quiet, please — I ___ to concentrate on this bug.",
+      "options": [
+        "am trying",
+        "try",
+        "tried",
+        "have tried"
+      ],
+      "answer": "am trying",
+      "explanation": "Действие происходит прямо в момент речи («будь тише сейчас»), нужен Present Continuous."
+    },
+    {
+      "id": "ps-5",
+      "topicId": "tenses-present-simple-vs-cont",
+      "type": "input",
+      "prompt": "Water ___ (boil) at 100 degrees Celsius.",
+      "hint": "boil",
+      "answer": "boils",
+      "explanation": "Общеизвестный физический факт всегда передаётся через Present Simple."
+    },
+    {
+      "id": "pp-3",
+      "topicId": "tenses-pp-vs-past",
+      "type": "error",
+      "prompt": "We didn't saw him at the conference.",
+      "errorWordIndex": 2,
+      "options": [
+        "see",
+        "seen",
+        "seeing"
+      ],
+      "answer": "see",
+      "explanation": "После вспомогательного глагола didn't основной глагол всегда стоит в начальной форме (V1)."
+    },
+    {
+      "id": "pp-4",
+      "topicId": "tenses-pp-vs-past",
+      "type": "cloze",
+      "prompt": "This is the third time he ___ his password this week.",
+      "options": [
+        "has forgotten",
+        "forgot",
+        "forgets",
+        "had forgotten"
+      ],
+      "answer": "has forgotten",
+      "explanation": "Конструкция «This is the first/second/third time...» и незавершённый период (this week) требуют Present Perfect."
+    },
+    {
+      "id": "pp-5",
+      "topicId": "tenses-pp-vs-past",
+      "type": "input",
+      "prompt": "I ___ (never / try) sushi before today.",
+      "hint": "never + try",
+      "answer": "have never tried",
+      "acceptedAnswers": [
+        "'ve never tried"
+      ],
+      "explanation": "Жизненный опыт до настоящего момента описывается с помощью Present Perfect."
+    },
+    {
+      "id": "pperf-3",
+      "topicId": "tenses-past-perfect",
+      "type": "error",
+      "prompt": "After he has finished the report, he went home.",
+      "errorWordIndex": 2,
+      "options": [
+        "had",
+        "was",
+        "would"
+      ],
+      "answer": "had",
+      "explanation": "Оба действия в прошлом: то, что произошло раньше (finished), должно быть в Past Perfect (had finished)."
+    },
+    {
+      "id": "pperf-4",
+      "topicId": "tenses-past-perfect",
+      "type": "cloze",
+      "prompt": "She realized she ___ her phone on the train.",
+      "options": [
+        "had left",
+        "left",
+        "has left",
+        "was leaving"
+      ],
+      "answer": "had left",
+      "explanation": "Оставила телефон до того, как осознала это в прошлом — предпрошедшее время (Past Perfect)."
+    },
+    {
+      "id": "pperf-5",
+      "topicId": "tenses-past-perfect",
+      "type": "input",
+      "prompt": "They ___ (wait) for an hour before the bus finally arrived.",
+      "hint": "wait (duration before past event)",
+      "answer": "had been waiting",
+      "acceptedAnswers": [
+        "had waited"
+      ],
+      "explanation": "Длительное действие до другого момента в прошлом подчёркивается через Past Perfect Continuous."
+    },
+    {
+      "id": "fut-3",
+      "topicId": "tenses-future-forms",
+      "type": "error",
+      "prompt": "I will call you when I will arrive.",
+      "errorWordIndex": 6,
+      "options": [
+        "(remove 'will')",
+        "shall",
+        "would"
+      ],
+      "answer": "(remove 'will')",
+      "explanation": "В придаточных времени после when, as soon as, until вместо will используется Present Simple."
+    },
+    {
+      "id": "fut-4",
+      "topicId": "tenses-future-forms",
+      "type": "cloze",
+      "prompt": "The phone is ringing. — I ___ it!",
+      "options": [
+        "will get",
+        "am going to get",
+        "get",
+        "am getting"
+      ],
+      "answer": "will get",
+      "explanation": "Спонтанное решение, принятое в момент речи, выражается через will."
+    },
+    {
+      "id": "fut-5",
+      "topicId": "tenses-future-forms",
+      "type": "input",
+      "prompt": "By next Friday, we ___ (complete) the migration.",
+      "hint": "complete (by + future point)",
+      "answer": "will have completed",
+      "acceptedAnswers": [
+        "'ll have completed"
+      ],
+      "explanation": "Действие, которое завершится к определённому моменту в будущем (by next Friday) — Future Perfect."
+    },
+    {
+      "id": "c1-3",
+      "topicId": "cond-zero-first",
+      "type": "error",
+      "prompt": "If it will rain tomorrow, we'll stay indoors.",
+      "errorWordIndex": 2,
+      "options": [
+        "rains",
+        "rain",
+        "is rain"
+      ],
+      "answer": "rains",
+      "explanation": "В условии First Conditional после if ставится Present Simple (rains), а не will."
+    },
+    {
+      "id": "c1-4",
+      "topicId": "cond-zero-first",
+      "type": "cloze",
+      "prompt": "Unless you ___ now, you'll miss the last train.",
+      "options": [
+        "leave",
+        "don't leave",
+        "will leave",
+        "left"
+      ],
+      "answer": "leave",
+      "explanation": "Unless уже означает «если не», поэтому после него идёт утвердительный глагол в Present Simple."
+    },
+    {
+      "id": "c1-5",
+      "topicId": "cond-zero-first",
+      "type": "input",
+      "prompt": "If you mix red and blue, you ___ (get) purple.",
+      "hint": "get",
+      "answer": "get",
+      "explanation": "Zero Conditional: постоянный результат, в обеих частях Present Simple."
+    },
+    {
+      "id": "c2-3",
+      "topicId": "cond-second",
+      "type": "error",
+      "prompt": "If she knew his number, she will call him.",
+      "errorWordIndex": 6,
+      "options": [
+        "would",
+        "can",
+        "had"
+      ],
+      "answer": "would",
+      "explanation": "Во Second Conditional в главной части используется would + V1, а не will."
+    },
+    {
+      "id": "c2-4",
+      "topicId": "cond-second",
+      "type": "cloze",
+      "prompt": "What ___ you do if you won the lottery?",
+      "options": [
+        "would",
+        "will",
+        "did",
+        "do"
+      ],
+      "answer": "would",
+      "explanation": "Воображаемая ситуация в настоящем/будущем требует would в главном предложении."
+    },
+    {
+      "id": "c2-5",
+      "topicId": "cond-second",
+      "type": "input",
+      "prompt": "If we ___ (have) more time, we would redesign the entire layout.",
+      "hint": "have",
+      "answer": "had",
+      "explanation": "В условии Second Conditional используется Past Simple (had)."
+    },
+    {
+      "id": "c3-3",
+      "topicId": "cond-third-mixed",
+      "type": "error",
+      "prompt": "If you wouldn't have missed the bus, you'd be on time.",
+      "errorWordIndex": 2,
+      "options": [
+        "hadn't",
+        "didn't",
+        "haven't"
+      ],
+      "answer": "hadn't",
+      "explanation": "В части с if в Third/Mixed Conditional используется Past Perfect (hadn't missed), а не would."
+    },
+    {
+      "id": "c3-4",
+      "topicId": "cond-third-mixed",
+      "type": "cloze",
+      "prompt": "She ___ the exam if she had studied harder.",
+      "options": [
+        "would have passed",
+        "would pass",
+        "passed",
+        "had passed"
+      ],
+      "answer": "would have passed",
+      "explanation": "Нереальный результат в прошлом (Third Conditional): would have + V3."
+    },
+    {
+      "id": "c3-5",
+      "topicId": "cond-third-mixed",
+      "type": "transform",
+      "prompt": "I didn't sleep well, so I feel exhausted today.",
+      "hint": "Mixed: If I had slept...",
+      "tokens": [
+        "If",
+        "I",
+        "had",
+        "slept",
+        "well,",
+        "I",
+        "wouldn't",
+        "feel",
+        "exhausted",
+        "today."
+      ],
+      "answer": "If I had slept well, I wouldn't feel exhausted today.",
+      "explanation": "Mixed Conditional связывает нереальное прошлое (had slept) с состоянием сейчас (wouldn't feel today)."
+    },
+    {
+      "id": "mod-3",
+      "topicId": "modals-obligation",
+      "type": "error",
+      "prompt": "You mustn't to wear a tie at this office.",
+      "errorWordIndex": 2,
+      "options": [
+        "(remove 'to')",
+        "for",
+        "at"
+      ],
+      "answer": "(remove 'to')",
+      "explanation": "После модальных глаголов (must, can, should) инфинитив используется без частицы to."
+    },
+    {
+      "id": "mod-4",
+      "topicId": "modals-obligation",
+      "type": "cloze",
+      "prompt": "You ___ apologize — it wasn't your fault at all.",
+      "options": [
+        "don't need to",
+        "mustn't",
+        "couldn't",
+        "shouldn't have"
+      ],
+      "answer": "don't need to",
+      "explanation": "Отсутствие необходимости передаётся через don't need to / don't have to."
+    },
+    {
+      "id": "mod-5",
+      "topicId": "modals-obligation",
+      "type": "input",
+      "prompt": "Yesterday I ___ (have to) stay late to fix a build error.",
+      "hint": "past of have to",
+      "answer": "had to",
+      "explanation": "У глагола must нет формы прошедшего времени; для обязательств в прошлом используется had to."
+    },
+    {
+      "id": "modp-3",
+      "topicId": "modals-past-deduction",
+      "type": "error",
+      "prompt": "He must forgot about our meeting yesterday.",
+      "errorWordIndex": 2,
+      "options": [
+        "have forgotten",
+        "forget",
+        "be forgetting"
+      ],
+      "answer": "have forgotten",
+      "explanation": "Предположение о прошлом действии строится по схеме modal + have + V3 (must have forgotten)."
+    },
+    {
+      "id": "modp-4",
+      "topicId": "modals-past-deduction",
+      "type": "cloze",
+      "prompt": "I'm not sure where Anna is; she ___ home early.",
+      "options": [
+        "might have gone",
+        "must go",
+        "can't go",
+        "should go"
+      ],
+      "answer": "might have gone",
+      "explanation": "Неуверенное предположение о прошлом («возможно, ушла») — might/may/could + have + V3."
+    },
+    {
+      "id": "modp-5",
+      "topicId": "modals-past-deduction",
+      "type": "input",
+      "prompt": "You ___ (should / tell) me earlier — now it's too late.",
+      "hint": "criticism about past",
+      "answer": "should have told",
+      "explanation": "Сожаление или упрёк о прошлом действии («следовало сказать») — should have + V3."
+    },
+    {
+      "id": "art-3",
+      "topicId": "articles-definite-indefinite",
+      "type": "error",
+      "prompt": "She plays the piano and goes to the school by bus.",
+      "errorWordIndex": 7,
+      "options": [
+        "(remove 'the')",
+        "a",
+        "an"
+      ],
+      "answer": "(remove 'the')",
+      "explanation": "Существительные school, hospital, prison в значении «учиться/лечиться там» употребляются без артикля."
+    },
+    {
+      "id": "art-4",
+      "topicId": "articles-definite-indefinite",
+      "type": "cloze",
+      "prompt": "He is ___ honest developer who never hides mistakes.",
+      "options": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "answer": "an",
+      "explanation": "В слове honest буква h немая, слово начинается с гласного звука [ɒ], поэтому нужен артикль an."
+    },
+    {
+      "id": "art-5",
+      "topicId": "articles-definite-indefinite",
+      "type": "input",
+      "prompt": "___ Mount Everest is the highest peak in the world.",
+      "hint": "article or -",
+      "answer": "-",
+      "acceptedAnswers": [
+        "—",
+        "none",
+        ""
+      ],
+      "explanation": "Названия отдельных горных вершин (в отличие от горных цепей) используются без артикля."
+    },
+    {
+      "id": "quant-3",
+      "topicId": "quantifiers-count-uncount",
+      "type": "error",
+      "prompt": "There are much people waiting outside.",
+      "errorWordIndex": 2,
+      "options": [
+        "many",
+        "a little",
+        "few"
+      ],
+      "answer": "many",
+      "explanation": "People — исчисляемое существительное множественного числа, с ним используется many, а не much."
+    },
+    {
+      "id": "quant-4",
+      "topicId": "quantifiers-count-uncount",
+      "type": "cloze",
+      "prompt": "Unfortunately, ___ students understood the complex proof.",
+      "options": [
+        "few",
+        "a few",
+        "little",
+        "much"
+      ],
+      "answer": "few",
+      "explanation": "Students — исчисляемое; «few» без артикля подчёркивает нехватку («мало, почти никто»)."
+    },
+    {
+      "id": "quant-5",
+      "topicId": "quantifiers-count-uncount",
+      "type": "input",
+      "prompt": "Could you give me ___ (a/an/some) advice on this architecture?",
+      "hint": "advice is uncountable",
+      "answer": "some",
+      "acceptedAnswers": [
+        "a piece of"
+      ],
+      "explanation": "Advice в английском неисчисляемо: нельзя сказать an advice, нужно some advice или a piece of advice."
+    },
+    {
+      "id": "prep-3",
+      "topicId": "prep-time-place",
+      "type": "error",
+      "prompt": "We arrived to the airport two hours early.",
+      "errorWordIndex": 2,
+      "options": [
+        "at",
+        "on",
+        "for"
+      ],
+      "answer": "at",
+      "explanation": "После arrive используется предлог in (страны, крупные города) или at (здания, аэропорт, станция), но не to."
+    },
+    {
+      "id": "prep-4",
+      "topicId": "prep-time-place",
+      "type": "cloze",
+      "prompt": "I haven't seen him ___ three months.",
+      "options": [
+        "for",
+        "since",
+        "during",
+        "from"
+      ],
+      "answer": "for",
+      "explanation": "Период длительности («в течение трёх месяцев») вводится предлогом for, а точка отсчёта — since."
+    },
+    {
+      "id": "prep-5",
+      "topicId": "prep-time-place",
+      "type": "input",
+      "prompt": "The release is scheduled ___ May.",
+      "hint": "month preposition",
+      "answer": "in",
+      "explanation": "С месяцами, годами и сезонами используется предлог in."
+    },
+    {
+      "id": "dprep-3",
+      "topicId": "prep-dependent",
+      "type": "error",
+      "prompt": "This software is different than the previous version.",
+      "errorWordIndex": 4,
+      "options": [
+        "from",
+        "with",
+        "for"
+      ],
+      "answer": "from",
+      "explanation": "Стандартный предлог после different — from (в британском также допустимо to)."
+    },
+    {
+      "id": "dprep-4",
+      "topicId": "prep-dependent",
+      "type": "cloze",
+      "prompt": "She succeeded ___ solving the memory leak.",
+      "options": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "answer": "in",
+      "explanation": "Устойчивое управление глагола: succeed in doing something."
+    },
+    {
+      "id": "dprep-5",
+      "topicId": "prep-dependent",
+      "type": "input",
+      "prompt": "I'm really keen ___ minimalist UI design.",
+      "hint": "preposition",
+      "answer": "on",
+      "explanation": "Устойчивое выражение: to be keen on something («увлекаться чем-то»)."
+    },
+    {
+      "id": "pas-3",
+      "topicId": "passive-tenses",
+      "type": "error",
+      "prompt": "The package was deliver this morning.",
+      "errorWordIndex": 3,
+      "options": [
+        "delivered",
+        "delivering",
+        "delivers"
+      ],
+      "answer": "delivered",
+      "explanation": "В пассивном залоге после be всегда используется третья форма глагола (V3 — delivered)."
+    },
+    {
+      "id": "pas-4",
+      "topicId": "passive-tenses",
+      "type": "cloze",
+      "prompt": "The new update ___ tomorrow afternoon.",
+      "options": [
+        "will be released",
+        "will release",
+        "is releasing",
+        "released"
+      ],
+      "answer": "will be released",
+      "explanation": "Обновление само себя не выпускает — нужен Future Simple Passive (will be + V3)."
+    },
+    {
+      "id": "pas-5",
+      "topicId": "passive-tenses",
+      "type": "transform",
+      "prompt": "Someone has stolen my bicycle.",
+      "hint": "Passive: My bicycle...",
+      "tokens": [
+        "My",
+        "bicycle",
+        "has",
+        "been",
+        "stolen."
+      ],
+      "answer": "My bicycle has been stolen.",
+      "explanation": "Present Perfect Passive: has/have + been + V3."
+    },
+    {
+      "id": "caus-3",
+      "topicId": "causative-have-get",
+      "type": "error",
+      "prompt": "We had our house paint last summer.",
+      "errorWordIndex": 4,
+      "options": [
+        "painted",
+        "painting",
+        "to paint"
+      ],
+      "answer": "painted",
+      "explanation": "В каузативной конструкции have + something + V3 глагол действия всегда в форме V3."
+    },
+    {
+      "id": "caus-4",
+      "topicId": "causative-have-get",
+      "type": "cloze",
+      "prompt": "She is ___ her hair cut right now.",
+      "options": [
+        "having",
+        "making",
+        "doing",
+        "taking"
+      ],
+      "answer": "having",
+      "explanation": "Процесс оказания услуги в моменте — Present Continuous Causative (is having ... cut)."
+    },
+    {
+      "id": "caus-5",
+      "topicId": "causative-have-get",
+      "type": "input",
+      "prompt": "I'll ___ (get / check / my eyes) next week.",
+      "hint": "get + object + V3",
+      "answer": "get my eyes checked",
+      "acceptedAnswers": [
+        "have my eyes checked"
+      ],
+      "explanation": "Порядок слов в каузативе: get/have + объект + V3."
+    },
+    {
+      "id": "ger-3",
+      "topicId": "gerund-infinitive",
+      "type": "error",
+      "prompt": "I avoid to drive during rush hour.",
+      "errorWordIndex": 2,
+      "options": [
+        "driving",
+        "drive",
+        "driven"
+      ],
+      "answer": "driving",
+      "explanation": "После глагола avoid всегда используется герундий (V-ing), а не инфинитив."
+    },
+    {
+      "id": "ger-4",
+      "topicId": "gerund-infinitive",
+      "type": "cloze",
+      "prompt": "Don't forget ___ the door before you leave.",
+      "options": [
+        "to lock",
+        "locking",
+        "lock",
+        "locked"
+      ],
+      "answer": "to lock",
+      "explanation": "Forget + to V означает «не забыть сделать действие в будущем», forget + V-ing — «забыть о прошлом событии»."
+    },
+    {
+      "id": "ger-5",
+      "topicId": "gerund-infinitive",
+      "type": "input",
+      "prompt": "He admitted ___ (make) a mistake in the config.",
+      "hint": "make",
+      "answer": "making",
+      "acceptedAnswers": [
+        "having made"
+      ],
+      "explanation": "После глагола admit используется герундий (V-ing)."
+    },
+    {
+      "id": "rel-3",
+      "topicId": "clauses-relative",
+      "type": "error",
+      "prompt": "The person which called you didn't leave a name.",
+      "errorWordIndex": 2,
+      "options": [
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer": "who",
+      "explanation": "Для одушевлённых людей в роли подлежащего используется who или that, но не which."
+    },
+    {
+      "id": "rel-4",
+      "topicId": "clauses-relative",
+      "type": "cloze",
+      "prompt": "That's the author ___ book I recommended to you.",
+      "options": [
+        "whose",
+        "who",
+        "whom",
+        "which"
+      ],
+      "answer": "whose",
+      "explanation": "Принадлежность («чья книга») выражается относительным местоимением whose."
+    },
+    {
+      "id": "rel-5",
+      "topicId": "clauses-relative",
+      "type": "input",
+      "prompt": "The reason ___ I'm calling is urgent.",
+      "hint": "relative adverb",
+      "answer": "why",
+      "acceptedAnswers": [
+        "that"
+      ],
+      "explanation": "После слова reason для указания причины используется why (или that)."
+    },
+    {
+      "id": "part-3",
+      "topicId": "clauses-participle",
+      "type": "error",
+      "prompt": "Having finish the work, she closed her laptop.",
+      "errorWordIndex": 1,
+      "options": [
+        "finished",
+        "finishing",
+        "finishes"
+      ],
+      "answer": "finished",
+      "explanation": "Перфектный причастный оборот строится как Having + V3 (Having finished)."
+    },
+    {
+      "id": "part-4",
+      "topicId": "clauses-participle",
+      "type": "cloze",
+      "prompt": "___ by the noise, he couldn't fall asleep.",
+      "options": [
+        "Annoyed",
+        "Annoying",
+        "Having annoy",
+        "To annoy"
+      ],
+      "answer": "Annoyed",
+      "explanation": "Пассивное значение («раздражённый шумом») передаётся причастием прошедшего времени (V3)."
+    },
+    {
+      "id": "part-5",
+      "topicId": "clauses-participle",
+      "type": "transform",
+      "prompt": "After he had checked the logs, he deployed the fix.",
+      "hint": "Participle: Having...",
+      "tokens": [
+        "Having",
+        "checked",
+        "the",
+        "logs,",
+        "he",
+        "deployed",
+        "the",
+        "fix."
+      ],
+      "answer": "Having checked the logs, he deployed the fix.",
+      "explanation": "Предшествующее действие одного и того же субъекта сжимается через Having + V3."
+    },
+    {
+      "id": "rep-3",
+      "topicId": "reported-speech",
+      "type": "error",
+      "prompt": "She told me that she will come the next day.",
+      "errorWordIndex": 5,
+      "options": [
+        "would",
+        "can",
+        "may"
+      ],
+      "answer": "would",
+      "explanation": "При глаголе речи в прошлом (told) срабатывает согласование времён: will сдвигается в would."
+    },
+    {
+      "id": "rep-4",
+      "topicId": "reported-speech",
+      "type": "cloze",
+      "prompt": "He asked me where ___.",
+      "options": [
+        "I lived",
+        "did I live",
+        "do I live",
+        "lived I"
+      ],
+      "answer": "I lived",
+      "explanation": "В косвенном вопросе порядок слов прямой (подлежащее + глагол), вспомогательный did не нужен."
+    },
+    {
+      "id": "rep-5",
+      "topicId": "reported-speech",
+      "type": "input",
+      "prompt": "The doctor advised me ___ (drink) more water.",
+      "hint": "advise + object + ?",
+      "answer": "to drink",
+      "explanation": "После глагола advise с дополнением (advise someone) идёт инфинитив с частицей to."
+    },
+    {
+      "id": "inv-3",
+      "topicId": "syntax-inversion-cleft",
+      "type": "error",
+      "prompt": "Seldom we see such dedication to quality.",
+      "errorWordIndex": 1,
+      "options": [
+        "do we",
+        "we do",
+        "are we"
+      ],
+      "answer": "do we",
+      "explanation": "После ограничительного наречия Seldom в начале предложения в Present Simple выносится вспомогательный do/does."
+    },
+    {
+      "id": "inv-4",
+      "topicId": "syntax-inversion-cleft",
+      "type": "cloze",
+      "prompt": "Little ___ that the script would save hours of work.",
+      "options": [
+        "did he know",
+        "he knew",
+        "knew he",
+        "had he know"
+      ],
+      "answer": "did he know",
+      "explanation": "Отрицательная конструкция Little в начале предложения требует инверсии: did + подлежащее + V1."
+    },
+    {
+      "id": "inv-5",
+      "topicId": "syntax-inversion-cleft",
+      "type": "transform",
+      "prompt": "The syntax error broke the build.",
+      "hint": "Cleft: It was the syntax error...",
+      "tokens": [
+        "It",
+        "was",
+        "the",
+        "syntax",
+        "error",
+        "that",
+        "broke",
+        "the",
+        "build."
+      ],
+      "answer": "It was the syntax error that broke the build.",
+      "explanation": "Эмфатическая конструкция (Cleft Sentence) «It is/was X that...» выделяет ключевой элемент предложения."
     }
   ]
 }
