@@ -155,8 +155,9 @@ if (e.key === "Escape" && (this.isMapOpen || this.isRulesOpen)) {
     const { pack } = getActivePack(this.plugin.data);
     const mistakesCount = getMistakeCount(pack, this.plugin.data.progress);
 
-    // Floating Island Toolbar
-    const island = this.rootEl.createDiv({ cls: "mgt-island-bar" });
+// Top Island Toolbar (always pinned cleanly above content)
+    const topbar = this.rootEl.createDiv({ cls: "mgt-topbar" });
+    const island = topbar.createDiv({ cls: "mgt-island-bar" });
 
     const smartBtn = island.createEl("button", {
       cls: `mgt-island-btn ${this.mode === "smart" ? "is-active" : ""}`,
@@ -191,8 +192,9 @@ const mapBtn = island.createEl("button", {
     setIcon(rulesBtn, "book-open");
     rulesBtn.addEventListener("click", () => this.toggleRules());
 
-    this.stageEl = this.rootEl.createDiv({ cls: "mgt-stage" });
-    this.mapHostEl = this.rootEl.createDiv({ cls: "mgt-map-host" });
+const workspace = this.rootEl.createDiv({ cls: "mgt-workspace" });
+    this.stageEl = workspace.createDiv({ cls: "mgt-stage" });
+    this.mapHostEl = workspace.createDiv({ cls: "mgt-map-host" });
     this.renderCurrentStep();
     this.syncOverlays();
   }
@@ -212,12 +214,13 @@ const mapBtn = island.createEl("button", {
     this.syncOverlays();
   }
 
-  private syncOverlays(): void {
+private syncOverlays(): void {
     if (!this.mapHostEl) return;
 
     const { pack } = getActivePack(this.plugin.data);
 
     if (this.isMapOpen) {
+      this.stageEl?.addClass("is-hidden");
       renderTopicsMap(
         this.mapHostEl,
         pack,
@@ -232,6 +235,7 @@ const mapBtn = island.createEl("button", {
     }
 
     if (this.isRulesOpen) {
+      this.stageEl?.addClass("is-hidden");
       const rulesPack = getActiveRules(this.plugin.data);
       renderRulesOverlay(
         this.mapHostEl,
@@ -247,6 +251,7 @@ const mapBtn = island.createEl("button", {
     }
 
     this.mapHostEl.empty();
+    this.stageEl?.removeClass("is-hidden");
   }
 
   private renderCurrentStep(): void {

@@ -12,14 +12,9 @@ export function renderRulesOverlay(
   initialTopicId: string | undefined,
   callbacks: RulesOverlayCallbacks
 ): void {
-  host.empty();
+host.empty();
 
-  const overlay = host.createDiv({ cls: "mgt-map-overlay" });
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) callbacks.onClose();
-  });
-
-  const panel = overlay.createDiv({ cls: "mgt-map-panel mgt-rules-panel" });
+  const panel = host.createDiv({ cls: "mgt-map-panel mgt-rules-panel" });
 
   const rulesByTopic = new Map<string, GrammarRule>();
   for (const r of rulesPack.rules) {

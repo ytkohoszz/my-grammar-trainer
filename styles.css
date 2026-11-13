@@ -12,31 +12,44 @@
   flex: 1;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.mgt-topbar {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px 16px 8px;
+  z-index: 10;
+}
+
+.mgt-workspace {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
   overflow-y: auto;
   scrollbar-width: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px 20px calc(32px + env(safe-area-inset-bottom, 0px));
+  padding: 6px 20px 40px;
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
 }
 
-.mgt-root::-webkit-scrollbar {
+.mgt-workspace::-webkit-scrollbar {
   display: none;
 }
 
 /* --- Floating Apple-style Pill Toolbar --- */
 .mgt-island-bar {
-  position: sticky;
-  top: calc(4px + env(safe-area-inset-top, 0px));
-  z-index: 35;
-  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   gap: 4px;
   padding: 4px;
-  margin-bottom: 16px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--background-secondary) 72%, transparent);
   backdrop-filter: blur(20px) saturate(160%);
@@ -571,31 +584,22 @@ button.mgt-secondary-btn {
   margin-top: 18px;
 }
 
-/* --- Topics Map Overlay --- */
-.mgt-map-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 30;
-  background: color-mix(in srgb, var(--background-primary) 58%, transparent);
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
+/* --- Topics Map & Rules Panel --- */
+.mgt-map-host {
+  width: 100%;
+  max-width: 780px;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: calc(68px + env(safe-area-inset-top, 0px)) 16px calc(24px + env(safe-area-inset-bottom, 0px));
-  box-sizing: border-box;
+  flex-direction: column;
 }
 
 .mgt-map-panel {
   width: 100%;
-  max-width: 780px;
-  max-height: calc(100% - 8px);
   display: flex;
   flex-direction: column;
   border-radius: 22px;
   background: color-mix(in srgb, var(--background-secondary) 94%, var(--background-primary));
   border: 1px solid color-mix(in srgb, var(--background-modifier-border) 85%, rgba(255, 255, 255, 0.08));
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
   overflow: hidden;
   animation: mgtSlideUp 180ms cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -765,12 +769,12 @@ button.mgt-topic-card.is-weak .mgt-topic-bar-fill {
 
 /* --- Phone Layout (iPhone / narrow mobile screens) --- */
 @media (max-width: 520px) {
-  .mgt-root {
-    padding: 10px 12px calc(24px + env(safe-area-inset-bottom, 0px));
+  .mgt-topbar {
+    padding: 6px 12px 6px;
   }
 
-  .mgt-island-bar {
-    margin-bottom: 12px;
+  .mgt-workspace {
+    padding: 4px 12px 110px;
   }
 
   button.mgt-island-btn {
@@ -815,11 +819,7 @@ button.mgt-topic-card.is-weak .mgt-topic-bar-fill {
     flex: 1;
   }
 
-  .mgt-map-overlay {
-    padding: calc(58px + env(safe-area-inset-top, 0px)) 10px calc(16px + env(safe-area-inset-bottom, 0px));
-  }
-
-  .mgt-map-panel {
+.mgt-map-panel {
     border-radius: 20px;
   }
 

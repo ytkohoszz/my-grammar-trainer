@@ -15,14 +15,9 @@ export function renderTopicsMap(
   activeTopicId: string | undefined,
   callbacks: TopicsMapCallbacks
 ): void {
-  host.empty();
+host.empty();
 
-  const overlay = host.createDiv({ cls: "mgt-map-overlay" });
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) callbacks.onClose();
-  });
-
-  const panel = overlay.createDiv({ cls: "mgt-map-panel" });
+  const panel = host.createDiv({ cls: "mgt-map-panel" });
 
   // Filter bar
   const filterBar = panel.createDiv({ cls: "mgt-map-filters" });
