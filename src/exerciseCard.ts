@@ -24,11 +24,14 @@ export function renderExerciseCard(
   container.empty();
   const card = container.createDiv({ cls: "mgt-card mgt-exercise-card" });
 
-  // Subtle topic header
+// Subtle topic header
   const meta = card.createDiv({ cls: "mgt-meta-line" });
-  meta.setText(
-    topic ? `${topic.level} · ${topic.title}` : exercise.topicId
-  );
+  if (topic) {
+    meta.createSpan({ cls: "mgt-level-pill", text: topic.level });
+    meta.createSpan({ cls: "mgt-topic-label", text: topic.title });
+  } else {
+    meta.setText(exercise.topicId);
+  }
 
   let answered = false;
   const feedbackSlot = card.createDiv({ cls: "mgt-feedback-slot" });
