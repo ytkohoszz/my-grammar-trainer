@@ -61,7 +61,7 @@ export interface CachedRulesPack {
   pack: RulesPack;
 }
 
-export interface GrammarTrainerSettings {
+export type SessionMode = "smart" | "mistakes" | "topic";
 
 export const SHARED_GRAMMAR_STATE_KEY = "my-grammar-trainer:dashboard-state";
 
