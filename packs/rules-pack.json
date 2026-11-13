@@ -446,6 +446,310 @@
         }
       ],
       "pitfall": "После depend всегда идёт предлог on/upon, а не of или from."
+    },
+    {
+      "topicId": "passive-tenses",
+      "formula": "be (в нужном времени) + V3  |  being + V3 (Continuous)",
+      "points": [
+        "Используется, когда фокус на самом объекте или результате действия, а не на том, кто его совершил.",
+        "В Present/Past Continuous Passive добавляется слово being (is being built); в модальных глаголах — modal + be + V3."
+      ],
+      "examples": [
+        {
+          "en": "The main hall is being renovated right now.",
+          "note": "Процесс в настоящем."
+        },
+        {
+          "en": "He is said to be a brilliant architect.",
+          "note": "Безличный/личный пассив с глаголами мнения."
+        }
+      ],
+      "pitfall": "Всегда проверяйте V3 у неправильных глаголов (written, broken, stolen, spoken — а не wrote/broke)."
+    },
+    {
+      "topicId": "causative-have-get",
+      "formula": "have / get + объект + V3  |  have someone + V1  |  get someone + to V1",
+      "points": [
+        "Показывает, что услугу или работу для нас выполнил кто-то другой (мастер, специалист).",
+        "Если указан сам исполнитель: после have идёт голый инфинитив (had him rewrite), а после get — с частицей to (got him to fix)."
+      ],
+      "examples": [
+        {
+          "en": "I got my laptop battery replaced.",
+          "note": "Заменили в сервисе."
+        },
+        {
+          "en": "My manager had me rewrite the summary.",
+          "note": "Указан исполнитель → без to."
+        }
+      ],
+      "pitfall": "Не путайте с обычным Past Perfect: в каузативе объект стоит МЕЖДУ have и V3 (had my coat shortened)."
+    },
+    {
+      "topicId": "gerund-infinitive",
+      "formula": "V-ing (enjoy, avoid, deny, admit, suggest)  |  to V1 (decide, refuse, afford, manage, promise)",
+      "points": [
+        "Часть глаголов требует только герундия (avoid driving, admit making), другая — только инфинитива (afford to buy).",
+        "Глаголы stop, remember, forget, try меняют смысл: V-ing относится к процессу/прошлому, to V1 — к цели/будущему."
+      ],
+      "examples": [
+        {
+          "en": "I stopped to buy a coffee.",
+          "note": "Остановился, чтобы купить (цель)."
+        },
+        {
+          "en": "I remember putting the keys on the desk.",
+          "note": "Помню уже совершённое действие."
+        }
+      ],
+      "pitfall": "В выражениях «look forward to», «be used to», «object to» слово to — предлог, поэтому после него всегда идёт V-ing."
+    },
+    {
+      "topicId": "gerund-prepositions-it",
+      "formula": "Предлог (for, without, instead of, by, before) + V-ing  |  worth / busy + V-ing",
+      "points": [
+        "После любого предлога глагол ставится строго в форму герундия (V-ing), никогда не to V1.",
+        "Выражения be worth, be busy, have trouble/difficulty (in), there's no point (in) тоже требуют V-ing."
+      ],
+      "examples": [
+        {
+          "en": "This book is well worth reading twice.",
+          "note": "worth + V-ing."
+        },
+        {
+          "en": "She left without saying a word.",
+          "note": "Предлог without + V-ing."
+        }
+      ],
+      "pitfall": "Не ставьте «to» после worth: правильно «worth keeping», а не «worth to keep»."
+    },
+    {
+      "topicId": "infinitive-perfect-passive",
+      "formula": "to have + V3 (прошлое)  |  to be + V-ing (сейчас)  |  to have been + V3 (пассив в прошлом)",
+      "points": [
+        "После seem, appear, be said/believed/thought перфектный инфинитив (to have V3) относит действие к прошлому.",
+        "Длительный инфинитив (to be V-ing) описывает процесс в момент речи."
+      ],
+      "examples": [
+        {
+          "en": "He seems to have lost his keys again.",
+          "note": "Потерял раньше, сейчас это видно."
+        },
+        {
+          "en": "They seem to be enjoying the concert.",
+          "note": "Наслаждаются прямо сейчас."
+        }
+      ],
+      "pitfall": "Для пассивного действия в прошлом используйте полную связку «to have been + V3», а не «to been»."
+    },
+    {
+      "topicId": "verbs-causative-perception",
+      "formula": "make / let + объект + V1 (актив)  |  be made + to V1 (пассив)  |  see/hear + объект + V1 / V-ing",
+      "points": [
+        "В активе после make и let частица to не ставится (let me explain), но в пассиве возвращается (was made to fill out).",
+        "После глаголов восприятия (see, hear, watch, notice) V1 означает весь факт целиком, а V-ing — действие в процессе."
+      ],
+      "examples": [
+        {
+          "en": "I saw him cross the street.",
+          "note": "Видел от начала до конца (V1)."
+        },
+        {
+          "en": "I heard them recording a new track.",
+          "note": "Застал в процессе (V-ing)."
+        }
+      ],
+      "pitfall": "Allow и force всегда требуют to (allowed us to run), а let — без to (let us run)."
+    },
+    {
+      "topicId": "verb-say-tell-speak-talk",
+      "formula": "tell + адресат (+ that)  |  say + (что-то) (+ to адресату)  |  speak + язык",
+      "points": [
+        "Tell почти всегда требует указания собеседника сразу после глагола (tell me, tell someone).",
+        "Исключения без адресата для tell: tell the truth, tell a lie, tell a story, tell the difference / apart."
+      ],
+      "examples": [
+        {
+          "en": "He told me that he would be late.",
+          "note": "Есть адресат me → told."
+        },
+        {
+          "en": "Did he say anything about the schedule?",
+          "note": "Нет адресата → say."
+        }
+      ],
+      "pitfall": "Ошибки: «He said me» (неверно — нужно «told me» или «said to me») и «She told that...» (нужно «said that...»)."
+    },
+    {
+      "topicId": "collocations-make-do",
+      "formula": "make (создание/решение/ошибка)  |  do (работа/рутина/исследование)  |  take (пауза/душ)",
+      "points": [
+        "Make: make a decision, make a mistake, make progress, make an effort, make a phone call, make sure, make a difference.",
+        "Do: do research, do your best, do a favor, do a calculation, do the dishes / laundry."
+      ],
+      "examples": [
+        {
+          "en": "She did a lot of research before buying.",
+          "note": "do research (не make!)."
+        },
+        {
+          "en": "This tweak will make a huge difference.",
+          "note": "make a difference."
+        }
+      ],
+      "pitfall": "Слова «research» и «a favor» всегда идут с do, а «mistake», «decision» и «progress» — с make."
+    },
+    {
+      "topicId": "phrasal-verbs-separable",
+      "formula": "Глагол + местоимение + частица (turn it down, look it up)",
+      "points": [
+        "В разделяемых фразовых глаголах (turn off, put off, fill out, look up, pick up) местоимение it/them ставится строго в середину.",
+        "В неразделяемых (look after, look into, run into, come across, get over) объект всегда идёт после частицы."
+      ],
+      "examples": [
+        {
+          "en": "The music is too loud — turn it down.",
+          "note": "Местоимение между verb и particle."
+        },
+        {
+          "en": "We've run out of coffee.",
+          "note": "Трёхсловный глагол неразделяемый."
+        }
+      ],
+      "pitfall": "Никогда не ставьте it/them в конец разделяемого глагола: «turn off it» — ошибка, правильно «turn it off»."
+    },
+    {
+      "topicId": "clauses-relative",
+      "formula": "who/that (люди)  |  which/that (вещи)  |  whose (чей)  |  where/when (место/время)",
+      "points": [
+        "В Defining-придаточных (без запятых) можно использовать that; после everything/nothing/all ставится именно that.",
+        "В Non-defining (выделенных запятыми) слово that запрещено — только who или which."
+      ],
+      "examples": [
+        {
+          "en": "My brother, who lives in Berlin, is visiting.",
+          "note": "С запятыми → только who (не that)."
+        },
+        {
+          "en": "He failed the test, which surprised everyone.",
+          "note": "Относится ко всему факту → только which."
+        }
+      ],
+      "pitfall": "Сразу после предлога (with, in, about) для людей используется whom (with whom I worked), а для мест без предлога — where."
+    },
+    {
+      "topicId": "clauses-participle",
+      "formula": "V-ing (актив)  |  V3 (пассив)  |  Having + V3 (завершено до главного действия)",
+      "points": [
+        "Позволяет сжать длинное придаточное времени или причины в короткий оборот при одном и том же подлежащем.",
+        "Отрицание строится выносом Not перед причастием (Not knowing what to say...)."
+      ],
+      "examples": [
+        {
+          "en": "Feeling tired, he went to bed early.",
+          "note": "Активная причина (Because he felt...)."
+        },
+        {
+          "en": "Built in 1995, the building looks great.",
+          "note": "Пассивное значение (V3)."
+        }
+      ],
+      "pitfall": "Подлежащее причастного оборота и главного предложения должно совпадать."
+    },
+    {
+      "topicId": "clauses-nom-wh",
+      "formula": "what (= the thing that)  |  whatever / whoever / whichever / however",
+      "points": [
+        "What заменяет целую фразу «то, что» и работает как подлежащее или дополнение.",
+        "Whichever используется при выборе из ограниченного списка вариантов, whatever — при неограниченном выборе."
+      ],
+      "examples": [
+        {
+          "en": "What surprised me was the speed.",
+          "note": "«То, что меня удивило...»."
+        },
+        {
+          "en": "Choose whichever palette suits you best.",
+          "note": "Выбор из нескольких палитр."
+        }
+      ],
+      "pitfall": "Не путайте that и what: «Tell me what you want» (без опорного слова), но «The book that I bought» (после существительного)."
+    },
+    {
+      "topicId": "clauses-purpose-reason",
+      "formula": "Цель: (in order) to V1 / so that + clause  |  Причина: because/since + clause / due to + noun",
+      "points": [
+        "Перед глаголом для цели используйте to / in order to / so as not to; перед полным предложением с подлежащим — so that.",
+        "Для назначения инструмента перед V-ing ставится for (used for formatting)."
+      ],
+      "examples": [
+        {
+          "en": "I wrote it down so that I wouldn't forget.",
+          "note": "Полное придаточное → so that."
+        },
+        {
+          "en": "The flight was delayed due to dense fog.",
+          "note": "Существительное → due to / because of."
+        }
+      ],
+      "pitfall": "После because of, due to, owing to идёт только существительное/герундий, а не подлежащее с глаголом."
+    },
+    {
+      "topicId": "clauses-time-contrast",
+      "formula": "by (не позднее дедлайна) vs until (вплоть до)  |  while (+ clause) vs during (+ noun)  |  whereas",
+      "points": [
+        "By указывает на крайний срок завершения (by Friday), until — на длительность процесса до точки (wait until 6 PM).",
+        "Whereas и while противопоставляют два разных факта («тогда как»)."
+      ],
+      "examples": [
+        {
+          "en": "Don't close the terminal until the script finishes.",
+          "note": "Длится до момента окончания."
+        },
+        {
+          "en": "We stayed indoors during the storm.",
+          "note": "Существительное → during."
+        }
+      ],
+      "pitfall": "В придаточных времени после until, by the time, as soon as будущее выражается через Present Simple."
+    },
+    {
+      "topicId": "linking-concession",
+      "formula": "Although / Even though + clause  |  Despite / In spite of + noun / V-ing  |  However + adj",
+      "points": [
+        "Although, even though и while требуют полноценного предложения (подлежащее + сказуемое).",
+        "Despite и in spite of принимают существительное, герундий или оборот «the fact that...»."
+      ],
+      "examples": [
+        {
+          "en": "Despite having little experience, she nailed it.",
+          "note": "Герундий → Despite."
+        },
+        {
+          "en": "However tired he felt, he finished the review.",
+          "note": "However + прилагательное."
+        }
+      ],
+      "pitfall": "Никогда не ставьте of после Despite — это самая частая ошибка («Despite of» неверно)."
+    },
+    {
+      "topicId": "reported-speech",
+      "formula": "Backshift: Present → Past  |  Past/Pres.Perf → Past Perfect  |  will → would",
+      "points": [
+        "При глаголе речи в прошлом (said, told, asked) времена сдвигаются на шаг назад.",
+        "В косвенном вопросе порядок слов всегда прямой (He asked where I lived, без did)."
+      ],
+      "examples": [
+        {
+          "en": "He asked me where I lived.",
+          "note": "Прямой порядок слов."
+        },
+        {
+          "en": "He warned me not to touch that cable.",
+          "note": "Отрицательный приказ: not to + V1."
+        }
+      ],
+      "pitfall": "Suggest не принимает конструкцию «suggest someone to do»: правильно «suggested that I take» или «suggested taking»."
     }
   ]
 }
