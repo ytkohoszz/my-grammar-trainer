@@ -1,4 +1,4 @@
-import { Plugin, WorkspaceLeaf } from "obsidian";
+import { Plugin, TFile, WorkspaceLeaf, normalizePath } from "obsidian";
 import {
   getLocalDateKey,
   getMistakeCount,
@@ -23,8 +23,25 @@ import {
 } from "./types";
 import { GRAMMAR_VIEW_TYPE, GrammarTrainerView } from "./view";
 
+const DIARY_ROOT = "Ежедневник";
+const MONTHS_RU = [
+  "январь",
+  "февраль",
+  "март",
+  "апрель",
+  "май",
+  "июнь",
+  "июль",
+  "август",
+  "сентябрь",
+  "октябрь",
+  "ноябрь",
+  "декабрь"
+];
+
 export default class GrammarTrainerPlugin extends Plugin {
   data: PluginData = { ...DEFAULT_PLUGIN_DATA };
+  private dailySyncQueue: Promise<void> = Promise.resolve();
 
   async onload(): Promise<void> {
     await this.loadPluginData();
@@ -36,13 +53,13 @@ export default class GrammarTrainerPlugin extends Plugin {
       (leaf: WorkspaceLeaf) => new GrammarTrainerView(leaf, this)
     );
 
-    this.addRibbonIcon("graduation-cap", "Open Grammar Trainer", () => {
+    this.addRibbonIcon("graduation-cap", "Открыть тренажёр грамматики", () => {
       void this.activateView();
     });
 
-this.addCommand({
+    this.addCommand({
       id: "open-grammar-trainer",
-      name: "Open Grammar Trainer",
+      name: "Открыть тренажёр грамматики",
       callback: () => {
         void this.activateView();
       }
@@ -60,11 +77,10 @@ this.addCommand({
   }
 
   onunload(): void {
-    // Leaves are automatically cleaned up by Obsidian when unloading,
-    // or kept if needed; no custom global listeners yet.
+    // Leaves are automatically cleaned up by Obsidian when unloading.
   }
 
-async openTrainer(mode: SessionMode = "smart", topicId?: string): Promise<void> {
+  async openTrainer(mode: SessionMode = "smart", topicId?: string): Promise<void> {
     await this.activateView(mode, topicId);
   }
 
@@ -90,7 +106,7 @@ async openTrainer(mode: SessionMode = "smart", topicId?: string): Promise<void> 
     }
   }
 
-async syncRemotePack(): Promise<void> {
+  async syncRemotePack(): Promise<void> {
     const url = this.data.settings.packSourceUrl.trim();
     if (!url) {
       this.data.cachedPack = null;
@@ -127,13 +143,92 @@ async syncRemotePack(): Promise<void> {
     }
   }
 
-async recordExerciseResult(
+  async recordExerciseResult(
     exercise: GrammarExercise,
     isCorrect: boolean
   ): Promise<void> {
     recordExerciseAnswer(this.data.progress, exercise, isCorrect);
     await this.savePluginData();
     this.syncDashboardSnapshot();
+
+    const todayKey = getLocalDateKey();
+    const todayAnswered = this.data.progress.daily[todayKey]?.answered ?? 1;
+    this.enqueueDailyNoteSync(todayKey, todayAnswered);
+  }
+
+  private enqueueDailyNoteSync(dateKey: string, todayAnswered: number): void {
+    this.dailySyncQueue = this.dailySyncQueue
+      .then(() => this.syncDailyGrammarCount(dateKey, todayAnswered))
+      .catch((err) => {
+        console.error("[my-grammar-trainer] Failed to update daily note:", err);
+      });
+  }
+
+  private async syncDailyGrammarCount(
+    dateKey: string,
+    todayAnswered: number
+  ): Promise<void> {
+    const file = await this.findOrCreateDailyNote(dateKey, todayAnswered);
+    if (!file) return;
+
+    await this.app.fileManager.processFrontMatter(file, (fm) => {
+      if (!fm["дата"]) {
+        fm["дата"] = dateKey;
+      }
+      const prev = Number(fm["грамматика_упражнений"]);
+      const current = Number.isFinite(prev) && prev > 0 ? Math.floor(prev) : 0;
+      fm["грамматика_упражнений"] = Math.max(current + 1, todayAnswered);
+    });
+  }
+
+  private async findOrCreateDailyNote(
+    dateKey: string,
+    initialCount: number
+  ): Promise<TFile | null> {
+    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateKey);
+    if (!match) return null;
+
+    const [, year, month] = match;
+    const monthIdx = Number(month) - 1;
+    const monthName = MONTHS_RU[monthIdx] ?? month;
+
+    const nestedFolder = normalizePath(`${DIARY_ROOT}/${year}/${month} - ${monthName}`);
+    const nestedPath = normalizePath(`${nestedFolder}/${dateKey}.md`);
+    const flatPath = normalizePath(`${DIARY_ROOT}/${dateKey}.md`);
+
+    const directNested = this.app.vault.getAbstractFileByPath(nestedPath);
+    if (directNested instanceof TFile) return directNested;
+
+    const directFlat = this.app.vault.getAbstractFileByPath(flatPath);
+    if (directFlat instanceof TFile) return directFlat;
+
+    const existing = this.app.vault
+      .getMarkdownFiles()
+      .find(
+        (f) =>
+          f.basename === dateKey &&
+          (f.path.startsWith(`${DIARY_ROOT}/`) || f.path === flatPath)
+      );
+    if (existing) return existing;
+
+    await this.ensureFolderExists(nestedFolder);
+    const content = `---\nдата: ${dateKey}\nграмматика_упражнений: ${Math.max(0, initialCount - 1)}\n---\n`;
+    return await this.app.vault.create(nestedPath, content);
+  }
+
+  private async ensureFolderExists(folderPath: string): Promise<void> {
+    const parts = normalizePath(folderPath).split("/");
+    let current = "";
+    for (const part of parts) {
+      current = current ? `${current}/${part}` : part;
+      if (!this.app.vault.getAbstractFileByPath(current)) {
+        try {
+          await this.app.vault.createFolder(current);
+        } catch {
+          // Ignore if folder was created concurrently
+        }
+      }
+    }
   }
 
   getDashboardSnapshot(): GrammarDashboardSnapshot {
@@ -180,7 +275,7 @@ async recordExerciseResult(
         ...DEFAULT_PLUGIN_DATA.settings,
         ...(raw?.settings ?? {})
       },
-cachedPack: raw?.cachedPack ?? null,
+      cachedPack: raw?.cachedPack ?? null,
       cachedRules: raw?.cachedRules ?? null,
       progress: {
         topics: raw?.progress?.topics ?? {},

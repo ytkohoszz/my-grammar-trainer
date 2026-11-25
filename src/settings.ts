@@ -15,8 +15,10 @@ export class GrammarTrainerSettingTab extends PluginSettingTab {
     containerEl.empty();
 
     new Setting(containerEl)
-      .setName("Grammar pack URL")
-      .setDesc("Direct HTTPS link to raw JSON pack (e.g. GitHub raw or jsDelivr). Leave empty to use built-in starter pack.")
+      .setName("URL пакета упражнений")
+      .setDesc(
+        "Прямая HTTPS-ссылка на raw JSON (например, GitHub Raw или jsDelivr). Оставьте пустым для встроенного базового пакета."
+      )
       .addText((text) =>
         text
           .setPlaceholder("https://raw.githubusercontent.com/.../grammar-pack.json")
@@ -29,33 +31,36 @@ export class GrammarTrainerSettingTab extends PluginSettingTab {
 
     const active = getActivePack(this.plugin.data);
     const statusText = active.isRemote
-      ? `Remote cache: ${active.pack.topics.length} topics, ${active.pack.exercises.length} exercises`
-      : `Built-in starter pack: ${active.pack.topics.length} topics, ${active.pack.exercises.length} exercises`;
+      ? `Внешний пакет (кэш): ${active.pack.topics.length} тем, ${active.pack.exercises.length} упр.`
+      : `Встроенный базовый пакет: ${active.pack.topics.length} тем, ${active.pack.exercises.length} упр.`;
 
     new Setting(containerEl)
-      .setName("Sync grammar pack")
+      .setName("Синхронизация пакета")
       .setDesc(statusText)
       .addButton((btn) =>
-        btn.setButtonText("Sync now").setCta().onClick(async () => {
-          btn.setDisabled(true);
-          btn.setButtonText("Syncing...");
-          try {
-            await this.plugin.syncRemotePack();
-            new Notice("Grammar pack synced");
-            this.display();
-          } catch (err) {
-            const message = err instanceof Error ? err.message : String(err);
-            new Notice(`Sync failed: ${message}`);
-          } finally {
-            btn.setDisabled(false);
-            btn.setButtonText("Sync now");
-          }
-        })
+        btn
+          .setButtonText("Обновить")
+          .setCta()
+          .onClick(async () => {
+            btn.setDisabled(true);
+            btn.setButtonText("Обновление...");
+            try {
+              await this.plugin.syncRemotePack();
+              new Notice("Пакет грамматики обновлён");
+              this.display();
+            } catch (err) {
+              const message = err instanceof Error ? err.message : String(err);
+              new Notice(`Ошибка обновления: ${message}`);
+            } finally {
+              btn.setDisabled(false);
+              btn.setButtonText("Обновить");
+            }
+          })
       );
 
     new Setting(containerEl)
-      .setName("Session length")
-      .setDesc("Number of exercises per smart session.")
+      .setName("Длина сессии")
+      .setDesc("Количество упражнений в одной умной сессии.")
       .addSlider((slider) =>
         slider
           .setLimits(5, 30, 1)

@@ -1,3 +1,4 @@
+import { setIcon } from "obsidian";
 import { GrammarPack, GrammarRule, GrammarTopic, RulesPack } from "./types";
 
 export interface RulesOverlayCallbacks {
@@ -12,7 +13,7 @@ export function renderRulesOverlay(
   initialTopicId: string | undefined,
   callbacks: RulesOverlayCallbacks
 ): void {
-host.empty();
+  host.empty();
 
   const panel = host.createDiv({ cls: "mgt-map-panel mgt-rules-panel" });
 
@@ -45,17 +46,19 @@ host.empty();
       }
     }
 
-    // List mode header with search & level pills
     const header = panel.createDiv({ cls: "mgt-rules-header" });
     const searchInput = header.createEl("input", {
       cls: "mgt-rules-search",
       type: "text",
-      attr: { placeholder: "Search grammar rules..." }
+      attr: { placeholder: "Поиск по правилам грамматики..." }
     });
     searchInput.value = searchQuery;
 
     const filterRow = header.createDiv({ cls: "mgt-rules-levels" });
-    const levels = ["ALL", ...Array.from(new Set(grammarPack.topics.map((t) => t.level))).sort()];
+    const levels = [
+      "ALL",
+      ...Array.from(new Set(grammarPack.topics.map((t) => t.level))).sort()
+    ];
 
     const body = panel.createDiv({ cls: "mgt-map-body" });
 
@@ -73,7 +76,10 @@ host.empty();
       });
 
       if (filtered.length === 0) {
-        body.createDiv({ cls: "mgt-map-empty", text: "No rules match your query" });
+        body.createDiv({
+          cls: "mgt-map-empty",
+          text: "По вашему запросу правил не найдено"
+        });
         return;
       }
 
@@ -98,10 +104,12 @@ host.empty();
           left.createSpan({ cls: "mgt-level-pill", text: topic.level });
           left.createSpan({ cls: "mgt-rule-row-title", text: topic.title });
 
-          item.createSpan({
-            cls: `mgt-rule-chevron ${hasGuide ? "has-guide" : ""}`,
-            text: hasGuide ? "Guide ›" : "Summary ›"
+          const right = item.createSpan({
+            cls: `mgt-rule-chevron ${hasGuide ? "has-guide" : ""}`
           });
+          right.createSpan({ text: hasGuide ? "Разбор" : "Кратко" });
+          const iconSpan = right.createSpan({ cls: "mgt-inline-icon" });
+          setIcon(iconSpan, "chevron-right");
 
           item.addEventListener("click", () => {
             selectedTopicId = topic.id;
@@ -114,12 +122,14 @@ host.empty();
     levels.forEach((lvl) => {
       const btn = filterRow.createEl("button", {
         cls: `mgt-filter-pill ${lvl === levelFilter ? "is-active" : ""}`,
-        text: lvl === "ALL" ? "All" : lvl
+        text: lvl === "ALL" ? "Все" : lvl
       });
       btn.type = "button";
       btn.addEventListener("click", () => {
         levelFilter = lvl;
-        filterRow.querySelectorAll(".mgt-filter-pill").forEach((el) => el.removeClass("is-active"));
+        filterRow
+          .querySelectorAll(".mgt-filter-pill")
+          .forEach((el) => el.removeClass("is-active"));
         btn.addClass("is-active");
         renderList();
       });
@@ -145,15 +155,17 @@ function renderRuleDetail(
 ): void {
   const nav = panel.createDiv({ cls: "mgt-rule-nav" });
   const backBtn = nav.createEl("button", {
-    cls: "mgt-secondary-btn mgt-rule-back",
-    text: "← All Rules"
+    cls: "mgt-secondary-btn mgt-rule-back"
   });
   backBtn.type = "button";
+  const backIcon = backBtn.createSpan({ cls: "mgt-inline-icon" });
+  setIcon(backIcon, "arrow-left");
+  backBtn.createSpan({ text: "Все правила" });
   backBtn.addEventListener("click", onBack);
 
   const practiceBtn = nav.createEl("button", {
     cls: "mgt-primary-btn mgt-rule-practice",
-    text: "Practice Topic"
+    text: "Тренировать тему"
   });
   practiceBtn.type = "button";
   practiceBtn.addEventListener("click", onPractice);
@@ -175,13 +187,13 @@ function renderRuleDetail(
 
   if (rule.formula) {
     const formulaBox = body.createDiv({ cls: "mgt-rule-formula" });
-    formulaBox.createDiv({ cls: "mgt-rule-block-label", text: "Formula" });
+    formulaBox.createDiv({ cls: "mgt-rule-block-label", text: "Формула" });
     formulaBox.createDiv({ cls: "mgt-rule-formula-text", text: rule.formula });
   }
 
   if (rule.points.length > 0) {
     const sec = body.createDiv({ cls: "mgt-rule-section" });
-    sec.createDiv({ cls: "mgt-rule-block-label", text: "Key Rules" });
+    sec.createDiv({ cls: "mgt-rule-block-label", text: "Основные правила" });
     const ul = sec.createEl("ul", { cls: "mgt-rule-points" });
     for (const pt of rule.points) {
       ul.createEl("li", { text: pt });
@@ -190,7 +202,7 @@ function renderRuleDetail(
 
   if (rule.examples.length > 0) {
     const sec = body.createDiv({ cls: "mgt-rule-section" });
-    sec.createDiv({ cls: "mgt-rule-block-label", text: "Examples" });
+    sec.createDiv({ cls: "mgt-rule-block-label", text: "Примеры" });
     const list = sec.createDiv({ cls: "mgt-rule-examples" });
     for (const ex of rule.examples) {
       const row = list.createDiv({ cls: "mgt-rule-example-card" });
@@ -203,7 +215,7 @@ function renderRuleDetail(
 
   if (rule.pitfall) {
     const pit = body.createDiv({ cls: "mgt-rule-pitfall" });
-    pit.createDiv({ cls: "mgt-rule-block-label", text: "Watch Out" });
+    pit.createDiv({ cls: "mgt-rule-block-label", text: "Обратите внимание" });
     pit.createDiv({ cls: "mgt-rule-pitfall-text", text: rule.pitfall });
   }
 }

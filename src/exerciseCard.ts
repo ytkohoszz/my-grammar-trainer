@@ -25,10 +25,9 @@ export function renderExerciseCard(
   container.empty();
   const card = container.createDiv({ cls: "mgt-card mgt-exercise-card" });
 
-// Subtle topic header (clickable to open rule guide)
   const meta = card.createEl("button", {
     cls: "mgt-meta-line mgt-meta-btn",
-    attr: { title: "Open grammar rule for this topic" }
+    attr: { title: "Открыть правило по этой теме" }
   });
   meta.type = "button";
   if (topic) {
@@ -138,7 +137,7 @@ function renderErrorSpotting(
 ): void {
   const hintEl = card.createDiv({
     cls: "mgt-hint-line",
-    text: "Tap the word with a grammar error"
+    text: "Нажмите на слово с грамматической ошибкой"
   });
   card.insertBefore(hintEl, beforeEl);
 
@@ -154,7 +153,7 @@ function renderErrorSpotting(
 
   if (errorLocated) {
     optionsWrap.removeClass("is-hidden");
-    hintEl.setText("Choose the correct replacement");
+    hintEl.setText("Выберите правильную замену");
   }
 
   words.forEach((word, idx) => {
@@ -169,7 +168,7 @@ function renderErrorSpotting(
       if (idx === targetIdx) {
         errorLocated = true;
         wordBtn.addClass("is-located");
-        hintEl.setText("Choose the correct replacement");
+        hintEl.setText("Выберите правильную замену");
         optionsWrap.removeClass("is-hidden");
       } else {
         wordBtn.addClass("is-miss");
@@ -234,13 +233,13 @@ function renderTransform(
 
   const clearBtn = actions.createEl("button", {
     cls: "mgt-secondary-btn",
-    text: "Clear"
+    text: "Сбросить"
   });
   clearBtn.type = "button";
 
   const checkBtn = actions.createEl("button", {
     cls: "mgt-primary-btn",
-    text: "Check"
+    text: "Проверить"
   });
   checkBtn.type = "button";
   checkBtn.disabled = true;
@@ -256,7 +255,7 @@ function renderTransform(
     if (selectedIndices.length === 0) {
       tray.createSpan({
         cls: "mgt-tray-placeholder",
-        text: "Tap words below to build the sentence"
+        text: "Нажимайте на слова ниже, чтобы собрать предложение"
       });
     } else {
       selectedIndices.forEach((tokenIdx, pos) => {
@@ -329,7 +328,7 @@ function renderInput(
   if (exercise.hint) {
     const hintEl = card.createDiv({
       cls: "mgt-hint-line",
-      text: `Hint: ${exercise.hint}`
+      text: `Подсказка: ${exercise.hint}`
     });
     card.insertBefore(hintEl, beforeEl);
   }
@@ -341,7 +340,7 @@ function renderInput(
     cls: "mgt-input-field",
     type: "text",
     attr: {
-      placeholder: "Type your answer...",
+      placeholder: "Введите ответ...",
       autocomplete: "off",
       autocapitalize: "off",
       spellcheck: "false"
@@ -350,7 +349,7 @@ function renderInput(
 
   const submitBtn = formRow.createEl("button", {
     cls: "mgt-primary-btn",
-    text: "Check"
+    text: "Проверить"
   });
   submitBtn.type = "button";
 
@@ -391,13 +390,13 @@ function renderFeedback(
   const head = box.createDiv({ cls: "mgt-feedback-head" });
   head.createSpan({
     cls: "mgt-feedback-status",
-    text: isCorrect ? "Correct" : "Incorrect"
+    text: isCorrect ? "Верно" : "Ошибка"
   });
 
   if (!isCorrect) {
     head.createSpan({
       cls: "mgt-feedback-answer",
-      text: `Answer: ${exercise.answer}`
+      text: `Ответ: ${exercise.answer}`
     });
   } else if (userAnswer && exercise.type === "transform") {
     head.createSpan({
@@ -414,7 +413,7 @@ function renderFeedback(
   const nextRow = box.createDiv({ cls: "mgt-feedback-actions" });
   const nextBtn = nextRow.createEl("button", {
     cls: "mgt-primary-btn mgt-next-btn",
-    text: "Continue"
+    text: "Дальше"
   });
   nextBtn.type = "button";
   nextBtn.addEventListener("click", onNext);

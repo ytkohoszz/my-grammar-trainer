@@ -43,7 +43,7 @@ export class GrammarTrainerView extends ItemView {
   }
 
   getDisplayText(): string {
-    return "Grammar Trainer";
+    return "Грамматика";
   }
 
   getIcon(): string {
@@ -69,14 +69,14 @@ export class GrammarTrainerView extends ItemView {
     this.startSession("smart");
   }
 
-async onClose(): Promise<void> {
+  async onClose(): Promise<void> {
     this.rootEl?.empty();
     this.rootEl = null;
     this.stageEl = null;
     this.mapHostEl = null;
   }
 
-startSession(mode: SessionMode, topicId?: string): void {
+  startSession(mode: SessionMode, topicId?: string): void {
     this.mode = mode;
     this.selectedTopicId = topicId;
     this.isMapOpen = false;
@@ -97,7 +97,7 @@ startSession(mode: SessionMode, topicId?: string): void {
     this.renderLayout();
   }
 
-private handleKeydown(e: KeyboardEvent): void {
+  private handleKeydown(e: KeyboardEvent): void {
     const target = e.target;
     if (
       target instanceof HTMLInputElement ||
@@ -106,7 +106,11 @@ private handleKeydown(e: KeyboardEvent): void {
       return;
     }
 
-if (e.key === "Escape" && (this.isMapOpen || this.isRulesOpen)) {
+    if (e.ctrlKey || e.metaKey || e.altKey) {
+      return;
+    }
+
+    if (e.key === "Escape" && (this.isMapOpen || this.isRulesOpen)) {
       e.preventDefault();
       this.isMapOpen = false;
       this.isRulesOpen = false;
@@ -114,13 +118,13 @@ if (e.key === "Escape" && (this.isMapOpen || this.isRulesOpen)) {
       return;
     }
 
-    if (e.key === "m" || e.key === "M") {
+    if (e.code === "KeyM" || e.key === "m" || e.key === "M") {
       e.preventDefault();
       this.toggleMap();
       return;
     }
 
-    if (e.key === "r" || e.key === "R") {
+    if (e.code === "KeyR" || e.key === "r" || e.key === "R") {
       e.preventDefault();
       this.toggleRules();
       return;
@@ -155,30 +159,34 @@ if (e.key === "Escape" && (this.isMapOpen || this.isRulesOpen)) {
     const { pack } = getActivePack(this.plugin.data);
     const mistakesCount = getMistakeCount(pack, this.plugin.data.progress);
 
-// Top Island Toolbar (always pinned cleanly above content)
     const topbar = this.rootEl.createDiv({ cls: "mgt-topbar" });
     const island = topbar.createDiv({ cls: "mgt-island-bar" });
 
     const smartBtn = island.createEl("button", {
-      cls: `mgt-island-btn ${this.mode === "smart" ? "is-active" : ""}`,
-      text: "Smart"
+      cls: `mgt-island-btn ${
+        this.mode === "smart" && !this.isMapOpen && !this.isRulesOpen ? "is-active" : ""
+      }`,
+      text: "Умная"
     });
     smartBtn.type = "button";
     smartBtn.addEventListener("click", () => this.startSession("smart"));
 
-    const mistakesLabel = mistakesCount > 0 ? `Mistakes (${mistakesCount})` : "Mistakes";
+    const mistakesLabel =
+      mistakesCount > 0 ? `Ошибки (${mistakesCount})` : "Ошибки";
     const mistakesBtn = island.createEl("button", {
-      cls: `mgt-island-btn ${this.mode === "mistakes" ? "is-active" : ""}`,
+      cls: `mgt-island-btn ${
+        this.mode === "mistakes" && !this.isMapOpen && !this.isRulesOpen ? "is-active" : ""
+      }`,
       text: mistakesLabel
     });
     mistakesBtn.type = "button";
     mistakesBtn.addEventListener("click", () => this.startSession("mistakes"));
 
-const mapBtn = island.createEl("button", {
+    const mapBtn = island.createEl("button", {
       cls: `mgt-island-btn mgt-icon-btn ${
         this.mode === "topic" || this.isMapOpen ? "is-active" : ""
       }`,
-      attr: { "aria-label": "Topics Map" }
+      attr: { "aria-label": "Карта тем", title: "Карта тем (M)" }
     });
     mapBtn.type = "button";
     setIcon(mapBtn, "layout-grid");
@@ -186,13 +194,13 @@ const mapBtn = island.createEl("button", {
 
     const rulesBtn = island.createEl("button", {
       cls: `mgt-island-btn mgt-icon-btn ${this.isRulesOpen ? "is-active" : ""}`,
-      attr: { "aria-label": "Grammar Rules" }
+      attr: { "aria-label": "Справочник правил", title: "Справочник правил (R)" }
     });
     rulesBtn.type = "button";
     setIcon(rulesBtn, "book-open");
     rulesBtn.addEventListener("click", () => this.toggleRules());
 
-const workspace = this.rootEl.createDiv({ cls: "mgt-workspace" });
+    const workspace = this.rootEl.createDiv({ cls: "mgt-workspace" });
     this.stageEl = workspace.createDiv({ cls: "mgt-stage" });
     this.mapHostEl = workspace.createDiv({ cls: "mgt-map-host" });
     this.renderCurrentStep();
@@ -214,7 +222,7 @@ const workspace = this.rootEl.createDiv({ cls: "mgt-workspace" });
     this.syncOverlays();
   }
 
-private syncOverlays(): void {
+  private syncOverlays(): void {
     if (!this.mapHostEl) return;
 
     const { pack } = getActivePack(this.plugin.data);
@@ -264,19 +272,22 @@ private syncOverlays(): void {
       const emptyCard = this.stageEl.createDiv({ cls: "mgt-card mgt-empty-state" });
       emptyCard.createDiv({
         cls: "mgt-empty-title",
-        text: this.mode === "mistakes" ? "No mistakes to review" : "No exercises available"
+        text:
+          this.mode === "mistakes"
+            ? "Ошибок для разбора нет"
+            : "Упражнения не найдены"
       });
       emptyCard.createDiv({
         cls: "mgt-empty-sub",
         text:
           this.mode === "mistakes"
-            ? "All previously missed exercises have been cleared."
-            : "Check your grammar pack in settings."
+            ? "Все ранее допущенные ошибки уже отработаны."
+            : "Проверьте источник пакета упражнений в настройках плагина."
       });
       if (this.mode === "mistakes") {
         const backBtn = emptyCard.createEl("button", {
           cls: "mgt-primary-btn mgt-summary-btn",
-          text: "Start Smart Session"
+          text: "Начать умную сессию"
         });
         backBtn.type = "button";
         backBtn.addEventListener("click", () => this.startSession("smart"));
@@ -289,7 +300,6 @@ private syncOverlays(): void {
       return;
     }
 
-    // Minimalist progress hairline
     const progressWrap = this.stageEl.createDiv({ cls: "mgt-progress-track" });
     const progressFill = progressWrap.createDiv({ cls: "mgt-progress-fill" });
     const pct = Math.round((this.currentIndex / this.queue.length) * 100);
@@ -309,7 +319,7 @@ private syncOverlays(): void {
         if (isCorrect) this.sessionCorrect++;
         void this.plugin.recordExerciseResult(exercise, isCorrect);
       },
-onNext: () => {
+      onNext: () => {
         this.currentIndex++;
         this.renderCurrentStep();
       },
@@ -331,13 +341,13 @@ onNext: () => {
     });
     card.createDiv({
       cls: "mgt-empty-sub",
-      text: `Session accuracy ${accuracy}% · Overall mastery ${overall}%`
+      text: `Точность сессии ${accuracy}% · Общее владение ${overall}%`
     });
 
     const actions = card.createDiv({ cls: "mgt-summary-actions" });
     const againBtn = actions.createEl("button", {
       cls: "mgt-primary-btn",
-      text: "New Smart Session"
+      text: "Новая умная сессия"
     });
     againBtn.type = "button";
     againBtn.addEventListener("click", () => this.startSession("smart"));
@@ -345,7 +355,7 @@ onNext: () => {
     if (mistakesLeft > 0) {
       const reviewBtn = actions.createEl("button", {
         cls: "mgt-secondary-btn",
-        text: `Review Mistakes (${mistakesLeft})`
+        text: `Разобрать ошибки (${mistakesLeft})`
       });
       reviewBtn.type = "button";
       reviewBtn.addEventListener("click", () => this.startSession("mistakes"));

@@ -15,19 +15,18 @@ export function renderTopicsMap(
   activeTopicId: string | undefined,
   callbacks: TopicsMapCallbacks
 ): void {
-host.empty();
+  host.empty();
 
   const panel = host.createDiv({ cls: "mgt-map-panel" });
 
-  // Filter bar
   const filterBar = panel.createDiv({ cls: "mgt-map-filters" });
   const levelsPresent = Array.from(
     new Set(pack.topics.map((t) => t.level))
   ).sort();
 
   const filters: Array<{ id: MapFilter; label: string }> = [
-    { id: "all", label: "All" },
-    { id: "weak", label: "Weak" },
+    { id: "all", label: "Все" },
+    { id: "weak", label: "Слабые" },
     ...levelsPresent.map((lvl) => ({ id: lvl, label: lvl }))
   ];
 
@@ -52,7 +51,7 @@ host.empty();
     if (filtered.length === 0) {
       body.createDiv({
         cls: "mgt-map-empty",
-        text: "No topics match this filter"
+        text: "Нет тем по выбранному фильтру"
       });
       return;
     }
@@ -95,7 +94,7 @@ host.empty();
         topRow.createSpan({ cls: "mgt-topic-level", text: topic.level });
         topRow.createSpan({
           cls: "mgt-topic-pct",
-          text: attempts === 0 ? `${exCount} ex` : `${mastery}%`
+          text: attempts === 0 ? `${exCount} упр.` : `${mastery}%`
         });
 
         card.createDiv({ cls: "mgt-topic-title", text: topic.title });
